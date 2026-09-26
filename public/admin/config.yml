@@ -2,7 +2,7 @@ backend:
   name: github
   repo: centedgesolutions/Centedge-Website
   branch: main
-# base_url: https://centedge.co.in (defaults to current origin)
+  base_url: https://centedge-website.pages.dev
   auth_endpoint: api/auth
 
 # Upload settings

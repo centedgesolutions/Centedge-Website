@@ -7,14 +7,30 @@
   <title>Content Manager | Cent Edge Consulting Pvt Ltd</title>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <style>
-    /* Styling login screen */
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     }
   </style>
 </head>
 <body>
+  <script>
+    window.CMS_MANUAL_INIT = true;
+  </script>
   <!-- Include Decap CMS -->
   <script src="https://unpkg.com/decap-cms@^3.1.2/dist/decap-cms.js"></script>
+  <script>
+    CMS.init({
+      config: {
+        load_config_file: true,
+        backend: {
+          name: 'github',
+          repo: 'centedgesolutions/Centedge-Website',
+          branch: 'main',
+          base_url: window.location.origin,
+          auth_endpoint: 'api/auth'
+        }
+      }
+    });
+  </script>
 </body>
 </html>
