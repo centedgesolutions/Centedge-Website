@@ -6,10 +6,8 @@ publishDate: 2026-07-28
 readTime: 8 min read
 category: Industrial Engineering
 featured: true
-coverImage: /images/uploads/71os-fkj3dl._ac_uf1000-1000_ql80_.jpg
-excerpt: Accurate SAM is the bedrock of line balancing, costing, and capacity
-  planning. Learn why stopwatch time studies fail without PMTS and GSD motion
-  analysis.
+coverImage: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGb0zh913x1fLvDIP-zt5ZehK4hxBoP9kuXFuuBrTKUA&s=10
+excerpt: Mayuresh
 ---
 Standard  (SAM) or Standard Minute Value (SMV) is the single most critical number in an apparel manufacturing facility. It dictates piece rates, line balancing, factory efficiency metrics, and buyer cost quotations.
 
