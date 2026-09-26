@@ -1,0 +1,507 @@
+﻿---
+// src/pages/solutions/index.astro
+// Main Solutions Overview Directory Page for Cent Edge Consulting
+// Features the 4 core specialized apparel manufacturing practice areas in a clean 1-row grid.
+
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const pageTitle = "Apparel Manufacturing Solutions & Practice Areas | Cent Edge Consulting";
+const pageDescription = "Explore Cent Edge's 4 core apparel consulting specialisations: Factory Setup & Expansion, Digital & Smart Factory, Operational Excellence & Lean, and Industrial Engineering & Productivity.";
+const canonicalUrl = "https://centedge.co.in/solutions/";
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  canonicalUrl={canonicalUrl}
+>
+  <Header />
+
+  <!-- PAGE-SPECIFIC SEO SCHEMAS (BreadcrumbList & CollectionPage) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Apparel Manufacturing Solutions | Cent Edge Consulting",
+    "description": "Comprehensive consulting solutions across the garment manufacturing lifecycle: Factory Setup, Smart Factory IoT, Lean Transformation, and Industrial Engineering.",
+    "url": "https://centedge.co.in/solutions/",
+    "provider": {
+      "@type": "ProfessionalService",
+      "name": "Cent Edge Consulting Pvt Ltd",
+      "url": "https://centedge.co.in"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://centedge.co.in/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Solutions",
+        "item": "https://centedge.co.in/solutions/"
+      }
+    ]
+  }
+  </script>
+
+  <!-- BREADCRUMB NAVIGATION -->
+  <nav class="breadcrumb-bar" aria-label="Breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb-list">
+        <li><a href="/">Home</a></li>
+        <li class="breadcrumb-separator">/</li>
+        <li class="breadcrumb-current" aria-current="page">Solutions</li>
+      </ol>
+    </div>
+  </nav>
+
+  <main class="page-wrapper" id="main-content">
+    <!-- ============================================================ -->
+    <!-- 1. SOLUTIONS HERO SECTION -->
+    <!-- ============================================================ -->
+    <section class="solutions-hero-section">
+      <div class="container">
+        <div class="hero-center-content">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <span>Apparel Manufacturing Advisory &bull; 4 Core Practices</span>
+          </div>
+          <h1 class="hero-title">
+            Tailored Consulting Solutions for <span class="text-gradient">Apparel Manufacturers</span>
+          </h1>
+          <p class="hero-sub">
+            From new plant commissioning and lean transformations to digital shopfloor IoT and precision industrial engineering — discover our end-to-end execution-led consulting practices.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 2. OUR SPECIALISATIONS (4 CORE PRACTICE AREAS IN 1 ROW) -->
+    <!-- ============================================================ -->
+    <section class="pillars-section section" aria-labelledby="solutions-pillars-heading" style="padding-top: 0; padding-bottom: 5rem;">
+      <div class="container">
+        <div class="pillars-grid">
+          
+          <!-- Box 1: End to End Apparel Factory Setup -->
+          <div class="pillar-card">
+            <div class="pillar-img">
+              <img src="/images/pillar-factory-layout.jpg" alt="End-to-end apparel factory setup, feasibility and plant transformation" loading="lazy" width="480" height="290"/>
+            </div>
+            <div class="pillar-body">
+              <div class="pillar-tag">Factory Setup &amp; Expansion</div>
+              <h3>End to End Apparel Factory Setup</h3>
+              <p>Turnkey greenfield and brownfield project execution &mdash; from feasibility studies and layout engineering to commissioning.</p>
+              <a href="/solutions/apparel-factory-setup-consulting/" class="pillar-link">Explore Solutions &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Box 2: Digital & Smart Factory -->
+          <div class="pillar-card">
+            <div class="pillar-img">
+              <img src="/images/pillar-smart-factory.jpg" alt="Digital and smart factory consulting with real-time IoT monitoring in garment manufacturing" loading="lazy" width="480" height="290"/>
+            </div>
+            <div class="pillar-body">
+              <div class="pillar-tag">Smart Factory &amp; IoT</div>
+              <h3>Digital &amp; Smart Factory</h3>
+              <p>Real-time shopfloor IoT tracking, digital line monitoring, AI-driven predictive insights and paperless quality systems.</p>
+              <a href="/solutions/smart-factory/" class="pillar-link">Explore Solutions &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Box 3: Operational Excellence & Lean Transformation -->
+          <div class="pillar-card">
+            <div class="pillar-img">
+              <img src="/images/pillar-lean.jpg" alt="Operational excellence and lean manufacturing transformation on garment shopfloor" loading="lazy" width="480" height="290"/>
+            </div>
+            <div class="pillar-body">
+              <div class="pillar-tag">Lean Transformation</div>
+              <h3>Operational Excellence &amp; Lean</h3>
+              <p>Factory diagnostics, waste elimination, flow improvement, bottleneck resolution and continuous improvement systems.</p>
+              <a href="/solutions/lean-manufacturing/" class="pillar-link">Explore Solutions &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Box 4: Industrial Engineering & Productivity -->
+          <div class="pillar-card">
+            <div class="pillar-img">
+              <img src="/images/pillar-ie-training.jpg" alt="Industrial Engineering and garment line balancing consulting" loading="lazy" width="480" height="290"/>
+            </div>
+            <div class="pillar-body">
+              <div class="pillar-tag">Industrial Engineering</div>
+              <h3>Industrial Engineering &amp; Productivity</h3>
+              <p>Scientific PMTS &amp; GSD standard minute values (SMV), line balancing, operator motion economy and throughput acceleration.</p>
+              <a href="/solutions/industrial-engineering/" class="pillar-link">Explore Solutions &rarr;</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 3. HOW WE DELIVER MEASURABLE VALUE STRIP -->
+    <!-- ============================================================ -->
+    <section class="delivery-strip-section">
+      <div class="container">
+        <div class="delivery-grid">
+          <div class="delivery-item">
+            <div class="delivery-num">01</div>
+            <h4>Diagnostic Assessment</h4>
+            <p>On-site shopfloor evaluation to identify baseline bottlenecks, SMV gaps, and quantifiable ROI levers.</p>
+          </div>
+          <div class="delivery-item">
+            <div class="delivery-num">02</div>
+            <h4>Hands-on Execution</h4>
+            <p>Our consultants work directly on the production lines alongside supervisors and operators to implement systems.</p>
+          </div>
+          <div class="delivery-item">
+            <div class="delivery-num">03</div>
+            <h4>Capability Transfer</h4>
+            <p>Structured training and SOP standardisation ensuring internal factory teams sustain gains permanently.</p>
+          </div>
+          <div class="delivery-item">
+            <div class="delivery-num">04</div>
+            <h4>Measurable Governance</h4>
+            <p>Real-time KPI dashboards, milestone reviews, and verifiable efficiency, quality, and throughput metrics.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 4. BOTTOM CTA BANNER (CONSISTENT WITH OTHER SOLUTION PAGES) -->
+    <!-- ============================================================ -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-banner">
+          <div class="cta-inner text-center">
+            <span class="cta-tag">Take the Next Step</span>
+            <h2 class="cta-title">Ready to Elevate Your Garment Manufacturing Operations?</h2>
+            <p class="cta-desc">
+              Book a comprehensive Cent Edge Diagnostic Study. We will evaluate your plant, identify productivity opportunities, and provide an actionable roadmap.
+            </p>
+            <div class="cta-actions">
+              <a href="/contact/" class="btn-primary btn-cta">
+                <span>Schedule a Consulting Consultation</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <a href="https://wa.me/919901422066?text=Hi%20Cent%20Edge%20team,%20we%20want%20to%20discuss%20apparel%20manufacturing%20consulting%20solutions" target="_blank" rel="noopener noreferrer" class="btn-cta-whatsapp">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                </svg>
+                <span>WhatsApp Surya Prakash (+91 99014 22066)</span>
+              </a>
+            </div>
+            <div class="cta-trust-note">
+              <span>Confidential on-site audit &bull; Non-disruptive shop-floor assessment &bull; Actionable executive debrief</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  /* -------------------------------------------------- */
+  /* BREADCRUMB NAVIGATION */
+  /* -------------------------------------------------- */
+  .breadcrumb-bar {
+    background: #f8fafc;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 0.85rem 0;
+    font-size: 0.88rem;
+  }
+  .breadcrumb-list {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: #64748b;
+  }
+  .breadcrumb-list a {
+    color: #1a2e4a;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  .breadcrumb-list a:hover {
+    color: #f47957;
+  }
+  .breadcrumb-separator {
+    color: #94a3b8;
+  }
+  .breadcrumb-current {
+    color: #f47957;
+    font-weight: 600;
+  }
+
+  /* -------------------------------------------------- */
+  /* HERO SECTION */
+  /* -------------------------------------------------- */
+  .solutions-hero-section {
+    background: linear-gradient(180deg, #f0f7ff 0%, #ffffff 100%);
+    padding: 4.5rem 0 3rem;
+    text-align: center;
+    border-bottom: 1px solid #f1f5f9;
+  }
+
+  .hero-center-content {
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(37, 99, 168, 0.08);
+    border: 1px solid rgba(37, 99, 168, 0.18);
+    padding: 6px 14px;
+    border-radius: 9999px;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: #2563a8;
+    margin-bottom: 1.5rem;
+  }
+
+  .badge-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #10b981;
+  }
+
+  .hero-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(2rem, 3.8vw, 3rem);
+    font-weight: 700;
+    color: #1a2e4a;
+    line-height: 1.2;
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.01em;
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #2563a8 0%, #1e3a5f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .hero-sub {
+    font-size: clamp(1rem, 1.3vw, 1.125rem);
+    color: #475569;
+    line-height: 1.65;
+    margin: 0 auto;
+    max-width: 740px;
+  }
+
+  /* -------------------------------------------------- */
+  /* DELIVERY STRIP SECTION */
+  /* -------------------------------------------------- */
+  .delivery-strip-section {
+    background: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 3.5rem 0;
+  }
+
+  .delivery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.75rem;
+  }
+
+  .delivery-item {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.75rem 1.4rem;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(13, 27, 42, 0.03);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .delivery-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(13, 27, 42, 0.06);
+    border-color: #cbd5e1;
+  }
+
+  .delivery-num {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #2563a8;
+    line-height: 1;
+    margin-bottom: 0.75rem;
+    opacity: 0.85;
+  }
+
+  .delivery-item h4 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #1a2e4a;
+    margin-bottom: 0.5rem;
+  }
+
+  .delivery-item p {
+    font-size: 0.875rem;
+    color: #64748b;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /* -------------------------------------------------- */
+  /* BOTTOM CTA SECTION */
+  /* -------------------------------------------------- */
+  .cta-section {
+    background: linear-gradient(135deg, #1a2e4a 0%, #122035 100%);
+    padding: 5rem 0;
+  }
+
+  .cta-banner {
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .cta-inner {
+    text-align: center;
+  }
+
+  .cta-tag {
+    display: inline-block;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #93c5fd;
+    background: rgba(147, 197, 253, 0.15);
+    padding: 6px 16px;
+    border-radius: 9999px;
+    margin-bottom: 20px;
+  }
+
+  .cta-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.85rem, 3vw, 2.5rem);
+    color: #ffffff;
+    line-height: 1.25;
+    margin: 0 0 20px;
+    font-weight: 700;
+  }
+
+  .cta-desc {
+    font-size: 1.05rem;
+    color: #cbd5e1;
+    line-height: 1.65;
+    margin: 0 auto 36px;
+    max-width: 720px;
+  }
+
+  .cta-actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    background: #1a2e4a;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 12px rgba(26, 46, 74, 0.15);
+  }
+
+  .btn-primary:hover {
+    background: #2563a8;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(37, 99, 168, 0.25);
+  }
+
+  .btn-cta {
+    background: #2563a8;
+    padding: 16px 36px;
+    font-size: 1.0625rem;
+  }
+
+  .btn-cta:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(37, 99, 168, 0.35);
+  }
+
+  .btn-cta-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 32px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    font-size: 1.0625rem;
+    font-weight: 600;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+    transition: all 0.25s ease;
+  }
+
+  .btn-cta-whatsapp:hover {
+    background: #25D366;
+    border-color: #25D366;
+    color: #ffffff;
+    transform: translateY(-2px);
+  }
+
+  .cta-trust-note {
+    font-size: 0.8125rem;
+    color: #94a3b8;
+  }
+
+  /* -------------------------------------------------- */
+  /* RESPONSIVE */
+  /* -------------------------------------------------- */
+  @media (max-width: 1080px) {
+    .delivery-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .solutions-hero-section {
+      padding: 3rem 0 2rem;
+    }
+    .delivery-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

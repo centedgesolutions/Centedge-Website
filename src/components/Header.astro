@@ -1,0 +1,60 @@
+---
+// Header.astro — Clean sticky navigation, SkilGlobal-inspired
+// Phone number removed from header per client request
+const pathname = Astro.url.pathname.replace(/\/index\.html$/, '');
+const currentPath = (pathname.length > 1 && pathname.endsWith('/')) ? pathname.slice(0, -1) : (pathname || '/');
+
+function isActive(href: string) {
+  let norm = href.replace(/\/index\.html$/, '');
+  if (norm.length > 1 && norm.endsWith('/')) norm = norm.slice(0, -1);
+  if (!norm) norm = '/';
+  
+  if (norm === '/') {
+    return currentPath === '/';
+  }
+  return currentPath === norm || currentPath.startsWith(norm + '/');
+}
+---
+<header class="site-header" id="site-header" role="banner">
+  <div class="site-header-main">
+    <div class="container">
+
+      <a href="/" class="site-logo" aria-label="Cent Edge Consulting - Home">
+        <img src="/images/centedge_logo_hd.png" alt="Cent Edge Consulting" class="site-logo-img" style="max-height: 42px; height: 42px; width: auto;" />
+      </a>
+
+      <nav class="site-nav" id="site-nav" role="navigation" aria-label="Main navigation" style="display: flex; gap: 1.25rem; justify-content: center; flex: 1; margin: 0 2rem;">
+        <a href="/" class={isActive('/') ? 'active' : ''}>Home</a>
+        <a href="/about/" class={isActive('/about/') ? 'active' : ''}>About Us</a>
+        <div class="nav-dropdown">
+          <a href="/solutions/" aria-haspopup="true" class={isActive('/solutions/') ? 'active' : ''}>Solutions</a>
+                  <div class="dropdown-menu" role="menu">
+            <a href="/solutions/apparel-factory-setup-consulting/" role="menuitem">Factory Setup</a>
+            <a href="/solutions/lean-manufacturing/" role="menuitem">Lean Manufacturing</a>
+            <a href="/solutions/smart-factory/" role="menuitem">Smart Factory</a>
+            <a href="/solutions/industrial-engineering/" role="menuitem">Industrial Engineering</a>
+          </div>
+        </div>
+        <a href="/success-stories/" class={isActive('/success-stories/') ? 'active' : ''}>Success Stories</a>
+        <a href="/insights/" class={isActive('/insights/') ? 'active' : ''}>Insights</a>
+        <a href="/contact/" class={isActive('/contact/') ? 'active' : ''}>Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="/contact/" class="btn btn-primary btn-sm">Schedule a Dipstick Study</a>
+      </div>
+
+      <button class="nav-toggle" id="nav-toggle" aria-controls="site-nav" aria-expanded="false"
+        aria-label="Open navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+  </div>
+
+  <div class="site-tagline-bar">
+    <div class="site-tagline-text">
+      Smart Factory <span class="tagline-pipe">|</span> Manufacturing Excellence <span class="tagline-pipe">|</span> Profitable Results
+    </div>
+  </div>
+</header>

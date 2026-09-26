@@ -1,0 +1,2205 @@
+---
+// src/pages/solutions/smart-factory/index.astro
+// Flagship Solution Page: Smart Factory Consulting for Apparel Manufacturers
+// Built with bespoke technical vector diagrams, scannable consulting copy, and 100% visual alignment with Industrial Engineering & 5S pages.
+
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+
+const pageTitle = "Smart Factory Consulting for Apparel Manufacturers | Cent Edge Bangalore";
+const pageDescription = "Transform garment manufacturing with a connected, scientific Smart Factory. Cent Edge unifies MES telemetry, automated cutting, deskilling jigs, internal logistics, and digital quality into shop-floor profitability.";
+const canonicalUrl = "https://centedge.co.in/solutions/smart-factory/";
+---
+
+<BaseLayout 
+  title={pageTitle} 
+  description={pageDescription}
+  canonicalUrl={canonicalUrl}
+>
+  <Header />
+
+  <!-- PAGE-SPECIFIC SEO SCHEMAS (Service & BreadcrumbList) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Smart Factory Consulting for Apparel Manufacturers",
+    "serviceType": "Apparel Industry 4.0 and Smart Factory Consulting",
+    "provider": {
+      "@type": "ProfessionalService",
+      "name": "Cent Edge Consulting Pvt Ltd",
+      "url": "https://centedge.co.in"
+    },
+    "areaServed": [
+      {"@type": "Country", "name": "India"},
+      {"@type": "Country", "name": "Bangladesh"},
+      {"@type": "Country", "name": "Jordan"},
+      {"@type": "Country", "name": "Vietnam"}
+    ],
+    "description": "Scientific Smart Factory advisory for garment manufacturers. Connect MES telemetry, smart cutting rooms, deskilling automation, internal material handling, and digital quality systems.",
+    "url": "https://centedge.co.in/solutions/smart-factory/"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://centedge.co.in/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Solutions",
+        "item": "https://centedge.co.in/solutions/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Smart Factory",
+        "item": "https://centedge.co.in/solutions/smart-factory/"
+      }
+    ]
+  }
+  </script>
+
+  <!-- BREADCRUMB NAVIGATION -->
+  <nav class="breadcrumb-bar" aria-label="Breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb-list">
+        <li><a href="/">Home</a></li>
+        <li class="breadcrumb-separator">/</li>
+        <li><a href="/solutions/">Solutions</a></li>
+        <li class="breadcrumb-separator">/</li>
+        <li class="breadcrumb-current" aria-current="page">Smart Factory Consulting</li>
+      </ol>
+    </div>
+  </nav>
+
+  <main class="page-wrapper">
+    <!-- ============================================================ -->
+    <!-- 1. HERO SECTION WITH IMAGE & METRIC CHIPS -->
+    <!-- ============================================================ -->
+    <section class="hero-section">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <span>Apparel Industry 4.0 &bull; Connected Shop-Floor Intelligence</span>
+          </div>
+          <h1 class="hero-title">
+            Convert Shop-Floor Telemetry into <em>Measurable</em> Apparel Profitability
+          </h1>
+          <p class="hero-desc">
+            A vendor-neutral Smart Factory operating system that integrates real-time MES machine telemetry, automated cutting, deskilling attachments, and digital quality control directly to your plant's P&amp;L.
+          </p>
+          <div class="hero-actions">
+            <a href="/contact/" class="btn-primary">
+              <span>Discuss Your Smart Factory Roadmap</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="https://wa.me/919901422066?text=Hi%20Cent%20Edge%20team,%20we%20want%20to%20discuss%20Smart%20Factory%20consulting%20for%20our%20garment%20factory" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+              </svg>
+              <span>Chat with Smart Factory Specialist</span>
+            </a>
+          </div>
+
+          <div class="hero-trust-row">
+            <div class="trust-badge-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Proven Across 100+ Apparel Lines</span>
+            </div>
+            <div class="trust-badge-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Measurable Pilot ROI in 90 Days</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-image-wrapper">
+            <img 
+              src="/images/pillar-smart-factory.jpg" 
+              alt="Smart Factory Consulting in Garment Plant" 
+              class="hero-illustration"
+              loading="eager"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- KEY RESULTS & BENCHMARKS STRIP -->
+      <div class="results-ticker-strip">
+        <div class="container">
+          <div class="ticker-header-bar">
+            <div class="ticker-badge-live">
+              <span class="live-dot-ping"></span>
+              <span class="live-badge-text">VERIFIED SHOP-FLOOR BENCHMARKS</span>
+            </div>
+            <div class="ticker-header-trust">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              <span>Documented Across 100+ Factory Engagements</span>
+            </div>
+          </div>
+
+          <div class="ticker-cards-row">
+            <div class="ticker-card">
+              <div class="ticker-card-top">
+                <span class="ticker-pill pill-blue">Productivity</span>
+                <div class="ticker-icon-wrap wrap-blue">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="20" x2="18" y2="10"></line>
+                    <line x1="12" y1="20" x2="12" y2="4"></line>
+                    <line x1="6" y1="20" x2="6" y2="14"></line>
+                  </svg>
+                </div>
+              </div>
+              <div class="ticker-card-number">+18–30%</div>
+              <div class="ticker-card-label">Line Output Uplift</div>
+              <div class="ticker-card-footer">
+                <span class="footer-chip">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>MES Pacing Synchronized</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="ticker-card">
+              <div class="ticker-card-top">
+                <span class="ticker-pill pill-indigo">Traceability</span>
+                <div class="ticker-icon-wrap wrap-indigo">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="ticker-card-number">100%</div>
+              <div class="ticker-card-label">Real-Time WIP Visibility</div>
+              <div class="ticker-card-footer">
+                <span class="footer-chip">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Zero Blind WIP Piles</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="ticker-card">
+              <div class="ticker-card-top">
+                <span class="ticker-pill pill-emerald">Downtime Cut</span>
+                <div class="ticker-icon-wrap wrap-emerald">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                </div>
+              </div>
+              <div class="ticker-card-number">15–25%</div>
+              <div class="ticker-card-label">NPT &amp; Stoppages Cut</div>
+              <div class="ticker-card-footer">
+                <span class="footer-chip">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Instant Andon Alerts</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="ticker-card">
+              <div class="ticker-card-top">
+                <span class="ticker-pill pill-amber">Rapid Payback</span>
+                <div class="ticker-icon-wrap wrap-amber">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="12" y1="1" x2="12" y2="23"></line>
+                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="ticker-card-number">3–6 Mo</div>
+              <div class="ticker-card-label">Measurable Technology ROI</div>
+              <div class="ticker-card-footer">
+                <span class="footer-chip">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>P&amp;L Driven CAPEX</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 2. SECTION 2: SHOP-FLOOR CHALLENGES (4 BESPOKE FLAT VECTOR ART) -->
+    <!-- ============================================================ -->
+    <section class="section section-challenges">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag section-tag-danger">Industry Bottlenecks</span>
+          <h2 class="section-title">Where Disconnected Tech &amp; Blind Spots Bleed Plant Margins</h2>
+          <p class="section-subtitle">
+            Most technology adoption in garment factories is bought in isolation without an integrated data thread, creating digital silos and zero compounding ROI.
+          </p>
+        </div>
+
+        <div class="challenges-grid">
+          <!-- Card 1 -->
+          <div class="challenge-card">
+            <div class="challenge-img-box">
+              <svg viewBox="0 0 280 180" class="flat-vector-art" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="280" height="180" rx="12" fill="#f8fafc"/>
+                <!-- Coordinate Grid -->
+                <line x1="40" y1="140" x2="240" y2="140" stroke="#e2e8f0" stroke-width="2"/>
+                <line x1="40" y1="100" x2="240" y2="100" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4 4"/>
+                <line x1="40" y1="60" x2="240" y2="60" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4 4"/>
+                <line x1="40" y1="40" x2="40" y2="140" stroke="#cbd5e1" stroke-width="2"/>
+                <!-- Escalating Cost Curve -->
+                <path d="M40 120 Q110 110 160 70 T240 40" stroke="#ef4444" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+                <!-- Stagnant FOB Price Line -->
+                <line x1="40" y1="95" x2="240" y2="95" stroke="#2563a8" stroke-width="2.5" stroke-dasharray="6 6"/>
+                <!-- Squeeze Shaded Area -->
+                <polygon points="160,70 240,40 240,95 160,95" fill="rgba(239, 68, 68, 0.12)"/>
+                <!-- Badges -->
+                <rect x="145" y="65" width="85" height="20" rx="4" fill="#fee2e2" stroke="#ef4444"/>
+                <text x="187" y="79" font-family="Inter, sans-serif" font-size="9" font-weight="700" fill="#dc2626" text-anchor="middle">MARGIN SQUEEZE</text>
+                <text x="240" y="32" font-family="Inter, sans-serif" font-size="9" font-weight="700" fill="#ef4444" text-anchor="end">Wages &amp; Overheads</text>
+                <text x="240" y="112" font-family="Inter, sans-serif" font-size="9" font-weight="600" fill="#2563a8" text-anchor="end">Customer FOB Price</text>
+              </svg>
+              <span class="challenge-num">01</span>
+            </div>
+            <div class="challenge-body">
+              <span class="challenge-pill pill-danger">Cost Inflation</span>
+              <h3 class="challenge-heading">Cost Without Pricing Power</h3>
+              <p class="challenge-text">
+                Wages, raw materials, and factory utilities escalate year-on-year, while buyer FOB pricing remains compressed or flat across global retail orders.
+              </p>
+              <div class="challenge-impact">
+                <strong>Impact:</strong> Operating margins eroded by 2–4% annually without live productivity tracking.
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="challenge-card">
+            <div class="challenge-img-box">
+              <svg viewBox="0 0 280 180" class="flat-vector-art" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="280" height="180" rx="12" fill="#f8fafc"/>
+                <!-- Baseline -->
+                <line x1="35" y1="140" x2="245" y2="140" stroke="#cbd5e1" stroke-width="2"/>
+                <!-- Region Bars -->
+                <rect x="50" y="90" width="36" height="50" rx="4" fill="#cbd5e1"/>
+                <text x="68" y="156" font-family="Inter, sans-serif" font-size="9.5" font-weight="600" fill="#64748b" text-anchor="middle">Legacy</text>
+                <rect x="110" y="65" width="36" height="75" rx="4" fill="#60a5fa"/>
+                <text x="128" y="156" font-family="Inter, sans-serif" font-size="9.5" font-weight="600" fill="#2563a8" text-anchor="middle">Vietnam</text>
+                <rect x="170" y="40" width="36" height="100" rx="4" fill="#10b981"/>
+                <text x="188" y="156" font-family="Inter, sans-serif" font-size="9.5" font-weight="700" fill="#047857" text-anchor="middle">Smart Hub</text>
+                <!-- Gap Indicator Arrow -->
+                <path d="M68 80 L128 55 L188 30" stroke="#10b981" stroke-width="2" stroke-dasharray="4 4"/>
+                <circle cx="188" cy="30" r="4" fill="#10b981"/>
+                <!-- Alert Badge -->
+                <rect x="60" y="24" width="160" height="22" rx="5" fill="#ecfdf5" stroke="#10b981"/>
+                <text x="140" y="39" font-family="Inter, sans-serif" font-size="9" font-weight="700" fill="#047857" text-anchor="middle">+35% Regional Tech Scale</text>
+              </svg>
+              <span class="challenge-num">02</span>
+            </div>
+            <div class="challenge-body">
+              <span class="challenge-pill pill-amber">Regional Gap</span>
+              <h3 class="challenge-heading">Intensifying Hub Competition</h3>
+              <p class="challenge-text">
+                Competitor hubs in Vietnam, Bangladesh, and Cambodia scale automated cutting and digital MES to outprice conventional, unmonitored plants.
+              </p>
+              <div class="challenge-impact">
+                <strong>Impact:</strong> Buyer order migration to digitized regional apparel competitors.
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="challenge-card">
+            <div class="challenge-img-box">
+              <svg viewBox="0 0 280 180" class="flat-vector-art" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="280" height="180" rx="12" fill="#f8fafc"/>
+                <!-- Baseline -->
+                <line x1="30" y1="135" x2="250" y2="135" stroke="#cbd5e1" stroke-width="2"/>
+                <!-- Operator Variance Bell Curve -->
+                <path d="M45 135 Q100 135 120 70 T140 35 Q160 35 175 70 T235 135" stroke="#f59e0b" stroke-width="3" fill="none"/>
+                <!-- Variance Range Indicators -->
+                <line x1="95" y1="45" x2="95" y2="135" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="3 3"/>
+                <line x1="185" y1="45" x2="185" y2="135" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="3 3"/>
+                <!-- Operator Silhouette -->
+                <circle cx="140" cy="55" r="12" fill="#1a2e4a"/>
+                <path d="M125 80 C125 70 155 70 155 80 V100 H125 Z" fill="#2563a8"/>
+                <!-- Badge -->
+                <rect x="75" y="18" width="130" height="22" rx="5" fill="#fef2f2" stroke="#ef4444"/>
+                <text x="140" y="33" font-family="Inter, sans-serif" font-size="9" font-weight="700" fill="#dc2626" text-anchor="middle">&plusmn;35% Operator Variance</text>
+              </svg>
+              <span class="challenge-num">03</span>
+            </div>
+            <div class="challenge-body">
+              <span class="challenge-pill pill-warning">Skill Scarcity</span>
+              <h3 class="challenge-heading">Critical Operator Dependency</h3>
+              <p class="challenge-text">
+                Skilled sewing operators are increasingly scarce. Without standardized deskilling jigs and digital SOPs, line volatility remains unacceptably high.
+              </p>
+              <div class="challenge-impact">
+                <strong>Impact:</strong> Heavy efficiency dips during style changeovers and high absenteeism.
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="challenge-card">
+            <div class="challenge-img-box">
+              <svg viewBox="0 0 280 180" class="flat-vector-art" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="280" height="180" rx="12" fill="#f8fafc"/>
+                <!-- 3 Silo Boxes -->
+                <rect x="35" y="55" width="55" height="50" rx="6" fill="#ffffff" stroke="#64748b" stroke-width="2"/>
+                <text x="62" y="78" font-family="Inter, sans-serif" font-size="9" font-weight="700" fill="#1a2e4a" text-anchor="middle">CAD</text>
+                <text x="62" y="93" font-family="Inter, sans-serif" font-size="8" font-weight="500" fill="#64748b" text-anchor="middle">Silo 1</text>
+
+                <rect x="112" y="55" width="55" height="50" rx="6" fill="#ffffff" stroke="#64748b" stroke-width="2"/>
+                <text x="139" y="78" font-family="Inter, sans-serif" font-size="9" font-weight="700" fill="#1a2e4a" text-anchor="middle">SEW</text>
+                <text x="139" y="93" font-family="Inter, sans-serif" font-size="8" font-weight="500" fill="#64748b" text-anchor="middle">Silo 2</text>
+
+                <rect x="190" y="55" width="55" height="50" rx="6" fill="#ffffff" stroke="#64748b" stroke-width="2"/>
+                <text x="217" y="78" font-family="Inter, sans-serif" font-size="9" font-weight="700" fill="#1a2e4a" text-anchor="middle">PACK</text>
+                <text x="217" y="93" font-family="Inter, sans-serif" font-size="8" font-weight="500" fill="#64748b" text-anchor="middle">Silo 3</text>
+
+                <!-- Broken Links with red X -->
+                <line x1="90" y1="80" x2="112" y2="80" stroke="#ef4444" stroke-width="2" stroke-dasharray="3 3"/>
+                <circle cx="101" cy="80" r="7" fill="#fee2e2" stroke="#ef4444"/>
+                <text x="101" y="84" font-family="Inter, sans-serif" font-size="9" font-weight="800" fill="#dc2626" text-anchor="middle">&times;</text>
+
+                <line x1="167" y1="80" x2="190" y2="80" stroke="#ef4444" stroke-width="2" stroke-dasharray="3 3"/>
+                <circle cx="178" cy="80" r="7" fill="#fee2e2" stroke="#ef4444"/>
+                <text x="178" y="84" font-family="Inter, sans-serif" font-size="9" font-weight="800" fill="#dc2626" text-anchor="middle">&times;</text>
+
+                <!-- Badge -->
+                <rect x="70" y="130" width="140" height="22" rx="5" fill="#fef2f2" stroke="#ef4444"/>
+                <text x="140" y="145" font-family="Inter, sans-serif" font-size="9" font-weight="700" fill="#dc2626" text-anchor="middle">No Integrated Data Thread</text>
+              </svg>
+              <span class="challenge-num">04</span>
+            </div>
+            <div class="challenge-body">
+              <span class="challenge-pill pill-danger">Digital Blind Spots</span>
+              <h3 class="challenge-heading">Disconnected Tech Silos</h3>
+              <p class="challenge-text">
+                Purchasing individual software tools or automated stations without an integrated data thread creates digital silos with zero compounding ROI.
+              </p>
+              <div class="challenge-impact">
+                <strong>Impact:</strong> Expensive software shelfware and uncalibrated shop-floor bottlenecks.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 3. SECTION 3: THE 6 CORE SMART FACTORY LEVERS (MODULES) -->
+    <!-- ============================================================ -->
+    <section class="section section-modules" id="levers">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag section-tag-primary">The 6 Core Levers</span>
+          <h2 class="section-title">The Foundational Levers of a Connected Garment Plant</h2>
+          <p class="section-subtitle">
+            From real-time machine telemetry to automated cutting and digital quality control, we build systems that synchronize your entire manufacturing value chain.
+          </p>
+        </div>
+
+        <div class="modules-grid">
+          <!-- Module 1: MES & Real-Time Machine Telemetry -->
+          <div class="module-card">
+            <div class="module-art-box">
+              <svg viewBox="0 0 320 180" class="module-svg" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="320" height="180" rx="14" fill="#eff6ff"/>
+                <!-- Machine Console Box -->
+                <rect x="35" y="35" width="105" height="110" rx="8" fill="#ffffff" stroke="#2563a8" stroke-width="2"/>
+                <rect x="47" y="48" width="81" height="34" rx="4" fill="#1a2e4a"/>
+                <text x="87" y="69" font-family="Inter, sans-serif" font-size="13" font-weight="800" fill="#10b981" text-anchor="middle">94.2% OEE</text>
+                <circle cx="58" cy="105" r="7" fill="#10b981"/>
+                <text x="73" y="109" font-family="Inter, sans-serif" font-size="9" font-weight="700" fill="#1e293b">LIVE PACE</text>
+                <rect x="47" y="122" width="81" height="12" rx="3" fill="#e0f2fe"/>
+                <rect x="47" y="122" width="62" height="12" rx="3" fill="#2563a8"/>
+
+                <!-- Telemetry Wave Link -->
+                <path d="M140 90 H180" stroke="#2563a8" stroke-width="3" stroke-dasharray="4 4"/>
+                <circle cx="160" cy="90" r="5" fill="#2563a8"/>
+
+                <!-- Supervisor Tablet -->
+                <rect x="185" y="35" width="100" height="110" rx="8" fill="#ffffff" stroke="#1e293b" stroke-width="2"/>
+                <rect x="195" y="48" width="80" height="12" rx="3" fill="#f1f5f9"/>
+                <text x="235" y="58" font-family="Inter, sans-serif" font-size="8.5" font-weight="700" fill="#1a2e4a" text-anchor="middle">LINE 04 BOTTLENECK</text>
+                <!-- Live Bar Graph on Tablet -->
+                <rect x="200" y="70" width="12" height="55" rx="2" fill="#2563a8"/>
+                <rect x="218" y="85" width="12" height="40" rx="2" fill="#2563a8"/>
+                <rect x="236" y="60" width="12" height="65" rx="2" fill="#ef4444"/>
+                <rect x="254" y="90" width="12" height="35" rx="2" fill="#10b981"/>
+                <!-- Instant Andon Pill -->
+                <rect x="195" y="132" width="80" height="12" rx="3" fill="#fee2e2"/>
+                <text x="235" y="141" font-family="Inter, sans-serif" font-size="7.5" font-weight="700" fill="#dc2626" text-anchor="middle">&bull; ANDON TRIGGERED</text>
+              </svg>
+            </div>
+            <div class="module-body">
+              <div class="module-badge-row">
+                <span class="module-num-badge">LEVER 01</span>
+                <span class="module-subtag">Floor Telemetry</span>
+              </div>
+              <h3 class="module-heading">MES &amp; Real-Time Machine Telemetry</h3>
+              <p class="module-desc">
+                Digitize sewing floor execution with non-invasive IoT sensors and terminal tablets, turning static end-of-day reports into live hourly management control.
+              </p>
+              <ul class="module-points">
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Non-invasive optical &amp; needle-run sensors for instant cycle time logging</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Real-time operator pacing screens displaying earned hours vs standard SAM</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Instant Andon call buttons for mechanics, quality inspectors, and bundle feeders</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Supervisor mobile dashboards alerting to line bottlenecks within 3 minutes</span>
+                </li>
+              </ul>
+              <div class="module-footer">
+                <span class="kpi-chip">
+                  <strong>Expected Impact:</strong> 8–15% efficiency recovery &amp; 30% lower non-productive time
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Module 2: Connected Smart Cutting Room -->
+          <div class="module-card">
+            <div class="module-art-box">
+              <svg viewBox="0 0 320 180" class="module-svg" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="320" height="180" rx="14" fill="#eff6ff"/>
+                <!-- 4 Connected Cutting Steps Flow -->
+                <rect x="20" y="55" width="55" height="65" rx="6" fill="#ffffff" stroke="#2563a8" stroke-width="2"/>
+                <text x="47" y="80" font-family="Inter, sans-serif" font-size="10" font-weight="800" fill="#2563a8" text-anchor="middle">CAD</text>
+                <text x="47" y="96" font-family="Inter, sans-serif" font-size="8" font-weight="600" fill="#64748b" text-anchor="middle">Auto-Nest</text>
+                <path d="M75 87 H92" stroke="#2563a8" stroke-width="2"/>
+
+                <rect x="94" y="55" width="55" height="65" rx="6" fill="#ffffff" stroke="#2563a8" stroke-width="2"/>
+                <text x="121" y="80" font-family="Inter, sans-serif" font-size="10" font-weight="800" fill="#2563a8" text-anchor="middle">ROLL</text>
+                <text x="121" y="96" font-family="Inter, sans-serif" font-size="8" font-weight="600" fill="#64748b" text-anchor="middle">RFID Sync</text>
+                <path d="M149 87 H166" stroke="#2563a8" stroke-width="2"/>
+
+                <rect x="168" y="55" width="55" height="65" rx="6" fill="#ffffff" stroke="#2563a8" stroke-width="2"/>
+                <text x="195" y="80" font-family="Inter, sans-serif" font-size="10" font-weight="800" fill="#2563a8" text-anchor="middle">SPREAD</text>
+                <text x="195" y="96" font-family="Inter, sans-serif" font-size="8" font-weight="600" fill="#64748b" text-anchor="middle">Tensionless</text>
+                <path d="M223 87 H240" stroke="#2563a8" stroke-width="2"/>
+
+                <rect x="242" y="55" width="60" height="65" rx="6" fill="#10b981" stroke="#059669" stroke-width="2"/>
+                <text x="272" y="80" font-family="Inter, sans-serif" font-size="10" font-weight="800" fill="#ffffff" text-anchor="middle">CNC CUT</text>
+                <text x="272" y="96" font-family="Inter, sans-serif" font-size="8" font-weight="700" fill="#dcfce7" text-anchor="middle">Zero Defect</text>
+
+                <!-- Value Badge -->
+                <rect x="65" y="135" width="190" height="22" rx="5" fill="#ffffff" stroke="#2563a8"/>
+                <text x="160" y="150" font-family="Inter, sans-serif" font-size="9" font-weight="700" fill="#1a2e4a" text-anchor="middle">Direct Fabric Yield Recovery: 1.5–3.0%</text>
+              </svg>
+            </div>
+            <div class="module-body">
+              <div class="module-badge-row">
+                <span class="module-num-badge">LEVER 02</span>
+                <span class="module-subtag">Material Yield</span>
+              </div>
+              <h3 class="module-heading">Connected Smart Cutting Room</h3>
+              <p class="module-desc">
+                Connect CAD nesting software directly with automated fabric spreading and CNC cutters, capturing 60–70% of total garment cost where it is determined.
+              </p>
+              <ul class="module-points">
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>End-bit management and roll length tracking eliminating cut-order overruns</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Automated tensionless spreading synchronized to fabric stretch characteristics</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>CNC knife velocity calibration preventing ply-to-ply perimeter distortion</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Automated ply-numbering and barcode ticket printing for line traceability</span>
+                </li>
+              </ul>
+              <div class="module-footer">
+                <span class="kpi-chip">
+                  <strong>Expected Impact:</strong> 1.5–3.0% fabric utilization savings &amp; zero shade mismatch
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Module 3: Automation & Workstation Deskilling -->
+          <div class="module-card">
+            <div class="module-art-box">
+              <svg viewBox="0 0 320 180" class="module-svg" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="320" height="180" rx="14" fill="#eff6ff"/>
+                <!-- Deskilling Workstation Jig Graphic -->
+                <rect x="40" y="40" width="130" height="100" rx="8" fill="#ffffff" stroke="#2563a8" stroke-width="2"/>
+                <circle cx="85" cy="75" r="22" fill="#e0f2fe" stroke="#2563a8" stroke-width="2"/>
+                <path d="M85 62 V88 M72 75 H98" stroke="#2563a8" stroke-width="3" stroke-linecap="round"/>
+                <rect x="120" y="60" width="40" height="40" rx="4" fill="#f8fafc" stroke="#64748b"/>
+                <text x="140" y="84" font-family="Inter, sans-serif" font-size="9" font-weight="700" fill="#1e293b" text-anchor="middle">JIG</text>
+                <text x="140" y="125" font-family="Inter, sans-serif" font-size="9" font-weight="700" fill="#2563a8" text-anchor="middle">Pneumatic Guide</text>
+
+                <!-- Outcome Arrow -->
+                <path d="M180 90 H210" stroke="#10b981" stroke-width="3"/>
+                <polygon points="210,84 220,90 210,96" fill="#10b981"/>
+
+                <!-- Deskilled Result Card -->
+                <rect x="225" y="40" width="65" height="100" rx="8" fill="#10b981"/>
+                <text x="257" y="75" font-family="Inter, sans-serif" font-size="14" font-weight="800" fill="#ffffff" text-anchor="middle">-42%</text>
+                <text x="257" y="95" font-family="Inter, sans-serif" font-size="9" font-weight="700" fill="#dcfce7" text-anchor="middle">SAM TIME</text>
+                <text x="257" y="115" font-family="Inter, sans-serif" font-size="8" font-weight="700" fill="#ffffff" text-anchor="middle">DESKILLED</text>
+              </svg>
+            </div>
+            <div class="module-body">
+              <div class="module-badge-row">
+                <span class="module-num-badge">LEVER 03</span>
+                <span class="module-subtag">Labor Engineering</span>
+              </div>
+              <h3 class="module-heading">Automation &amp; Workstation Deskilling</h3>
+              <p class="module-desc">
+                Targeted mechanization and low-cost intelligent automation (LCIA) that removes high-dexterity operator bottlenecks and stabilizes standard time.
+              </p>
+              <ul class="module-points">
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Pneumatic folding attachments for collar setting, placket folding, and pocket welting</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Programmable pattern clamp sewers for critical decorative and structural seams</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Automatic stackers and thread trimmers eliminating non-value handling motions</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Rapid training matrices enabling new hires to reach target pitch efficiency in days</span>
+                </li>
+              </ul>
+              <div class="module-footer">
+                <span class="kpi-chip">
+                  <strong>Expected Impact:</strong> 20–40% SAM reduction on critical stations &amp; lower skill dependency
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Module 4: Intelligent Material Handling & Logistics -->
+          <div class="module-card">
+            <div class="module-art-box">
+              <svg viewBox="0 0 320 180" class="module-svg" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="320" height="180" rx="14" fill="#eff6ff"/>
+                <!-- Overhead Hanging Track -->
+                <line x1="30" y1="40" x2="290" y2="40" stroke="#1e293b" stroke-width="4"/>
+                <!-- Hangers Routing Along Track -->
+                <path d="M70 40 V65 L58 78 H82 Z" stroke="#2563a8" stroke-width="2" fill="#ffffff"/>
+                <path d="M140 40 V65 L128 78 H152 Z" stroke="#2563a8" stroke-width="2" fill="#ffffff"/>
+                <path d="M210 40 V65 L198 78 H222 Z" stroke="#2563a8" stroke-width="2" fill="#ffffff"/>
+                <path d="M275 40 V65 L263 78 H287 Z" stroke="#2563a8" stroke-width="2" fill="#ffffff"/>
+                <text x="160" y="28" font-family="Inter, sans-serif" font-size="9" font-weight="700" fill="#2563a8" text-anchor="middle">OVERHEAD UNIT PRODUCTION SYSTEM (UPS)</text>
+
+                <!-- Floor AGV Transit -->
+                <rect x="95" y="110" width="105" height="32" rx="6" fill="#ffffff" stroke="#2563a8" stroke-width="2"/>
+                <circle cx="115" cy="144" r="6" fill="#1e293b"/>
+                <circle cx="180" cy="144" r="6" fill="#1e293b"/>
+                <text x="147" y="130" font-family="Inter, sans-serif" font-size="9.5" font-weight="700" fill="#2563a8" text-anchor="middle">AGV FLOOR CART</text>
+                <path d="M210 126 H260" stroke="#10b981" stroke-width="2.5" stroke-dasharray="4 4"/>
+                <polygon points="260,121 268,126 260,131" fill="#10b981"/>
+              </svg>
+            </div>
+            <div class="module-body">
+              <div class="module-badge-row">
+                <span class="module-num-badge">LEVER 04</span>
+                <span class="module-subtag">Internal Logistics</span>
+              </div>
+              <h3 class="module-heading">Intelligent Material Logistics &amp; Flow</h3>
+              <p class="module-desc">
+                Eliminate manual bundle hauling and messy gangway WIP piles with synchronized overhead conveyors, AGVs, and vertical gravity chutes.
+              </p>
+              <ul class="module-points">
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Unit Production Systems (UPS) and overhead tracks routing pieces directly to needles</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Autonomous Guided Vehicles (AGV/AMR) for roll dispatch and finished bundle transit</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Vertical spiral chutes moving cut bundles from cutting floors to sewing gangways</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Strict FIFO discipline ensuring zero buried orders and faster throughput velocity</span>
+                </li>
+              </ul>
+              <div class="module-footer">
+                <span class="kpi-chip">
+                  <strong>Expected Impact:</strong> 40% reduction in shop-floor WIP &amp; 25% faster dock-to-dock cycle
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Module 5: Smart IE & Digital Quality Systems -->
+          <div class="module-card">
+            <div class="module-art-box">
+              <svg viewBox="0 0 320 180" class="module-svg" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="320" height="180" rx="14" fill="#eff6ff"/>
+                <!-- Digitized Yamazumi Pitch Balance -->
+                <rect x="25" y="30" width="135" height="120" rx="8" fill="#ffffff" stroke="#2563a8" stroke-width="2"/>
+                <text x="92" y="50" font-family="Inter, sans-serif" font-size="9" font-weight="700" fill="#1a2e4a" text-anchor="middle">LIVE YAMAZUMI BALANCE</text>
+                <rect x="37" y="80" width="16" height="55" rx="3" fill="#2563a8"/>
+                <rect x="58" y="72" width="16" height="63" rx="3" fill="#2563a8"/>
+                <rect x="79" y="75" width="16" height="60" rx="3" fill="#2563a8"/>
+                <rect x="100" y="68" width="16" height="67" rx="3" fill="#2563a8"/>
+                <rect x="121" y="76" width="16" height="59" rx="3" fill="#2563a8"/>
+                <line x1="30" y1="73" x2="150" y2="73" stroke="#ef4444" stroke-width="2" stroke-dasharray="4 4"/>
+                <text x="92" y="145" font-family="Inter, sans-serif" font-size="8" font-weight="600" fill="#10b981" text-anchor="middle">92.4% Pitch Efficiency</text>
+
+                <!-- Traffic Light Quality Status -->
+                <rect x="175" y="30" width="120" height="120" rx="8" fill="#ffffff" stroke="#1e293b" stroke-width="2"/>
+                <text x="235" y="50" font-family="Inter, sans-serif" font-size="9" font-weight="700" fill="#1a2e4a" text-anchor="middle">DIGITAL QUALITY DHU</text>
+                <circle cx="235" cy="85" r="24" fill="#dcfce7" stroke="#10b981" stroke-width="2"/>
+                <text x="235" y="90" font-family="Inter, sans-serif" font-size="12" font-weight="800" fill="#15803d" text-anchor="middle">&lt;1.2%</text>
+                <!-- Automatic Intervention Alert -->
+                <rect x="185" y="122" width="100" height="18" rx="4" fill="#f8fafc" stroke="#cbd5e1"/>
+                <text x="235" y="135" font-family="Inter, sans-serif" font-size="8" font-weight="700" fill="#475569" text-anchor="middle">AUTO INTERVENTION</text>
+              </svg>
+            </div>
+            <div class="module-body">
+              <div class="module-badge-row">
+                <span class="module-num-badge">LEVER 05</span>
+                <span class="module-subtag">Quality &amp; IE Balance</span>
+              </div>
+              <h3 class="module-heading">Smart IE &amp; Digital Quality Systems</h3>
+              <p class="module-desc">
+                Replaces paper quality sheets and manual stopwatches with tablet-based defect logging, instant traffic-light andons, and dynamic line balancing.
+              </p>
+              <ul class="module-points">
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Tablet-based end-of-line and roving DHU inspection logging defects in real time</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Instant traffic-light alerts triggering line interventions when DHU spikes above threshold</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Digital Yamazumi line pitch diagrams recalculating re-balance options in 15 minutes</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Historical defect heatmaps guiding targeted operator re-training and needle maintenance</span>
+                </li>
+              </ul>
+              <div class="module-footer">
+                <span class="kpi-chip">
+                  <strong>Expected Impact:</strong> 35–50% DHU reduction &amp; 90%+ line balancing efficiency
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Module 6: Enterprise IoT & Plant Cockpit -->
+          <div class="module-card">
+            <div class="module-art-box">
+              <svg viewBox="0 0 320 180" class="module-svg" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="320" height="180" rx="14" fill="#eff6ff"/>
+                <!-- Central Cockpit Screen -->
+                <rect x="35" y="30" width="250" height="120" rx="8" fill="#1a2e4a" stroke="#2563a8" stroke-width="2"/>
+                <!-- Cockpit Top Bar -->
+                <rect x="45" y="40" width="100" height="10" rx="3" fill="#3b82f6"/>
+                <circle cx="270" cy="45" r="4" fill="#10b981"/>
+                <!-- 3 Metric Dash Cards -->
+                <rect x="45" y="60" width="68" height="70" rx="4" fill="#2563a8"/>
+                <text x="79" y="80" font-family="Inter, sans-serif" font-size="8" font-weight="600" fill="#dbeafe" text-anchor="middle">PLANT OEE</text>
+                <text x="79" y="105" font-family="Inter, sans-serif" font-size="14" font-weight="800" fill="#ffffff" text-anchor="middle">88.4%</text>
+
+                <rect x="122" y="60" width="76" height="70" rx="4" fill="#1e293b"/>
+                <text x="160" y="80" font-family="Inter, sans-serif" font-size="8" font-weight="600" fill="#94a3b8" text-anchor="middle">ENERGY / PC</text>
+                <text x="160" y="105" font-family="Inter, sans-serif" font-size="13" font-weight="800" fill="#10b981" text-anchor="middle">-14% kWh</text>
+
+                <rect x="207" y="60" width="68" height="70" rx="4" fill="#1e293b"/>
+                <text x="241" y="80" font-family="Inter, sans-serif" font-size="8" font-weight="600" fill="#94a3b8" text-anchor="middle">TPM UPTIME</text>
+                <text x="241" y="105" font-family="Inter, sans-serif" font-size="13" font-weight="800" fill="#f59e0b" text-anchor="middle">98.9%</text>
+              </svg>
+            </div>
+            <div class="module-body">
+              <div class="module-badge-row">
+                <span class="module-num-badge">LEVER 06</span>
+                <span class="module-subtag">Enterprise Cockpit</span>
+              </div>
+              <h3 class="module-heading">Enterprise Scope &amp; Management Cockpit</h3>
+              <p class="module-desc">
+                Extend smart factory intelligence across plant utilities, predictive TPM maintenance, ERP order synchronization, and C-suite performance visibility.
+              </p>
+              <ul class="module-points">
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Smart energy submetering tracking kWh, compressed air leakage, and steam cost per garment</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Predictive TPM vibration sensors alerting to motor bearing failures before line stoppages</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Automated synchronization between floor MES piece counters and enterprise ERP / FastReact</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Central Operations Cockpit displaying multi-factory benchmarks for executive leadership</span>
+                </li>
+              </ul>
+              <div class="module-footer">
+                <span class="kpi-chip">
+                  <strong>Expected Impact:</strong> 12–18% energy savings &amp; complete executive operational transparency
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 4. SECTION 4: TRANSFORMATION ROADMAP (5 PHASES) -->
+    <!-- ============================================================ -->
+    <section class="section section-roadmap" id="roadmap">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag section-tag-primary">Implementation Methodology</span>
+          <h2 class="section-title">A Clear, Phased Smart Factory Roadmap</h2>
+          <p class="section-subtitle">
+            We de-risk technology investments through a disciplined 5-phase transformation model, proving business case ROI on a pilot line before plant-wide scale.
+          </p>
+        </div>
+
+        <div class="roadmap-grid">
+          <!-- Step 1 -->
+          <div class="roadmap-card">
+            <div class="roadmap-header">
+              <div class="roadmap-badge">Phase 01</div>
+              <div class="roadmap-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563a8" stroke-width="2.2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              </div>
+            </div>
+            <h3 class="roadmap-title">Diagnostic &amp; Baseline</h3>
+            <p class="roadmap-desc">
+              Evaluate current machine capabilities, IT/OT infrastructure, Wi-Fi networks, and identify highest-ROI floor constraints.
+            </p>
+            <div class="roadmap-milestone">
+              <strong>Milestone:</strong> Technology readiness score &amp; baseline cost-per-minute audit.
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="roadmap-card">
+            <div class="roadmap-header">
+              <div class="roadmap-badge">Phase 02</div>
+              <div class="roadmap-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563a8" stroke-width="2.2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              </div>
+            </div>
+            <h3 class="roadmap-title">Architecture &amp; Roadmap</h3>
+            <p class="roadmap-desc">
+              Design vendor-agnostic technology architecture, calculate hardware/software payback, and define integration standards.
+            </p>
+            <div class="roadmap-milestone">
+              <strong>Milestone:</strong> Concrete 3-year CAPEX roadmap with guaranteed ROI metrics.
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="roadmap-card">
+            <div class="roadmap-header">
+              <div class="roadmap-badge">Phase 03</div>
+              <div class="roadmap-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563a8" stroke-width="2.2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+              </div>
+            </div>
+            <h3 class="roadmap-title">Focused 90-Day Pilot</h3>
+            <p class="roadmap-desc">
+              Deploy MES telemetry, deskilling jigs, and digital quality on 1 designated model line to calibrate and prove the concept.
+            </p>
+            <div class="roadmap-milestone">
+              <strong>Milestone:</strong> Target efficiency lift documented on live buyer production orders.
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="roadmap-card">
+            <div class="roadmap-header">
+              <div class="roadmap-badge">Phase 04</div>
+              <div class="roadmap-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563a8" stroke-width="2.2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+              </div>
+            </div>
+            <h3 class="roadmap-title">Plant-Wide Rollout</h3>
+            <p class="roadmap-desc">
+              Scale connected hardware across all cutting, sewing, and finishing lines with structured supervisor training.
+            </p>
+            <div class="roadmap-milestone">
+              <strong>Milestone:</strong> 100% factory digital coverage with real-time ERP synchronization.
+            </div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="roadmap-card highlight-card">
+            <div class="roadmap-header">
+              <div class="roadmap-badge badge-gold">Phase 05</div>
+              <div class="roadmap-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2.2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+              </div>
+            </div>
+            <h3 class="roadmap-title">Govern &amp; Sustain</h3>
+            <p class="roadmap-desc">
+              Institutionalize digital SOPs, predictive TPM routines, and daily tier-meeting governance that the factory owns forever.
+            </p>
+            <div class="roadmap-milestone">
+              <strong>Milestone:</strong> Autonomous digital culture &amp; continuous margin expansion.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 5. SECTION 5: PHILOSOPHY & OPERATING SYSTEM COMPARISON -->
+    <!-- ============================================================ -->
+    <section class="section section-operating-system">
+      <div class="container">
+        <div class="os-card">
+          <div class="os-header">
+            <span class="os-badge">Core Operating Philosophy</span>
+            <h2 class="os-title">Smart Factory Cannot Be Built on Operational Quicksand</h2>
+            <p class="os-lead">
+              Automating an unstable, chaotic production line only produces expensive automated chaos. Cent Edge builds smart factories on solid Lean &amp; IE foundations.
+            </p>
+          </div>
+
+          <div class="os-comparison-grid">
+            <div class="os-comp-box comp-traditional">
+              <div class="comp-title-bar title-traditional">
+                <span class="comp-icon">&times;</span>
+                <h3>What Most Factories Chase (Vendor Silos)</h3>
+              </div>
+              <ul class="comp-list">
+                <li>A technology or two bought in isolation without an integrated common data thread.</li>
+                <li>Automation thrown at the loudest bottleneck while upstream cut schedules remain unstable.</li>
+                <li>Machinery and software vendor sales roadmaps adopted as the plant's strategy.</li>
+                <li>Operators and supervisors treating new screens as policing tools rather than helpers.</li>
+                <li>Expensive software shelfware discarded once initial consultant enthusiasm fades.</li>
+              </ul>
+            </div>
+
+            <div class="os-comp-box comp-centedge">
+              <div class="comp-title-bar title-centedge">
+                <span class="comp-icon">&#10003;</span>
+                <h3>The Cent Edge Smart Factory Operating System</h3>
+              </div>
+              <ul class="comp-list">
+                <li>One connected system acting on the same real-time truth from cut to carton.</li>
+                <li>Automation sequenced against proven business outcomes (cost/min and throughput recovery).</li>
+                <li>Disciplined 5S, optimized line layouts, and calibrated SMVs implemented before sensors.</li>
+                <li>Transparent operator pacing screens designed to empower workers and reduce fatigue.</li>
+                <li>A sustainable operating standard institutionalized into daily management routines.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="os-decision-footer">
+            <div class="decision-text">
+              <strong>Strategic Decision:</strong> Technology adoption must serve plant P&amp;L economics. By combining robust Industrial Engineering standards with vendor-neutral IoT and digital quality tools, Cent Edge delivers compounding manufacturing returns.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 6. SECTION 6: MEASURABLE BUSINESS IMPACT (6 PILLARS) -->
+    <!-- ============================================================ -->
+    <section class="section section-impact">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag section-tag-emerald">Business Impact</span>
+          <h2 class="section-title">Measurable Manufacturing ROI from Connected Operations</h2>
+          <p class="section-subtitle">
+            Whether your plant runs high-volume basics or fast-turn fashion, Cent Edge's Smart Factory advisory converts digital investment into hard P&amp;L gains.
+          </p>
+        </div>
+
+        <div class="impact-grid">
+          <div class="impact-card">
+            <div class="impact-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563a8" stroke-width="2.2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+            </div>
+            <h3 class="impact-heading">Higher Line Productivity (+18–30%)</h3>
+            <p class="impact-body">Instant bottleneck visibility and live operator pacing screens recover lost minutes across all sewing lines.</p>
+          </div>
+
+          <div class="impact-card">
+            <div class="impact-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+            </div>
+            <h3 class="impact-heading">100% Real-Time WIP Visibility</h3>
+            <p class="impact-body">Replace delayed end-of-day tally sheets with live bundle and piece traceability from cutting to packing.</p>
+          </div>
+
+          <div class="impact-card">
+            <div class="impact-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563a8" stroke-width="2.2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+            </div>
+            <h3 class="impact-heading">1.5–3.0% Fabric Yield Savings</h3>
+            <p class="impact-body">End-to-end roll barcode planning and CNC automated cutting maximize markers and eliminate end-bit waste.</p>
+          </div>
+
+          <div class="impact-card">
+            <div class="impact-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <h3 class="impact-heading">30% Lower Non-Productive Time</h3>
+            <p class="impact-body">Wireless Andon call systems reduce mechanic response times from 25 minutes down to under 3 minutes.</p>
+          </div>
+
+          <div class="impact-card">
+            <div class="impact-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563a8" stroke-width="2.2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+            </div>
+            <h3 class="impact-heading">Reduced Operator Scarcity Dependency</h3>
+            <p class="impact-body">Dedicated workstation jigs and pneumatic guides allow semi-skilled workers to produce master-quality seams.</p>
+          </div>
+
+          <div class="impact-card">
+            <div class="impact-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            </div>
+            <h3 class="impact-heading">Measurable 3–6 Month Payback</h3>
+            <p class="impact-body">Every dollar of CAPEX is strictly modeled against labor cost per minute, fabric yield, and throughput recovery.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 7. BOTTOM CTA SECTION -->
+    <!-- ============================================================ -->
+    <section class="section section-cta">
+      <div class="container">
+        <div class="cta-banner">
+          <div class="cta-inner text-center">
+            <span class="cta-tag">Take the Next Step</span>
+            <h2 class="cta-title">Ready to Build a Truly Connected Garment Factory?</h2>
+            <p class="cta-desc">
+              Book a comprehensive Cent Edge Smart Factory Diagnostic Assessment. We evaluate your shop-floor digital readiness, quantify bottleneck losses, and deliver an actionable technology ROI roadmap.
+            </p>
+            <div class="cta-actions">
+              <a href="/contact/" class="btn-primary btn-cta">
+                <span>Book a Smart Factory Diagnostic</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <a href="https://wa.me/919901422066?text=Hi%20Cent%20Edge%20team,%20we%20want%20to%20schedule%20a%20Smart%20Factory%20diagnostic%20for%20our%20plant" target="_blank" rel="noopener noreferrer" class="btn-secondary btn-cta-secondary">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                </svg>
+                <span>WhatsApp Instant Inquiry</span>
+              </a>
+            </div>
+            <div class="cta-trust-note">
+              <span>Confidential on-site audit &bull; Non-disruptive shop-floor assessment &bull; Actionable executive debrief</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  /* -------------------------------------------------- */
+  /* BREADCRUMB NAVIGATION */
+  /* -------------------------------------------------- */
+  .breadcrumb-bar {
+    background: #f8fafc;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 0.85rem 0;
+    font-size: 0.88rem;
+  }
+  .breadcrumb-list {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: #64748b;
+  }
+  .breadcrumb-list a {
+    color: #1a2e4a;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  .breadcrumb-list a:hover {
+    color: #f47957;
+  }
+  .breadcrumb-separator {
+    color: #94a3b8;
+  }
+  .breadcrumb-current {
+    color: #f47957;
+    font-weight: 600;
+  }
+
+  /* -------------------------------------------------- */
+  /* DESIGN TOKENS */
+  /* -------------------------------------------------- */
+  :root {
+    --ce-navy: #1a2e4a;
+    --ce-navy-dark: #122035;
+    --ce-blue: #2563a8;
+    --ce-blue-light: #e0f2fe;
+    --ce-blue-soft: #f0f7ff;
+    --ce-coral: #f47957;
+    --ce-emerald: #10b981;
+    --ce-slate-dark: #1e293b;
+    --ce-slate-body: #475569;
+    --ce-slate-light: #64748b;
+    --ce-card-bg: #ffffff;
+    --ce-border: #e2e8f0;
+    --ce-shadow-sm: 0 2px 8px rgba(26, 46, 74, 0.06);
+    --ce-shadow-md: 0 8px 24px rgba(26, 46, 74, 0.09);
+    --ce-shadow-lg: 0 16px 40px rgba(26, 46, 74, 0.12);
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .page-wrapper {
+    overflow-x: hidden;
+  }
+
+  /* -------------------------------------------------- */
+  /* TYPOGRAPHY & SECTION HEADERS */
+  /* -------------------------------------------------- */
+  .section {
+    padding: 80px 0;
+  }
+
+  .section-header {
+    max-width: 760px;
+    margin: 0 auto 52px;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .section-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 6px 14px;
+    border-radius: 9999px;
+    margin-bottom: 16px;
+  }
+
+  .section-tag-primary {
+    background: #e0f2fe;
+    color: var(--ce-blue);
+  }
+
+  .section-tag-danger {
+    background: #fee2e2;
+    color: #dc2626;
+  }
+
+  .section-tag-emerald {
+    background: #d1fae5;
+    color: #059669;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.35rem;
+    color: var(--ce-navy);
+    line-height: 1.25;
+    margin: 0 0 16px;
+    font-weight: 700;
+  }
+
+  .section-subtitle {
+    font-size: 1.05rem;
+    color: var(--ce-slate-body);
+    line-height: 1.65;
+    margin: 0;
+  }
+
+  /* -------------------------------------------------- */
+  /* 1. HERO SECTION */
+  /* -------------------------------------------------- */
+  .hero-section {
+    background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 50%, #f8fafc 100%);
+    padding: 60px 0 0;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid var(--ce-border);
+  }
+
+  .hero-container {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 48px;
+    align-items: center;
+    padding-bottom: 50px;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #ffffff;
+    border: 1px solid #bfdbfe;
+    color: var(--ce-blue);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 9999px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(37, 99, 168, 0.08);
+  }
+
+  .badge-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #10b981;
+  }
+
+  .hero-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.85rem;
+    color: var(--ce-navy);
+    line-height: 1.2;
+    margin: 0 0 20px;
+    font-weight: 800;
+  }
+
+  .hero-title em {
+    font-style: italic;
+    color: var(--ce-blue);
+  }
+
+  .hero-desc {
+    font-size: 1.125rem;
+    color: var(--ce-slate-body);
+    line-height: 1.65;
+    margin: 0 0 32px;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    background: var(--ce-navy);
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 12px rgba(26, 46, 74, 0.15);
+  }
+
+  .btn-primary:hover {
+    background: var(--ce-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(37, 99, 168, 0.25);
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #ffffff;
+    color: var(--ce-navy);
+    border: 1px solid var(--ce-border);
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 14px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+  }
+
+  .btn-secondary:hover {
+    border-color: #25D366;
+    color: #128C7E;
+    transform: translateY(-2px);
+  }
+
+  .hero-trust-row {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .trust-badge-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.84rem;
+    font-weight: 600;
+    color: var(--ce-slate-dark);
+  }
+
+  .hero-visual {
+    position: relative;
+  }
+
+  .hero-image-wrapper {
+    position: relative;
+    border-radius: 20px;
+    overflow: visible;
+    box-shadow: 0 20px 50px rgba(26, 46, 74, 0.14);
+    border: 3px solid #ffffff;
+    background: #ffffff;
+  }
+
+  .hero-illustration {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 18px;
+    object-fit: cover;
+  }
+
+  .floating-chip {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(8px);
+    border: 1px solid #e2e8f0;
+    padding: 10px 16px;
+    border-radius: 12px;
+    box-shadow: 0 10px 24px rgba(26, 46, 74, 0.12);
+  }
+
+  .chip-efficiency {
+    bottom: -18px;
+    left: -18px;
+  }
+
+  .chip-smv {
+    top: 20px;
+    right: -18px;
+  }
+
+  .chip-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: var(--ce-blue-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .chip-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .chip-val {
+    font-weight: 800;
+    font-size: 0.95rem;
+    color: var(--ce-navy);
+    line-height: 1.2;
+  }
+
+  .chip-lbl {
+    font-size: 0.72rem;
+    color: var(--ce-slate-light);
+    font-weight: 500;
+  }
+
+  /* -------------------------------------------------- */
+  /* RESULTS TICKER STRIP */
+  /* -------------------------------------------------- */
+  .results-ticker-strip {
+    background: #ffffff;
+    border-top: 1px solid var(--ce-border);
+    padding: 24px 0 32px;
+  }
+
+  .ticker-header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #f1f5f9;
+  }
+
+  .ticker-badge-live {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .live-dot-ping {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #10b981;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.25);
+  }
+
+  .live-badge-text {
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: var(--ce-navy);
+  }
+
+  .ticker-header-trust {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.78rem;
+    color: var(--ce-slate-light);
+    font-weight: 500;
+  }
+
+  .ticker-cards-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  .ticker-card {
+    background: #fbfcfe;
+    border: 1px solid var(--ce-border);
+    border-radius: 14px;
+    padding: 18px;
+    transition: all 0.25s ease;
+  }
+
+  .ticker-card:hover {
+    border-color: var(--ce-blue);
+    transform: translateY(-2px);
+    box-shadow: var(--ce-shadow-sm);
+  }
+
+  .ticker-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+
+  .ticker-pill {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 3px 8px;
+    border-radius: 6px;
+  }
+
+  .pill-blue { background: #e0f2fe; color: #0369a1; }
+  .pill-indigo { background: #e0e7ff; color: #4338ca; }
+  .pill-emerald { background: #dcfce7; color: #15803d; }
+  .pill-amber { background: #fef3c7; color: #b45309; }
+
+  .ticker-icon-wrap {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .wrap-blue { background: #eff6ff; color: #2563a8; }
+  .wrap-indigo { background: #eef2ff; color: #4f46e5; }
+  .wrap-emerald { background: #ecfdf5; color: #059669; }
+  .wrap-amber { background: #fffbeb; color: #d97706; }
+
+  .ticker-card-number {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--ce-navy);
+    line-height: 1.1;
+    margin-bottom: 4px;
+  }
+
+  .ticker-card-label {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--ce-slate-dark);
+    margin-bottom: 12px;
+  }
+
+  .ticker-card-footer {
+    border-top: 1px solid #f1f5f9;
+    padding-top: 8px;
+  }
+
+  .footer-chip {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.72rem;
+    color: #10b981;
+    font-weight: 600;
+  }
+
+  /* -------------------------------------------------- */
+  /* 2. SECTION 2: SHOP-FLOOR CHALLENGES */
+  /* -------------------------------------------------- */
+  .section-challenges {
+    background: #ffffff;
+  }
+
+  .challenges-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+
+  .challenge-card {
+    background: #fbfcfe;
+    border: 1px solid var(--ce-border);
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+  }
+
+  .challenge-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--ce-shadow-md);
+    border-color: rgba(37, 99, 168, 0.3);
+  }
+
+  .challenge-img-box {
+    position: relative;
+    background: #f8fafc;
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid var(--ce-border);
+  }
+
+  .flat-vector-art {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+  }
+
+  .challenge-num {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 28px;
+    height: 28px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 50%;
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--ce-navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .challenge-body {
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .challenge-pill {
+    align-self: flex-start;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 4px 10px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+  }
+
+  .pill-danger {
+    background: #fef2f2;
+    color: #dc2626;
+  }
+
+  .pill-amber {
+    background: #fffbeb;
+    color: #d97706;
+  }
+
+  .pill-warning {
+    background: #fef3c7;
+    color: #b45309;
+  }
+
+  .challenge-heading {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.25rem;
+    color: var(--ce-navy);
+    margin: 0 0 12px;
+    line-height: 1.3;
+  }
+
+  .challenge-text {
+    font-size: 0.875rem;
+    color: var(--ce-slate-body);
+    line-height: 1.55;
+    margin: 0 0 16px;
+    flex-grow: 1;
+  }
+
+  .challenge-impact {
+    font-size: 0.8125rem;
+    color: #dc2626;
+    background: #fff5f5;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border-left: 3px solid #ef4444;
+  }
+
+  /* -------------------------------------------------- */
+  /* 3. SECTION 3: THE 6 CORE MODULES / LEVERS */
+  /* -------------------------------------------------- */
+  .section-modules {
+    background: #f8fafc;
+  }
+
+  .modules-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  .module-card {
+    background: #ffffff;
+    border: 1px solid var(--ce-border);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--ce-shadow-sm);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+  }
+
+  .module-card:hover {
+    box-shadow: var(--ce-shadow-md);
+    border-color: rgba(37, 99, 168, 0.3);
+    transform: translateY(-4px);
+  }
+
+  .module-art-box {
+    background: #f1f5f9;
+    padding: 16px;
+    border-bottom: 1px solid var(--ce-border);
+  }
+
+  .module-svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+  }
+
+  .module-body {
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .module-badge-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+
+  .module-num-badge {
+    background: var(--ce-navy);
+    color: #ffffff;
+    font-size: 0.6875rem;
+    font-weight: 800;
+    padding: 4px 9px;
+    border-radius: 6px;
+    letter-spacing: 0.05em;
+  }
+
+  .module-subtag {
+    font-size: 0.75rem;
+    color: var(--ce-blue);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .module-heading {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.45rem;
+    color: var(--ce-navy);
+    margin: 0 0 12px;
+    line-height: 1.3;
+  }
+
+  .module-desc {
+    font-size: 0.92rem;
+    color: var(--ce-slate-body);
+    line-height: 1.6;
+    margin: 0 0 20px;
+  }
+
+  .module-points {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex-grow: 1;
+  }
+
+  .module-points li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.875rem;
+    color: var(--ce-slate-dark);
+    line-height: 1.5;
+  }
+
+  .module-points svg {
+    flex-shrink: 0;
+    margin-top: 3px;
+  }
+
+  .module-footer {
+    border-top: 1px solid #f1f5f9;
+    padding-top: 16px;
+    margin-top: auto;
+  }
+
+  .kpi-chip {
+    display: inline-block;
+    background: #ecfdf5;
+    color: #047857;
+    font-size: 0.8125rem;
+    padding: 6px 12px;
+    border-radius: 8px;
+    border-left: 3px solid #10b981;
+    line-height: 1.4;
+  }
+
+  /* -------------------------------------------------- */
+  /* 4. SECTION 4: ROADMAP (5 COLUMNS MATCHING IE) */
+  /* -------------------------------------------------- */
+  .section-roadmap {
+    background: #ffffff;
+  }
+
+  .roadmap-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+  }
+
+  .roadmap-card {
+    background: #fbfcfe;
+    border: 1px solid var(--ce-border);
+    border-radius: 16px;
+    padding: 24px 18px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+  }
+
+  .roadmap-card:hover {
+    border-color: var(--ce-blue);
+    transform: translateY(-4px);
+    box-shadow: var(--ce-shadow-md);
+  }
+
+  .highlight-card {
+    background: #fffdfa;
+    border-color: #fde68a;
+  }
+
+  .roadmap-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  .roadmap-badge {
+    background: #e0f2fe;
+    color: var(--ce-blue);
+    font-size: 0.6875rem;
+    font-weight: 800;
+    padding: 4px 8px;
+    border-radius: 6px;
+    text-transform: uppercase;
+  }
+
+  .badge-gold {
+    background: #fef3c7;
+    color: #b45309;
+  }
+
+  .roadmap-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: #ffffff;
+    border: 1px solid var(--ce-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .roadmap-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.15rem;
+    color: var(--ce-navy);
+    margin: 0 0 10px;
+    line-height: 1.3;
+  }
+
+  .roadmap-desc {
+    font-size: 0.8125rem;
+    color: var(--ce-slate-body);
+    line-height: 1.55;
+    margin: 0 0 16px;
+    flex-grow: 1;
+  }
+
+  .roadmap-milestone {
+    border-top: 1px solid #f1f5f9;
+    padding-top: 12px;
+    font-size: 0.75rem;
+    color: var(--ce-blue);
+    line-height: 1.45;
+  }
+
+  /* -------------------------------------------------- */
+  /* 5. SECTION 5: OPERATING SYSTEM COMPARISON */
+  /* -------------------------------------------------- */
+  .section-operating-system {
+    background: #f8fafc;
+  }
+
+  .os-card {
+    background: #ffffff;
+    border: 1px solid var(--ce-border);
+    border-radius: 24px;
+    padding: 56px 48px;
+    box-shadow: var(--ce-shadow-md);
+  }
+
+  .os-header {
+    text-align: center;
+    max-width: 780px;
+    margin: 0 auto 48px;
+  }
+
+  .os-badge {
+    display: inline-block;
+    background: #e0f2fe;
+    color: var(--ce-blue);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 6px 14px;
+    border-radius: 9999px;
+    margin-bottom: 16px;
+  }
+
+  .os-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.25rem;
+    color: var(--ce-navy);
+    line-height: 1.25;
+    margin: 0 0 16px;
+  }
+
+  .os-lead {
+    font-size: 1.05rem;
+    color: var(--ce-slate-body);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .os-comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-bottom: 40px;
+  }
+
+  .os-comp-box {
+    border-radius: 16px;
+    padding: 32px 28px;
+    border: 1px solid var(--ce-border);
+  }
+
+  .comp-traditional {
+    background: #fff8f8;
+    border-color: #fee2e2;
+  }
+
+  .comp-centedge {
+    background: #f0fdf4;
+    border-color: #bbf7d0;
+  }
+
+  .comp-title-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .comp-title-bar h3 {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 700;
+  }
+
+  .title-traditional { color: #dc2626; }
+  .title-centedge { color: #15803d; }
+
+  .comp-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+    font-weight: 800;
+  }
+
+  .comp-traditional .comp-icon {
+    background: #fee2e2;
+    color: #dc2626;
+  }
+
+  .comp-centedge .comp-icon {
+    background: #dcfce7;
+    color: #15803d;
+  }
+
+  .comp-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .comp-list li {
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: var(--ce-slate-dark);
+    position: relative;
+    padding-left: 20px;
+  }
+
+  .comp-traditional .comp-list li::before {
+    content: "–";
+    position: absolute;
+    left: 0;
+    color: #dc2626;
+    font-weight: 800;
+  }
+
+  .comp-centedge .comp-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #10b981;
+    font-weight: 800;
+  }
+
+  .os-decision-footer {
+    background: #f8fafc;
+    border: 1px solid var(--ce-border);
+    border-radius: 12px;
+    padding: 20px 24px;
+    text-align: center;
+  }
+
+  .decision-text {
+    font-size: 0.92rem;
+    color: var(--ce-slate-dark);
+    line-height: 1.6;
+  }
+
+  /* -------------------------------------------------- */
+  /* 6. SECTION 6: MEASURABLE BUSINESS IMPACT (3x2 GRID) */
+  /* -------------------------------------------------- */
+  .section-impact {
+    background: #ffffff;
+  }
+
+  .impact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .impact-card {
+    background: #fbfcfe;
+    border: 1px solid var(--ce-border);
+    border-radius: 16px;
+    padding: 28px 24px;
+    transition: all 0.3s ease;
+  }
+
+  .impact-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--ce-shadow-md);
+    border-color: rgba(37, 99, 168, 0.3);
+  }
+
+  .impact-icon-wrap {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: var(--ce-blue-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .impact-heading {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.25rem;
+    color: var(--ce-navy);
+    margin: 0 0 10px;
+    line-height: 1.3;
+  }
+
+  .impact-body {
+    font-size: 0.875rem;
+    color: var(--ce-slate-body);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* -------------------------------------------------- */
+  /* 7. BOTTOM CTA SECTION */
+  /* -------------------------------------------------- */
+  .section-cta {
+    background: linear-gradient(135deg, #1a2e4a 0%, #122035 100%);
+    padding: 80px 0;
+  }
+
+  .cta-banner {
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .cta-tag {
+    display: inline-block;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #93c5fd;
+    background: rgba(147, 197, 253, 0.15);
+    padding: 6px 16px;
+    border-radius: 9999px;
+    margin-bottom: 20px;
+  }
+
+  .cta-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.5rem;
+    color: #ffffff;
+    line-height: 1.25;
+    margin: 0 0 20px;
+    font-weight: 700;
+  }
+
+  .cta-desc {
+    font-size: 1.1rem;
+    color: #cbd5e1;
+    line-height: 1.65;
+    margin: 0 0 36px;
+  }
+
+  .cta-actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+  }
+
+  .btn-cta {
+    background: var(--ce-blue);
+    padding: 16px 36px;
+    font-size: 1.0625rem;
+  }
+
+  .btn-cta:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(37, 99, 168, 0.35);
+  }
+
+  .btn-cta-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 32px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    font-size: 1.0625rem;
+    font-weight: 600;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+    transition: all 0.25s ease;
+  }
+
+  .btn-cta-secondary:hover {
+    background: #25D366;
+    border-color: #25D366;
+    color: #ffffff;
+    transform: translateY(-2px);
+  }
+
+  .cta-trust-note {
+    font-size: 0.8125rem;
+    color: #94a3b8;
+  }
+
+  /* -------------------------------------------------- */
+  /* RESPONSIVE BREAKPOINTS (MATCHING IE PAGE) */
+  /* -------------------------------------------------- */
+  @media (max-width: 1024px) {
+    .hero-container {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    .hero-visual {
+      max-width: 540px;
+      margin: 0 auto;
+    }
+    .ticker-cards-row {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .challenges-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .modules-grid {
+      grid-template-columns: 1fr;
+    }
+    .roadmap-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .os-comparison-grid {
+      grid-template-columns: 1fr;
+    }
+    .impact-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .section {
+      padding: 56px 0;
+    }
+    .hero-title {
+      font-size: 2.15rem;
+    }
+    .section-title {
+      font-size: 1.85rem;
+    }
+    .ticker-cards-row {
+      grid-template-columns: 1fr;
+    }
+    .challenges-grid {
+      grid-template-columns: 1fr;
+    }
+    .roadmap-grid {
+      grid-template-columns: 1fr;
+    }
+    .impact-grid {
+      grid-template-columns: 1fr;
+    }
+    .os-card {
+      padding: 32px 20px;
+    }
+  }
+</style>

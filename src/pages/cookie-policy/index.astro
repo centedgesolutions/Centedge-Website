@@ -1,0 +1,101 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<BaseLayout
+  title="Cookie Policy | Cent Edge Consulting"
+  description="Cookie Policy for Cent Edge Consulting website."
+>
+  <Header />
+  
+  <main id="main-content">
+    <div class="legal-container" style="max-width: 900px; margin: 0 auto; padding-top: 140px; padding-bottom: 6rem; padding-left: 1.5rem; padding-right: 1.5rem;">
+      <h1 class="legal-title">Cookie Policy</h1>
+
+      <p>
+        Please read this Cookie Policy carefully before using this site ("website", "service") operated by Cent Edge Consulting ("us", "we", "our").
+      </p>
+
+      <p>
+        The content displayed on the website is the intellectual property of Cent Edge Consulting. You may not reuse, republish, or reprint such content without our written consent.
+      </p>
+
+      <p>
+        All information posted regarding cookies is merely for educational and informational purposes. Should you decide to act upon any information on this website, you do so at your own risk.
+      </p>
+
+      <p>
+        While the information on this website has been verified to the best of our abilities, we cannot guarantee that there are no mistakes or errors.
+      </p>
+
+      <p>
+        We reserve the right to change this policy at any given time, of which you will be promptly updated. If you want to make sure that you are up to date with the latest changes, we advise you to frequently visit this page.
+      </p>
+
+      <div class="legal-footer-nav">
+        <p>
+          Copyright &copy; 2026 Cent Edge Consulting | <a href="/privacy-policy/">Privacy Policy</a>, <a href="/terms-of-use/">Terms of use</a>, <a href="/disclaimer/">Disclaimer</a>, <a href="/cookie-policy/">Cookie Policy</a>
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style is:global>
+  .legal-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 140px 1.5rem 6rem;
+    font-family: var(--font-main, "Inter", sans-serif);
+    color: #333333;
+    line-height: 1.75;
+  }
+  .legal-title {
+    font-family: var(--font-serif, "Playfair Display", Georgia, serif);
+    font-size: clamp(2rem, 3.5vw, 2.5rem);
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  .legal-container h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111827;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+  }
+  .legal-container p {
+    margin-bottom: 1.25rem;
+    font-size: 1rem;
+    color: #374151;
+  }
+  .legal-container ul {
+    margin: 1rem 0 1.5rem;
+    padding-left: 1.75rem;
+  }
+  .legal-container li {
+    margin-bottom: 0.5rem;
+    line-height: 1.7;
+    color: #374151;
+  }
+  .legal-container a {
+    color: #f47957;
+    text-decoration: none;
+  }
+  .legal-container a:hover {
+    text-decoration: underline;
+  }
+  .legal-footer-nav {
+    margin-top: 3.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e5e7eb;
+    font-size: 0.9rem;
+    color: #6b7280;
+  }
+</style>

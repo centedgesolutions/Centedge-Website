@@ -1,0 +1,139 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { getCollection } from 'astro:content';
+
+const allStories = await getCollection('success-stories');
+allStories.sort((a, b) => {
+  const dateA = a.data.publishDate ? new Date(a.data.publishDate).getTime() : 0;
+  const dateB = b.data.publishDate ? new Date(b.data.publishDate).getTime() : 0;
+  return dateB - dateA;
+});
+---
+
+<BaseLayout
+  title="Apparel Factory Case Studies & Success Stories | Cent Edge Consulting"
+  description="Explore verified case studies and measurable transformation results achieved by Cent Edge across apparel manufacturing units in India and international markets."
+>
+  <Header />
+
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="page-hero" style="background: linear-gradient(135deg, #10243e 0%, #1a3f6f 100%); padding: calc(var(--header-height) + 50px) 0 60px; color: #ffffff; text-align: center;">
+      <div class="container">
+        <div style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: #93c5fd; background: rgba(255,255,255,0.08); padding: 6px 16px; border-radius: 9999px; margin-bottom: 20px;">
+          <span style="width: 8px; height: 8px; border-radius: 50%; background: #38bdf8;"></span>
+          Verified Operational Transformations
+        </div>
+        <h1 style="font-family: var(--font-serif); font-size: clamp(2.2rem, 4vw, 3.25rem); font-weight: 700; color: #ffffff; max-width: 840px; margin: 0 auto 20px; line-height: 1.2;">
+          Measurable Impact. Real Factories. Sustained Performance.
+        </h1>
+        <p style="font-size: 1.15rem; color: #cbd5e1; max-width: 680px; margin: 0 auto 30px; line-height: 1.6;">
+          Selected engagements from our portfolio of 100+ factory transformations and continuous improvement projects across India and global apparel hubs.
+        </p>
+        
+        <!-- Summary Stats Ribbon -->
+        <div style="display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.12); max-width: 800px; margin: 0 auto;">
+          <div>
+            <span style="display: block; font-size: 2rem; font-weight: 700; color: #ffffff; font-family: var(--font-serif);">100+</span>
+            <span style="font-size: 0.85rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px;">Factory Projects</span>
+          </div>
+          <div style="border-left: 1px solid rgba(255,255,255,0.15); padding-left: 32px;">
+            <span style="display: block; font-size: 2rem; font-weight: 700; color: #38bdf8; font-family: var(--font-serif);">+25–30%</span>
+            <span style="font-size: 0.85rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px;">Productivity Gain</span>
+          </div>
+          <div style="border-left: 1px solid rgba(255,255,255,0.15); padding-left: 32px;">
+            <span style="display: block; font-size: 2rem; font-weight: 700; color: #ffffff; font-family: var(--font-serif);">$111k+</span>
+            <span style="font-size: 0.85rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px;">Avg. Client Savings</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STORIES LISTING GRID -->
+    <section class="section bg-white" style="padding: 70px 0;">
+      <div class="container">
+
+        {allStories.length === 0 ? (
+          <div style="text-align: center; padding: 60px 20px; background: #f8faff; border-radius: 12px; border: 1px dashed #cbd5e1;">
+            <h3 style="color: #1a3f6f; margin-bottom: 12px;">Case Studies Being Uploaded</h3>
+            <p style="color: #64748b; max-width: 500px; margin: 0 auto 20px;">
+              Our verified case study entries are being populated through the content management portal. Please check back soon or book a direct consultation with our principal team.
+            </p>
+            <a href="/contact/" class="btn btn-primary">Request Portfolio Brief</a>
+          </div>
+        ) : (
+          <div class="stories-showcase-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 32px;">
+            {allStories.map((story) => {
+              const storySlug = story.id.replace(/\.md$/, '');
+              return (
+                <article class="story-showcase-card" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; transition: transform 0.25s ease, box-shadow 0.25s ease; box-shadow: 0 4px 12px rgba(15,23,42,0.04);">
+                  
+                  <div style="position: relative; height: 220px; overflow: hidden; background: #1e293b;">
+                    <img
+                      src={story.data.coverImage || '/images/story-lean.jpg'}
+                      alt={story.data.title}
+                      style="width: 100%; height: 100%; object-fit: cover;"
+                      loading="lazy"
+                    />
+                    <div style="position: absolute; top: 14px; left: 14px; background: #1a3f6f; color: #ffffff; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; padding: 5px 12px; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
+                      {story.data.category}
+                    </div>
+                  </div>
+
+                  <div style="padding: 24px; display: flex; flex-direction: column; flex: 1;">
+                    <div style="font-size: 0.85rem; color: #2563a8; font-weight: 600; margin-bottom: 6px;">
+                      {story.data.client}
+                    </div>
+
+                    <h2 style="font-family: var(--font-serif); font-size: 1.35rem; color: #1a3f6f; margin-bottom: 12px; line-height: 1.3;">
+                      <a href={`/success-stories/${storySlug}/`} style="color: inherit; text-decoration: none;">
+                        {story.data.title}
+                      </a>
+                    </h2>
+
+                    <!-- Key Metric Callout Box -->
+                    <div style="background: #f0fdf4; border-left: 3px solid #10b981; padding: 10px 14px; border-radius: 4px; margin-bottom: 14px;">
+                      <span style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700; color: #047857; display: block; letter-spacing: 0.5px;">Key Result:</span>
+                      <strong style="color: #065f46; font-size: 1rem;">{story.data.kpi}</strong>
+                    </div>
+
+                    <p style="color: #475569; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; flex: 1;">
+                      {story.data.summary}
+                    </p>
+
+                    <div style="border-top: 1px solid #f1f5f9; padding-top: 16px; margin-top: auto; display: flex; justify-content: space-between; align-items: center;">
+                      <a href={`/success-stories/${storySlug}/`} style="color: #2563a8; font-weight: 600; font-size: 0.95rem; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                        Read Full Case Study &rarr;
+                      </a>
+                    </div>
+                  </div>
+
+                </article>
+              );
+            })}
+          </div>
+        )}
+
+      </div>
+    </section>
+
+    <!-- CONTACT CTA BAND -->
+    <section class="contact-cta-band" aria-labelledby="cta-heading">
+      <div class="container">
+        <div class="contact-cta-box" data-reveal>
+          <h2 id="cta-heading">Ready for Measurable Factory Results?</h2>
+          <p>Discuss your operational bottlenecks or facility expansion plans with our principal apparel manufacturing experts.</p>
+          <div class="btn-group">
+            <a href="/contact/" class="btn btn-primary" style="white-space: nowrap;">Book a Consultation</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</BaseLayout>

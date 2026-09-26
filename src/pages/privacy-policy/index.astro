@@ -1,0 +1,150 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<BaseLayout
+  title="Privacy Policy | Cent Edge Consulting"
+  description="Privacy Policy for Cent Edge Consulting website."
+>
+  <Header />
+  
+  <main id="main-content">
+    <div class="legal-container" style="max-width: 900px; margin: 0 auto; padding-top: 140px; padding-bottom: 6rem; padding-left: 1.5rem; padding-right: 1.5rem;">
+      <h1 class="legal-title">Privacy Policy</h1>
+
+      <p>
+        This privacy policy will help you understand how <strong>Cent Edge Consulting</strong> ("Cent Edge", "us", "we", "our") 
+        uses and protects the data you provide to us when you visit and use <strong>https://centedge.co.in</strong> (the "website", "service").
+      </p>
+      <p>
+        We reserve the right to change this policy at any given time, of which you will be promptly updated. If you want to make sure that you are 
+        up to date with the latest changes, we advise you to frequently visit this page.
+      </p>
+
+      <h2>What User Data We Collect</h2>
+      <p>When you visit the website, we may collect the following data:</p>
+      <ul>
+        <li>Your IP address.</li>
+        <li>Your contact information and email address when you submit consultation or diagnostic inquiries.</li>
+        <li>Other information such as interests, factory vertical, and preferences.</li>
+        <li>Data profile regarding your online behavior on our website.</li>
+      </ul>
+
+      <h2>Why We Collect Your Data</h2>
+      <p>We are collecting your data for several reasons:</p>
+      <ul>
+        <li>To better understand your manufacturing and consulting needs.</li>
+        <li>To improve our consulting services, website experience, and technical insights.</li>
+        <li>To send you promotional emails, industry whitepapers, and operational insights containing information we think you will find useful.</li>
+        <li>To contact you regarding diagnostic audits or to fill out operational surveys.</li>
+        <li>To customize our website according to your online behavior and personal preferences.</li>
+      </ul>
+
+      <h2>Safeguarding and Securing the Data</h2>
+      <p>
+        Cent Edge Consulting is committed to securing your data and keeping it confidential. Cent Edge has done all in its power 
+        to prevent data theft, unauthorized access, and disclosure by implementing the latest technologies and software, which help us 
+        safeguard all the information we collect online.
+      </p>
+
+      <h2>Our Cookie Policy</h2>
+      <p>
+        Once you agree to allow our website to use cookies, you also agree to use the data it collects regarding your online behavior 
+        (analyze web traffic, web pages you visit and spend the most time on).
+      </p>
+      <p>
+        The data we collect by using cookies is used to customize our website to your needs. After we use the data for statistical analysis, 
+        the data is completely removed from our systems.
+      </p>
+      <p>
+        Please note that cookies don't allow us to gain control of your computer in any way. They are strictly used to monitor which pages you find useful 
+        and which you do not so that we can provide a better experience for you.
+      </p>
+      <p>
+        If you want to disable cookies, you can do it by accessing the settings of your internet browser. (You can visit 
+        <a href="/cookie-policy/">our Cookie Policy</a> for more details).
+      </p>
+
+      <h2>Restricting the Collection of Your Personal Data</h2>
+      <p>At some point, you might wish to restrict the use and collection of your personal data. You can achieve this by doing the following:</p>
+      <ul>
+        <li>When you are filling the forms on the website, make sure to check if there is a box which you can leave unchecked, if you don't want to disclose your personal information.</li>
+        <li>If you have already agreed to share your information with us, feel free to contact us via email and we will be more than happy to change this for you.</li>
+      </ul>
+      <p>
+        Cent Edge Consulting will not lease, sell or distribute your personal information to any third parties, unless we have your permission. 
+        We might do so if the law forces us.
+      </p>
+
+      <p style="margin-top: 2rem; padding: 1.25rem; background-color: #f8fafc; border-left: 4px solid #f47957; border-radius: 4px;">
+        <strong>DPDP Notice:</strong> We collect your details to provide consulting tools, operational diagnostics, and verify your professional background. 
+        You may request data erasure or updates at <a href="mailto:privacy@centedge.co.in">privacy@centedge.co.in</a>.
+      </p>
+
+      <div class="legal-footer-nav">
+        <p>
+          Copyright &copy; 2026 Cent Edge Consulting | <a href="/privacy-policy/">Privacy Policy</a>, <a href="/terms-of-use/">Terms of use</a>, <a href="/disclaimer/">Disclaimer</a>
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style is:global>
+  .legal-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 140px 1.5rem 6rem;
+    font-family: var(--font-main, "Inter", sans-serif);
+    color: #333333;
+    line-height: 1.75;
+  }
+  .legal-title {
+    font-family: var(--font-serif, "Playfair Display", Georgia, serif);
+    font-size: clamp(2rem, 3.5vw, 2.5rem);
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  .legal-container h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111827;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+  }
+  .legal-container p {
+    margin-bottom: 1.25rem;
+    font-size: 1rem;
+    color: #374151;
+  }
+  .legal-container ul {
+    margin: 1rem 0 1.5rem;
+    padding-left: 1.75rem;
+  }
+  .legal-container li {
+    margin-bottom: 0.5rem;
+    line-height: 1.7;
+    color: #374151;
+  }
+  .legal-container a {
+    color: #f47957;
+    text-decoration: none;
+  }
+  .legal-container a:hover {
+    text-decoration: underline;
+  }
+  .legal-footer-nav {
+    margin-top: 3.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e5e7eb;
+    font-size: 0.9rem;
+    color: #6b7280;
+  }
+</style>

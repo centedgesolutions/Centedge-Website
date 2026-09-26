@@ -1,0 +1,117 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { getCollection } from 'astro:content';
+
+const allArticles = await getCollection('insights');
+allArticles.sort((a, b) => {
+  const dateA = a.data.publishDate ? new Date(a.data.publishDate).getTime() : 0;
+  const dateB = b.data.publishDate ? new Date(b.data.publishDate).getTime() : 0;
+  return dateB - dateA;
+});
+---
+
+<BaseLayout
+  title="Apparel Manufacturing Insights & Articles | Cent Edge Consulting"
+  description="Practical engineering and operational articles written by principal consultants for garment factory directors, IE teams, and production managers."
+>
+  <Header />
+
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="page-hero" style="background: linear-gradient(135deg, #10243e 0%, #1a3f6f 100%); padding: calc(var(--header-height) + 50px) 0 60px; color: #ffffff; text-align: center;">
+      <div class="container">
+        <div style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: #93c5fd; background: rgba(255,255,255,0.08); padding: 6px 16px; border-radius: 9999px; margin-bottom: 20px;">
+          <span style="width: 8px; height: 8px; border-radius: 50%; background: #38bdf8;"></span>
+          Knowledge Centre &amp; Thought Leadership
+        </div>
+        <h1 style="font-family: var(--font-serif); font-size: clamp(2.2rem, 4vw, 3.25rem); font-weight: 700; color: #ffffff; max-width: 840px; margin: 0 auto 20px; line-height: 1.2;">
+          Practical Insights for Apparel Factory Leaders
+        </h1>
+        <p style="font-size: 1.15rem; color: #cbd5e1; max-width: 680px; margin: 0 auto 20px; line-height: 1.6;">
+          Real shop-floor methodologies, technical guides, and governance frameworks written by senior consultants who have transformed over 100 garment factories.
+        </p>
+      </div>
+    </section>
+
+    <!-- ARTICLES LISTING GRID -->
+    <section class="section bg-white" style="padding: 70px 0;">
+      <div class="container">
+
+        {allArticles.length === 0 ? (
+          <div style="text-align: center; padding: 60px 20px; background: #f8faff; border-radius: 12px; border: 1px dashed #cbd5e1;">
+            <h3 style="color: #1a3f6f; margin-bottom: 12px;">Articles Being Published</h3>
+            <p style="color: #64748b; max-width: 500px; margin: 0 auto 20px;">
+              Technical articles and thought leadership entries are currently being updated. Please check back shortly or subscribe to our newsletter for instant updates.
+            </p>
+          </div>
+        ) : (
+          <div class="insights-grid-layout" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 32px;">
+            {allArticles.map((article) => {
+              const articleSlug = article.id.replace(/\.md$/, '');
+              return (
+                <article class="insight-article-card" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; transition: transform 0.25s ease, box-shadow 0.25s ease; box-shadow: 0 4px 12px rgba(15,23,42,0.04);">
+                  
+                  <div style="position: relative; height: 210px; overflow: hidden; background: #1e293b;">
+                    <img
+                      src={article.data.coverImage || '/images/insight-5s.jpg'}
+                      alt={article.data.title}
+                      style="width: 100%; height: 100%; object-fit: cover;"
+                      loading="lazy"
+                    />
+                    <div style="position: absolute; top: 14px; left: 14px; background: #1a3f6f; color: #ffffff; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; padding: 5px 12px; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
+                      {article.data.category}
+                    </div>
+                  </div>
+
+                  <div style="padding: 24px; display: flex; flex-direction: column; flex: 1;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.82rem; color: #64748b; margin-bottom: 10px;">
+                      <span>By {article.data.author}</span>
+                      <span>&bull; {article.data.readTime}</span>
+                    </div>
+
+                    <h2 style="font-family: var(--font-serif); font-size: 1.25rem; color: #1a3f6f; margin-bottom: 12px; line-height: 1.35;">
+                      <a href={`/insights/${articleSlug}/`} style="color: inherit; text-decoration: none;">
+                        {article.data.title}
+                      </a>
+                    </h2>
+
+                    <p style="color: #475569; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; flex: 1;">
+                      {article.data.excerpt}
+                    </p>
+
+                    <div style="border-top: 1px solid #f1f5f9; padding-top: 14px; margin-top: auto;">
+                      <a href={`/insights/${articleSlug}/`} style="color: #2563a8; font-weight: 600; font-size: 0.95rem; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                        Read Full Article &rarr;
+                      </a>
+                    </div>
+                  </div>
+
+                </article>
+              );
+            })}
+          </div>
+        )}
+
+      </div>
+    </section>
+
+    <!-- CONTACT CTA BAND -->
+    <section class="contact-cta-band" aria-labelledby="cta-heading">
+      <div class="container">
+        <div class="contact-cta-box" data-reveal>
+          <h2 id="cta-heading">Discuss Your Factory Challenge With Us</h2>
+          <p>Start with a focused diagnostic study or discuss your operational roadmap with our apparel manufacturing experts.</p>
+          <div class="btn-group">
+            <a href="/contact/" class="btn btn-primary" style="white-space: nowrap;">Book a Consultation</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</BaseLayout>

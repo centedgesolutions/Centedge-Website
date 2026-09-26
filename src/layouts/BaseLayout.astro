@@ -1,0 +1,68 @@
+﻿---
+// BaseLayout.astro — Global page wrapper for all Cent Edge pages
+interface Props {
+  title: string;
+  description: string;
+  canonicalUrl?: string;
+  ogImage?: string;
+}
+
+const {
+  title,
+  description,
+  canonicalUrl = Astro.url.href,
+  ogImage = "https://centedge.co.in/images/og-image.webp",
+} = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title}</title>
+  <meta name="description" content={description}>
+  <link rel="canonical" href={canonicalUrl}>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={description}>
+  <meta property="og:url" content={canonicalUrl}>
+  <meta property="og:image" content={ogImage}>
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:site_name" content="Cent Edge Consulting Pvt Ltd">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content={title}>
+  <meta name="twitter:description" content={description}>
+  <meta name="twitter:image" content={ogImage}>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Cent Edge Consulting Pvt Ltd",
+    "url": "https://centedge.co.in",
+    "description": "India leading apparel manufacturing consultancy.",
+    "foundingDate": "2002",
+    "telephone": "+91-9901422066",
+    "email": "surya@centedge.co.in",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Salarpuria Symbiosis, Bannerghatta Main Road",
+      "addressLocality": "Bangalore",
+      "addressRegion": "Karnataka",
+      "postalCode": "560076",
+      "addressCountry": "IN"
+    },
+    "areaServed": ["India", "Bangladesh", "Jordan", "Africa"],
+    "sameAs": ["https://www.linkedin.com/company/centedge"]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/global.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+  <slot />
+  <script is:inline src="/scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+backend:
+  name: github
+  repo: centedgesolutions/Centedge-Website
+  branch: main
+  base_url: https://centedge.co.in
+  auth_endpoint: api/auth
+
+# Upload settings
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+display_url: https://centedge.co.in
+logo_url: https://centedge.co.in/images/centedge_logo_hd.png
+
+collections:
+  - name: "success-stories"
+    label: "Success Stories"
+    label_singular: "Success Story"
+    folder: "src/content/success-stories"
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}} ({{client}}) — {{kpi}}"
+    fields:
+      - { label: "Story Title", name: "title", widget: "string", hint: "e.g. Large Apparel Exporter, Bangalore" }
+      - { label: "Client / Organization", name: "client", widget: "string", hint: "e.g. Leading Outerwear & Woven Exporter" }
+      - { label: "Key Outcome / KPI", name: "kpi", widget: "string", hint: "e.g. +32% throughput in 90 days" }
+      - { label: "Solution Category", name: "category", widget: "select", options: ["Lean Manufacturing", "5S Implementation", "Factory Setup & Layout", "Industrial Engineering", "Smart Factory & Quality"], default: "Lean Manufacturing" }
+      - { label: "Publish Date", name: "publishDate", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "Featured Story", name: "featured", widget: "boolean", default: false, required: false }
+      - { label: "Cover Image", name: "coverImage", widget: "image", required: false, default: "/images/story-lean.jpg" }
+      - { label: "Short Summary", name: "summary", widget: "text", hint: "Brief summary shown on cards (2-3 sentences)." }
+      - { label: "Client Challenge", name: "challenge", widget: "text", hint: "The operational bottlenecks or challenges the factory faced." }
+      - { label: "Cent Edge Solution & Methodology", name: "solution", widget: "text", hint: "The diagnostic steps, systems, and shop-floor execution delivered." }
+      - { label: "Measurable Results Achieved", name: "results", widget: "text", hint: "The sustained operating metrics, space recovered, or ROI delivered." }
+      - { label: "Full Case Study Details", name: "body", widget: "markdown", required: false }
+
+  - name: "insights"
+    label: "Insights & Articles"
+    label_singular: "Article"
+    folder: "src/content/insights"
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}} — By {{author}}"
+    fields:
+      - { label: "Article Title", name: "title", widget: "string" }
+      - { label: "Author", name: "author", widget: "string", default: "Surya Prakash" }
+      - { label: "Author Role", name: "authorRole", widget: "string", default: "Principal Consultant", required: false }
+      - { label: "Publish Date", name: "publishDate", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "Read Time", name: "readTime", widget: "string", default: "5 min read" }
+      - { label: "Category", name: "category", widget: "select", options: ["Lean Manufacturing", "Industrial Engineering", "Factory Setup", "Smart Factory", "Quality & 5S"], default: "Lean Manufacturing" }
+      - { label: "Featured Article", name: "featured", widget: "boolean", default: false, required: false }
+      - { label: "Cover Image", name: "coverImage", widget: "image", required: false, default: "/images/insight-5s.jpg" }
+      - { label: "Short Excerpt", name: "excerpt", widget: "text", hint: "Teaser excerpt shown on listing cards (2 sentences)." }
+      - { label: "Article Body", name: "body", widget: "markdown" }

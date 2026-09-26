@@ -1,0 +1,117 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const articles = await getCollection('insights');
+  return articles.map((article) => ({
+    params: { slug: article.id.replace(/\.md$/, '') },
+    props: { article },
+  }));
+}
+
+const { article } = Astro.props;
+const { Content } = await render(article);
+---
+
+<BaseLayout
+  title={`${article.data.title} | Cent Edge Insights`}
+  description={article.data.excerpt}
+>
+  <Header />
+
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section style="background: linear-gradient(135deg, #10243e 0%, #1a3f6f 100%); padding: calc(var(--header-height) + 40px) 0 50px; color: #ffffff;">
+      <div class="container" style="max-width: 840px;">
+        
+        <nav aria-label="Breadcrumb" style="font-size: 0.85rem; margin-bottom: 20px; color: #94a3b8;">
+          <a href="/" style="color: #cbd5e1; text-decoration: none;">Home</a>
+          <span style="margin: 0 8px;">/</span>
+          <a href="/insights/" style="color: #cbd5e1; text-decoration: none;">Insights</a>
+          <span style="margin: 0 8px;">/</span>
+          <span style="color: #38bdf8;">{article.data.title}</span>
+        </nav>
+
+        <div style="display: inline-block; background: #2563a8; color: #ffffff; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; padding: 4px 12px; border-radius: 4px; margin-bottom: 16px;">
+          {article.data.category}
+        </div>
+
+        <h1 style="font-family: var(--font-serif); font-size: clamp(2rem, 3.8vw, 3rem); font-weight: 700; color: #ffffff; margin-bottom: 18px; line-height: 1.25;">
+          {article.data.title}
+        </h1>
+
+        <div style="display: flex; align-items: center; gap: 16px; font-size: 0.95rem; color: #93c5fd; flex-wrap: wrap;">
+          <span>By <strong>{article.data.author}</strong> ({article.data.authorRole || 'Principal Consultant'})</span>
+          <span>&bull;</span>
+          <span>{article.data.readTime}</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTENT BODY -->
+    <section class="section bg-white" style="padding: 60px 0;">
+      <div class="container" style="max-width: 840px;">
+
+        <!-- Featured Image -->
+        {article.data.coverImage && (
+          <div style="border-radius: 12px; overflow: hidden; margin-bottom: 40px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+            <img src={article.data.coverImage} alt={article.data.title} style="width: 100%; height: auto; max-height: 440px; object-fit: cover;" />
+          </div>
+        )}
+
+        <!-- Excerpt Callout -->
+        <blockquote style="font-size: 1.15rem; color: #1e3a5f; font-style: italic; border-left: 4px solid #2563a8; padding: 16px 22px; margin-bottom: 40px; background: #f0f5ff; border-radius: 0 8px 8px 0; line-height: 1.6;">
+          {article.data.excerpt}
+        </blockquote>
+
+        <!-- Markdown Detailed Body -->
+        <article class="prose-content" style="color: #334155; font-size: 1.1rem; line-height: 1.85;">
+          <Content />
+        </article>
+
+        <!-- Author Signature Card -->
+        <div style="background: #f8faff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 24px; margin-top: 50px; display: flex; gap: 20px; align-items: center;">
+          <div style="width: 60px; height: 60px; border-radius: 50%; background: #1a3f6f; color: #ffffff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.3rem; flex-shrink: 0;">
+            {article.data.author.charAt(0)}
+          </div>
+          <div>
+            <h4 style="color: #1a3f6f; margin: 0 0 4px; font-size: 1.1rem;">About the Author: {article.data.author}</h4>
+            <p style="color: #64748b; font-size: 0.9rem; margin: 0; line-height: 1.5;">
+              Senior consulting practitioner at Cent Edge Consulting Pvt Ltd, specializing in garment manufacturing diagnostics, Lean flow engineering, and shop-floor continuous improvement.
+            </p>
+          </div>
+        </div>
+
+        <!-- Back to Insights Link -->
+        <div style="margin-top: 40px; padding-top: 24px; border-top: 1px solid #e2e8f0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+          <a href="/insights/" style="color: #1a3f6f; font-weight: 600; text-decoration: none;">
+            &larr; Back to All Insights
+          </a>
+          <a href="/contact/" class="btn btn-primary btn-sm">Discuss With The Author</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT CTA BAND -->
+    <section class="contact-cta-band" aria-labelledby="cta-heading">
+      <div class="container">
+        <div class="contact-cta-box" data-reveal>
+          <h2 id="cta-heading">Apply These Insights on Your Production Floor</h2>
+          <p>Schedule a focused diagnostic study with our principal apparel manufacturing experts.</p>
+          <div class="btn-group">
+            <a href="/contact/" class="btn btn-primary" style="white-space: nowrap;">Book a Consultation</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</BaseLayout>

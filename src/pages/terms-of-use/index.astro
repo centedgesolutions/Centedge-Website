@@ -1,0 +1,136 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<BaseLayout
+  title="Terms of Use | Cent Edge Consulting"
+  description="Terms of Use for Cent Edge Consulting website."
+>
+  <Header />
+  
+  <main id="main-content">
+    <div class="legal-container" style="max-width: 900px; margin: 0 auto; padding-top: 140px; padding-bottom: 6rem; padding-left: 1.5rem; padding-right: 1.5rem;">
+      <h1 class="legal-title">Terms of Use</h1>
+
+      <p>
+        Please read these Terms of Use ("terms", "terms of use") carefully before using https://centedge.co.in website (the "use") operated by Cent Edge Consulting ("us", "we", "our").
+      </p>
+
+      <h2>Conditions of Use</h2>
+      <p>
+        We will provide their uses to you, which are subject to the conditions stated below in this document. Every time you visit this website, use its uses or make a purchase, you accept the following conditions. Therefore, we urge you to read them carefully.
+      </p>
+
+      <h2>Privacy Policy</h2>
+      <p>
+        Before you continue using our website we advise you to read our privacy policy https://centedge.co.in/privacy-policy/ regarding our user data collection. It will help you better understand our practices.
+      </p>
+
+      <h2>Copyright</h2>
+      <p>
+        Content published on this website (digital downloads, images, texts, graphics, logos) is the property of Cent Edge Consulting and/or its content creators and protected by international copyright laws. The entire compilation of the content found on this website is the exclusive property of Cent Edge Consulting, with copyright authorship for this compilation by Cent Edge Consulting.
+      </p>
+
+      <h2>Communications</h2>
+      <p>
+        The entire communication with us is electronic. Every time you send us an email or visit our website, you are going to be communicating with us. You hereby consent to receive communications from us. If you subscribe to the news or blogs on our website, you are going to receive regular emails from us. We will continue to communicate with you by posting news, blogs and notices on our website and by sending you emails. You also agree that all notices, disclosures, agreements and other communications we provide to you electronically meet the legal requirements that such communications be in writing.
+      </p>
+
+      <h2>Applicable Law</h2>
+      <p>
+        By visiting this website, you agree that the laws of the Karnataka State, India without regard to principles of conflict laws, will govern these terms of use, or any dispute of any sort that might come between Cent Edge Consulting and you, or its business partners and associates.
+      </p>
+
+      <h2>Disputes</h2>
+      <p>
+        Any dispute related in any way to your visit to this website or to products you purchase from us shall be arbitrated by Courts of Karnataka state, India and you consent to exclusive jurisdiction and venue of such courts.
+      </p>
+
+      <h2>Comments, Reviews, and Emails</h2>
+      <p>
+        Visitors may post content as long as it is not obscene, illegal, defamatory, threatening, infringing of intellectual property rights, invasive of privacy or injurious in any other way to third parties. Content must be free of software viruses, political campaign, and commercial solicitation.
+      </p>
+      <p>
+        We reserve all rights (but not the obligation) to remove and/or edit such content. When you post your content, you grant Cent Edge Consulting non-exclusive, royalty-free and irrevocable right to use, reproduce, publish, modify such content throughout the world in any media.
+      </p>
+
+      <h2>License and Site Access</h2>
+      <p>
+        We grant you a limited license to access and make personal use of this website. You are not allowed to download or modify it. This may be done only with written consent from us.
+      </p>
+
+      <h2>User Account</h2>
+      <p>
+        If you are an owner of an account on this website, you are solely responsible for maintaining the confidentiality of your private user details (username and password). You are responsible for all activities that occur under your account or password.
+      </p>
+      <p>
+        We reserve all rights to terminate accounts, edit or remove content and cancel orders in their sole discretion.
+      </p>
+
+      <div class="legal-footer-nav">
+        <p>
+          Copyright &copy; 2026 Cent Edge Consulting | <a href="/privacy-policy/">Privacy Policy</a>, <a href="/terms-of-use/">Terms of use</a>, <a href="/disclaimer/">Disclaimer</a>
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style is:global>
+  .legal-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 140px 1.5rem 6rem;
+    font-family: var(--font-main, "Inter", sans-serif);
+    color: #333333;
+    line-height: 1.75;
+  }
+  .legal-title {
+    font-family: var(--font-serif, "Playfair Display", Georgia, serif);
+    font-size: clamp(2rem, 3.5vw, 2.5rem);
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  .legal-container h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111827;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+  }
+  .legal-container p {
+    margin-bottom: 1.25rem;
+    font-size: 1rem;
+    color: #374151;
+  }
+  .legal-container ul {
+    margin: 1rem 0 1.5rem;
+    padding-left: 1.75rem;
+  }
+  .legal-container li {
+    margin-bottom: 0.5rem;
+    line-height: 1.7;
+    color: #374151;
+  }
+  .legal-container a {
+    color: #f47957;
+    text-decoration: none;
+  }
+  .legal-container a:hover {
+    text-decoration: underline;
+  }
+  .legal-footer-nav {
+    margin-top: 3.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e5e7eb;
+    font-size: 0.9rem;
+    color: #6b7280;
+  }
+</style>
