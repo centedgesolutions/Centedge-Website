@@ -1,15 +1,23 @@
 ---
-title: "Large Apparel Exporter, Bangalore"
-client: "Leading Woven & Outerwear Exporter"
-kpi: "+32% throughput in 90 days"
-category: "Lean Manufacturing"
-publishDate: "2026-08-15"
+title: Large Apparel Exporter, Bangalore
+client: Leading Woven & Outerwear Exporter
+kpi: +32% throughput in 90 days
+category: Lean Manufacturing
+publishDate: 2026-08-15
 featured: true
-coverImage: "/images/story-lean.jpg"
-summary: "Lean manufacturing transformation across 3 production lines. WIP reduced by 40%, operator efficiency improved from 54% to 71% in selected lines."
-challenge: "The factory suffered from chronic bottlenecks in sewing, high WIP accumulation between operations, unbalanced operator workloads, and line efficiency averaging below 54%."
-solution: "Cent Edge conducted full Value Stream Mapping, recalculated standard minute values using motion analysis, restructured lines into cellular U-shape configurations, and deployed daily visual management boards."
-results: "Delivered +32% overall line throughput increase, reduced work-in-progress inventory by 40%, and lifted buyer on-time delivery from 68% to 94%."
+coverImage: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIdwBrSW7hG5fV33mjUr0G2InSTHtgKurW8RYSjrhFkg&s=10
+summary: Lean manufacturing transformation across 3 production lines. WIP
+  reduced by 40%, operator efficiency improved from 54% to 71% in selected
+  lines.
+challenge: The factory suffered from chronic bottlenecks in sewing, high WIP
+  accumulation between operations, unbalanced operator workloads, and line
+  efficiency averaging below 54%.
+solution: Cent Edge conducted full Value Stream Mapping, recalculated standard
+  minute values using motion analysis, restructured lines into cellular U-shape
+  configurations, and deployed daily visual management boards.
+results: Delivered +32% overall line throughput increase, reduced
+  work-in-progress inventory by 40%, and lifted buyer on-time delivery from 68%
+  to 94%.
 ---
 
 ### Project Overview
