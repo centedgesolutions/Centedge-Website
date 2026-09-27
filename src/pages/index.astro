@@ -88,7 +88,9 @@ const latestInsights = allInsights
                 <div class="hero-stat-label">CI Initiatives Delivered</div>
               </div>
               <div class="hero-stat-item">
-                <div class="hero-stat-number hero-stat-global">GLOBAL</div>
+                <div class="hero-stat-number">
+                  <span class="hero-stat-global">GLOBAL</span>
+                </div>
                 <div class="hero-stat-label">International Consulting</div>
               </div>
             </div>
@@ -639,7 +641,7 @@ const latestInsights = allInsights
   }
 
   function startCounters() {
-    const counters = document.querySelectorAll('.hero-counter');
+    const counters = document.querySelectorAll('.hero-counter[data-target]');
     counters.forEach(function(counter, index) {
       const target = parseInt(counter.getAttribute('data-target'));
       setTimeout(function() {

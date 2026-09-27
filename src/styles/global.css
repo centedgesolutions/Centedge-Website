@@ -6953,7 +6953,7 @@ address, .footer-address {
 
 .hero-stats-row {
   display: flex !important;
-  align-items: flex-start !important;
+  align-items: stretch !important;
   gap: 0 !important;
   width: 100% !important;
   background: none !important;
@@ -6969,6 +6969,9 @@ address, .footer-address {
 .hero-stat-item {
   flex: 1 !important;
   padding-right: 24px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
   background: none !important;
   border: none !important;
   border-radius: 0 !important;
@@ -6985,6 +6988,7 @@ address, .footer-address {
   align-items: baseline !important;
   gap: 2px !important;
   line-height: 1 !important;
+  min-height: 36px !important;
 }
 
 .hero-counter {
@@ -7006,13 +7010,16 @@ address, .footer-address {
 }
 
 .hero-stat-global {
-  font-size: 20px !important;
+  font-size: 32px !important;
   font-weight: 700 !important;
   color: #1e3a5f !important;
-  letter-spacing: 0.04em !important;
-  padding-top: 6px !important;
-  line-height: 1 !important;
   -webkit-text-fill-color: #1e3a5f !important;
+  line-height: 1 !important;
+  font-family: inherit !important;
+  letter-spacing: normal !important;
+  padding-top: 0 !important;
+  margin: 0 !important;
+  display: inline-block !important;
 }
 
 .hero-stat-label {
@@ -7124,7 +7131,7 @@ address, .footer-address {
 
 .hero-stats-row {
   display: flex !important;
-  align-items: flex-start !important;
+  align-items: stretch !important;
   gap: 0 !important;
   width: 100% !important;
   background: none !important;
@@ -7141,6 +7148,9 @@ address, .footer-address {
 .hero-stat-item {
   flex: 1 1 0 !important;
   padding-right: 24px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
   background: none !important;
   background-color: transparent !important;
   border: none !important;
@@ -7158,6 +7168,7 @@ address, .footer-address {
   align-items: baseline !important;
   gap: 2px !important;
   line-height: 1 !important;
+  min-height: 36px !important;
 }
 
 .hero-counter {
@@ -7182,14 +7193,16 @@ address, .footer-address {
 }
 
 .hero-stat-global {
-  font-size: 20px !important;
+  font-size: 32px !important;
   font-weight: 700 !important;
   color: #1e3a5f !important;
   -webkit-text-fill-color: #1e3a5f !important;
-  letter-spacing: 0.04em !important;
-  padding-top: 6px !important;
   line-height: 1 !important;
-  display: block !important;
+  font-family: inherit !important;
+  letter-spacing: normal !important;
+  padding-top: 0 !important;
+  margin: 0 !important;
+  display: inline-block !important;
 }
 
 .hero-stat-label {
@@ -7296,8 +7309,8 @@ address, .footer-address {
 }
 
 .hero-stat-global {
-  font-size: 18px !important;
-  padding-top: 4px !important;
+  font-size: 32px !important;
+  padding-top: 0 !important;
 }
 
 .hero-stats-divider {
