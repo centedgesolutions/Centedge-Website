@@ -56,7 +56,23 @@ const canonicalUrl = "https://centedge.co.in/contact/";
                 </p>
               </div>
 
-              <form class="consulting-form" id="consultingInquiryForm" action="https://formspree.io/f/placeholder" method="POST" novalidate>
+                            <div id="formSuccessMessage" class="form-feedback success-banner" style="display:none; padding:1.25rem 1.5rem; background:#ecfdf5; border:1px solid #10b981; border-radius:8px; margin-bottom:1.5rem; color:#065f46;">
+                <div style="display:flex; align-items:flex-start; gap:0.75rem;">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0; margin-top:2px;">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <div>
+                    <h4 style="margin:0 0 0.25rem; color:#065f46; font-size:1.05rem; font-weight:700;">Inquiry Delivered Successfully</h4>
+                    <p style="margin:0; font-size:0.925rem; line-height:1.5; color:#047857;">Thank you for reaching out to Cent Edge Consulting. Our Principal Consultants have received your details and will review your production requirements within 24–48 hours.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div id="formErrorMessage" class="form-feedback error-banner" style="display:none; padding:1.25rem 1.5rem; background:#fef2f2; border:1px solid #ef4444; border-radius:8px; margin-bottom:1.5rem; color:#991b1b;">
+                <p style="margin:0; font-size:0.925rem; line-height:1.5; color:#b91c1c;">There was an issue sending your message. Please reach us directly at <a href="mailto:admin@centedge.co.in" style="color:#b91c1c; font-weight:700; text-decoration:underline;">admin@centedge.co.in</a> or call <a href="tel:+919901422066" style="color:#b91c1c; font-weight:700; text-decoration:underline;">+91-9901422066</a>.</p>
+              </div>
+
+              <form class="consulting-form" id="consultingInquiryForm" action="https://formspree.io/f/xzezjlbg" method="POST" novalidate>
                 <!-- Row 1: Name & Designation -->
                 <div class="form-row-dual">
                   <div class="form-group">
@@ -363,6 +379,64 @@ const canonicalUrl = "https://centedge.co.in/contact/";
   </main>
 
   <Footer />
+  <script is:inline>
+    (function() {
+      const form = document.getElementById('consultingInquiryForm');
+      const successMsg = document.getElementById('formSuccessMessage');
+      const errorMsg = document.getElementById('formErrorMessage');
+      if (!form) return;
+
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const submitBtn = form.querySelector('.submit-btn');
+        const originalBtnHtml = submitBtn.innerHTML;
+
+        const fullName = form.querySelector('#fullName');
+        const email = form.querySelector('#email');
+        if (!fullName.value.trim() || !email.value.trim()) {
+          alert('Please fill in your full name and corporate email address.');
+          return;
+        }
+
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span>Submitting Consultation Request...</span>';
+        if (successMsg) successMsg.style.display = 'none';
+        if (errorMsg) errorMsg.style.display = 'none';
+
+        try {
+          const formData = new FormData(form);
+          const response = await fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+              'Accept': 'application/json'
+            }
+          });
+
+          if (response.ok) {
+            form.reset();
+            if (successMsg) {
+              successMsg.style.display = 'block';
+              successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+          } else {
+            throw new Error('Form submission failed');
+          }
+        } catch (err) {
+          if (errorMsg) {
+            errorMsg.style.display = 'block';
+            errorMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          } else {
+            alert('Submission failed. Please email us directly at admin@centedge.co.in');
+          }
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnHtml;
+        }
+      });
+    })();
+  </script>
 </BaseLayout>
 
 <style>
