@@ -61,3 +61,146 @@ function isActive(href: string) {
     </div>
   </div>
 </header>
+
+<style is:global>
+/* ============================================================
+   SOLUTIONS DROPDOWN HOVER BRIDGE & HIT-AREA ENHANCEMENTS
+   Eliminates gap and makes Solutions dropdown 100% reliable
+   ============================================================ */
+@media (min-width: 1024px) {
+  .nav-dropdown {
+    position: relative !important;
+    display: inline-flex !important;
+    align-items: center !important;
+  }
+
+  .nav-dropdown > a {
+    position: relative !important;
+    padding-bottom: 8px !important;
+    margin-bottom: -8px !important;
+  }
+
+  .nav-dropdown .dropdown-menu {
+    position: absolute !important;
+    top: 100% !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    margin-top: 4px !important;
+    background-color: #ffffff !important;
+    border-radius: 10px !important;
+    box-shadow: 0 12px 32px rgba(26, 63, 111, 0.16), 0 2px 8px rgba(0, 0, 0, 0.05) !important;
+    min-width: 240px !important;
+    padding: 8px 0 !important;
+    z-index: 1000 !important;
+    border: 1px solid #dde4ee !important;
+    pointer-events: auto !important;
+  }
+
+  /* Seamless hover bridge: spans from -30px above the menu all the way down, covering the gap completely */
+  .nav-dropdown .dropdown-menu::before {
+    content: '' !important;
+    position: absolute !important;
+    top: -30px !important;
+    left: -25px !important;
+    right: -25px !important;
+    height: 35px !important;
+    background: transparent !important;
+    display: block !important;
+    pointer-events: auto !important;
+    z-index: 1 !important;
+  }
+
+  /* Display dropdown when hovered, focused, or is-open */
+  .nav-dropdown:hover .dropdown-menu,
+  .nav-dropdown:focus-within .dropdown-menu,
+  .nav-dropdown.is-open .dropdown-menu {
+    display: block !important;
+  }
+
+  .nav-dropdown:hover > a::after,
+  .nav-dropdown:focus-within > a::after,
+  .nav-dropdown.is-open > a::after {
+    transform: rotate(180deg) !important;
+  }
+
+  .nav-dropdown .dropdown-menu a {
+    display: block !important;
+    padding: 10px 20px !important;
+    color: #1a3f6f !important;
+    font-size: 0.9rem !important;
+    font-weight: 500 !important;
+    line-height: 1.4 !important;
+    white-space: nowrap !important;
+    background: transparent !important;
+    border-bottom: none !important;
+    border-radius: 0 !important;
+    min-height: auto !important;
+    transition: background-color 0.15s ease, color 0.15s ease, padding-left 0.15s ease !important;
+  }
+
+  .nav-dropdown .dropdown-menu a:hover {
+    background-color: #f0f5ff !important;
+    color: #2563a8 !important;
+    padding-left: 24px !important;
+  }
+}
+</style>
+
+
+<script>
+  function initNavDropdown() {
+    const navDropdown = document.querySelector('.nav-dropdown');
+    if (!navDropdown) return;
+
+    let timer = null;
+
+    function openMenu() {
+      if (timer) {
+        clearTimeout(timer);
+        timer = null;
+      }
+      navDropdown.classList.add('is-open');
+    }
+
+    function closeMenu() {
+      if (timer) clearTimeout(timer);
+      timer = setTimeout(() => {
+        navDropdown.classList.remove('is-open');
+      }, 350);
+    }
+
+    navDropdown.addEventListener('mouseenter', openMenu);
+    navDropdown.addEventListener('mouseleave', closeMenu);
+
+    const dropdownMenu = navDropdown.querySelector('.dropdown-menu');
+    if (dropdownMenu) {
+      dropdownMenu.addEventListener('mouseenter', openMenu);
+      dropdownMenu.addEventListener('mouseleave', closeMenu);
+    }
+
+    const trigger = navDropdown.querySelector('a');
+    if (trigger) {
+      trigger.addEventListener('focus', openMenu);
+      trigger.addEventListener('click', (e) => {
+        if (window.innerWidth >= 1024) {
+          if (!navDropdown.classList.contains('is-open')) {
+            e.preventDefault();
+            openMenu();
+          }
+        }
+      });
+    }
+
+    navDropdown.addEventListener('focusout', (e) => {
+      if (!navDropdown.contains(e.relatedTarget)) {
+        closeMenu();
+      }
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initNavDropdown);
+  } else {
+    initNavDropdown();
+  }
+</script>

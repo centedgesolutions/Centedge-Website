@@ -69,6 +69,52 @@
   }
 
 
+  
+  /* ----------------------------------------------------------
+     2b. SOLUTIONS DROPDOWN HOVER PERSISTENCE
+     Maintains open state with a 300ms debounce buffer so
+     the dropdown never closes accidentally during cursor movement
+  ---------------------------------------------------------- */
+  var navDropdown = document.querySelector('.nav-dropdown');
+  if (navDropdown) {
+    var dropdownTimer = null;
+
+    function showDropdown() {
+      if (dropdownTimer) {
+        clearTimeout(dropdownTimer);
+        dropdownTimer = null;
+      }
+      navDropdown.classList.add('is-open');
+    }
+
+    function hideDropdown() {
+      if (dropdownTimer) clearTimeout(dropdownTimer);
+      dropdownTimer = setTimeout(function () {
+        navDropdown.classList.remove('is-open');
+      }, 300);
+    }
+
+    navDropdown.addEventListener('mouseenter', showDropdown);
+    navDropdown.addEventListener('mouseleave', hideDropdown);
+
+    var dropdownMenu = navDropdown.querySelector('.dropdown-menu');
+    if (dropdownMenu) {
+      dropdownMenu.addEventListener('mouseenter', showDropdown);
+      dropdownMenu.addEventListener('mouseleave', hideDropdown);
+    }
+
+    var dropdownTrigger = navDropdown.querySelector('a');
+    if (dropdownTrigger) {
+      dropdownTrigger.addEventListener('focus', showDropdown);
+    }
+    navDropdown.addEventListener('focusout', function (e) {
+      if (!navDropdown.contains(e.relatedTarget)) {
+        hideDropdown();
+      }
+    });
+  }
+
+
   /* ----------------------------------------------------------
      3. ACTIVE NAV LINK
   ---------------------------------------------------------- */

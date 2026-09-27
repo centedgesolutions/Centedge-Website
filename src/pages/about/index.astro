@@ -10,7 +10,7 @@ import Footer from '../../components/Footer.astro';
   <Header />
   <main id="main-content">
     <!-- HERO -->
-    <section class="hero-white" aria-labelledby="ab-hero-heading" style="padding-top: calc(var(--header-height) + var(--space-8)); padding-bottom: var(--space-12);">
+    <section class="about-hero hero-white" aria-labelledby="ab-hero-heading">
       <div class="container">
         <div class="hero-white-grid" style="align-items: center;">
           
@@ -418,7 +418,7 @@ import Footer from '../../components/Footer.astro';
                 </div>
               </div>
               <div class="category-card" style="background: white; border: 1px solid var(--color-border); border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-sm); transition: transform 0.3s, box-shadow 0.3s;">
-                <div class="cat-img-wrapper"><img src="/images/categories/cat_knits.jpg" alt="Stack of folded knitted cotton jersey t-shirts and pique polo shirts" width="100%" height="220" style="width: 100%; height: 220px; object-fit: cover; object-position: center;" loading="lazy" /></div>
+                <div class="cat-img-wrapper"><img src="/images/categories/cat_knits.jpg" alt="Textured knitted crewneck t-shirt demonstrating apparel knitting craftsmanship" width="100%" height="220" style="width: 100%; height: 220px; object-fit: cover; object-position: center;" loading="lazy" /></div>
                 <div style="padding: 24px;">
                   <h4 style="margin: 0; font-size: 1.3rem; color: var(--color-navy); font-weight: 700;">Knits</h4>
                 </div>
@@ -582,4 +582,64 @@ import Footer from '../../components/Footer.astro';
 
   </main>
   <Footer />
+
+<style is:global>
+  /* ============================================================
+     ABOUT US HERO VIEWPORT & HEADER FIX
+     Ensures eyebrow "• Apparel Manufacturing Consulting" is always
+     visible below the fixed header across all browsers & zoom levels
+     ============================================================ */
+  .about-hero.hero-white {
+    padding-top: 152px !important;
+    padding-bottom: 60px !important;
+    min-height: auto !important;
+    display: block !important;
+    box-sizing: border-box !important;
+  }
+  .about-hero.hero-white .container {
+    display: block !important;
+    flex: none !important;
+    padding-top: 0 !important;
+  }
+  .about-hero.hero-white .hero-white-grid {
+    display: grid !important;
+    grid-template-columns: 1.15fr 0.85fr !important;
+    gap: var(--space-12, 48px) !important;
+    align-items: center !important;
+    padding-bottom: var(--space-8, 32px) !important;
+  }
+  .about-hero .hero-eyebrow {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    font-size: 0.8125rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.08em !important;
+    color: var(--color-navy, #1a3f6f) !important;
+    margin-bottom: 16px !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  .about-hero .eyebrow-dot {
+    width: 7px !important;
+    height: 7px !important;
+    border-radius: 50% !important;
+    background-color: var(--color-blue, #2563a8) !important;
+    display: inline-block !important;
+    flex-shrink: 0 !important;
+  }
+  @media (max-width: 991px) {
+    .about-hero.hero-white .hero-white-grid {
+      grid-template-columns: 1fr !important;
+    }
+  }
+  @media (max-width: 768px) {
+    .about-hero.hero-white {
+      padding-top: 110px !important;
+      padding-bottom: 40px !important;
+    }
+  }
+</style>
+
 </BaseLayout>
