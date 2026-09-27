@@ -9069,11 +9069,19 @@ address, .footer-address {
 }
 
 
+
 /* ============================================================
-   COMPREHENSIVE MOBILE VIEWPORT OPTIMIZATIONS (Cent Edge)
+   ENTERPRISE MOBILE & TABLET UI/UX OVERHAUL (McKinsey / BCG / Deloitte Standards)
+   Comprehensive Responsive System for Cent Edge Consulting
+   Breakpoints: 320px, 375px, 430px, 768px, 1024px, 1280px, 1440px
    ============================================================ */
 
-/* 1. Global Viewport Overflow Protection */
+/* Global Smooth Scrolling */
+html {
+  scroll-behavior: smooth !important;
+}
+
+/* Global Viewport & Overflow Protection */
 html, body {
   overflow-x: hidden !important;
   max-width: 100vw !important;
@@ -9085,8 +9093,44 @@ html, body {
   box-sizing: border-box !important;
 }
 
-/* 2. Desktop Navigation Layout (Replaces inline style removed from Header.astro) */
-@media (min-width: 769px) {
+/* Word Break Protection: applied to paragraphs, long text, links, and addresses */
+p, li, td, th, address, .text-body, .article-content, .hero-white-sub {
+  overflow-wrap: break-word !important;
+  word-wrap: break-word !important;
+}
+
+/* Stat Numbers & Badges: Strict single line protection */
+.hero-stat-number {
+  display: inline-flex !important;
+  align-items: baseline !important;
+  gap: 2px !important;
+  flex-wrap: nowrap !important;
+  white-space: nowrap !important;
+  word-break: normal !important;
+}
+
+.hero-stat-global {
+  font-size: clamp(20px, 1.8vw, 26px) !important;
+  white-space: nowrap !important;
+  word-break: normal !important;
+  display: inline-block !important;
+  letter-spacing: -0.01em !important;
+}
+
+.hero-counter,
+.hero-stat-plus,
+.bt-num,
+.b-stat {
+  white-space: nowrap !important;
+  word-break: normal !important;
+  display: inline-block !important;
+}
+
+/* ------------------------------------------------------------
+   DESKTOP (>= 1024px: 1280px, 1440px)
+   Keeps desktop 100% pristine and unaffected
+   ------------------------------------------------------------ */
+@media (min-width: 1024px) {
   .site-nav {
     display: flex !important;
     gap: 1.25rem !important;
@@ -9094,14 +9138,180 @@ html, body {
     flex: 1 !important;
     margin: 0 2rem !important;
     align-items: center !important;
+    position: static !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    width: auto !important;
+    height: auto !important;
+  }
+  .nav-toggle {
+    display: none !important;
   }
   .mobile-nav-cta {
     display: none !important;
   }
+  .header-actions {
+    display: flex !important;
+  }
+  .hero-white-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: var(--space-16) !important;
+  }
+  .hero-stats-row {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+  }
 }
 
-/* 3. Mobile Header & Drawer Navigation (<= 768px) */
-@media (max-width: 768px) {
+/* ------------------------------------------------------------
+   MOBILE & TABLET OVERHAUL (<= 1023px: 768px, 430px, 375px, 320px)
+   Matches McKinsey / Deloitte / BCG mobile quality standards
+   ------------------------------------------------------------ */
+@media (max-width: 1023px) {
+
+  /* ----------------------------------------------------------
+     1. TYPOGRAPHY & VISUAL HIERARCHY (Fluid Scale via clamp())
+  ---------------------------------------------------------- */
+  /* Hero Headline: Maximum 32px on mobile/tablet, never overflows */
+  h1, .h1, .hero-white-content h1, .page-header-title, .contact-hero__title, .hero-title {
+    font-size: clamp(24px, 6.5vw, 32px) !important;
+    line-height: 1.25 !important;
+    margin-bottom: 12px !important;
+    text-align: left !important;
+    letter-spacing: -0.02em !important;
+    font-weight: 700 !important;
+  }
+
+  .hero-leadin {
+    font-size: clamp(18px, 4.5vw, 22px) !important;
+    line-height: 1.3 !important;
+    margin-bottom: 4px !important;
+    text-align: left !important;
+    font-weight: 600 !important;
+  }
+
+  .hero-accent {
+    font-size: clamp(18px, 4.5vw, 22px) !important;
+    line-height: 1.3 !important;
+    margin-bottom: 14px !important;
+    text-align: left !important;
+    font-weight: 700 !important;
+  }
+
+  /* Section Headings */
+  h2, .h2, .section-title, .breakthroughs-heading {
+    font-size: clamp(20px, 5vw, 26px) !important;
+    line-height: 1.3 !important;
+    margin-bottom: 12px !important;
+    text-align: left !important;
+    letter-spacing: -0.015em !important;
+    font-weight: 700 !important;
+  }
+
+  /* Card & Subsection Titles */
+  h3, .h3, .card-title, .solution-title, .story-title, .insight-title, .pillar-card h3 {
+    font-size: clamp(18px, 4vw, 22px) !important;
+    line-height: 1.35 !important;
+    margin-bottom: 10px !important;
+    text-align: left !important;
+    font-weight: 600 !important;
+  }
+
+  h4, .h4, .footer-col h4, .module-card h4 {
+    font-size: clamp(16px, 3.5vw, 19px) !important;
+    line-height: 1.4 !important;
+    margin-bottom: 10px !important;
+    text-align: left !important;
+    font-weight: 600 !important;
+  }
+
+  /* Body Text: Minimum 16px, 1.6 Line Height, Strictly Left-Aligned */
+  p, li, address, blockquote, dd,
+  .hero-white-sub, .section-subtitle, .footer-tagline, .contact-hero__sub,
+  .hero-desc, .results-lead, .text-body {
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+    text-align: left !important;
+  }
+
+  p {
+    margin-bottom: 16px !important;
+  }
+
+  /* Eyebrows */
+  .hero-eyebrow,
+  .section-eyebrow,
+  .breakthroughs-eyebrow,
+  .card-kicker,
+  .contact-hero__chip {
+    font-size: 11px !important;
+    letter-spacing: 0.08em !important;
+    margin-bottom: 8px !important;
+    text-align: left !important;
+    text-transform: uppercase !important;
+    display: inline-block !important;
+  }
+
+  /* Strict Left Alignment Across All Sections (McKinsey / Deloitte Standard) */
+  .section-header,
+  .section-header-center,
+  .section-header.text-center,
+  .text-center,
+  .hero-white-content,
+  .breakthroughs-header-left,
+  .breakthroughs-header,
+  .results-lead,
+  .why-choose-header,
+  .contact-hero__header,
+  .footer-brand {
+    text-align: left !important;
+  }
+
+  .section-header .section-subtitle,
+  .section-header-center .section-subtitle {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
+
+  /* ----------------------------------------------------------
+     2. SPACING & PADDING (40px 20px on Mobile)
+  ---------------------------------------------------------- */
+  section,
+  .section,
+  .page-header,
+  .site-footer,
+  .why-choose-section,
+  .about-intro,
+  .breakthroughs-section,
+  .pillars-section,
+  .proof-section,
+  .cta-section,
+  .contact-section,
+  .results-section,
+  .solutions-section,
+  .stories-section,
+  .insights-section,
+  .contact-hero,
+  .page-hero {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* ----------------------------------------------------------
+     3. HEADER & MOBILE DRAWER NAVIGATION
+  ---------------------------------------------------------- */
   :root {
     --header-height: 88px !important;
   }
@@ -9118,24 +9328,32 @@ html, body {
 
   .site-header-main .container {
     padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
   }
 
   .site-logo img,
   .site-logo-img {
-    max-height: 36px !important;
-    height: 36px !important;
+    max-height: 38px !important;
+    height: 38px !important;
+    width: auto !important;
+    max-width: 100% !important;
+    object-fit: contain !important;
   }
 
-  /* Hide header CTA on mobile header bar so it never crowds logo or hamburger */
+  /* Hide bulky CTA in top bar on tablet & mobile */
   .header-actions {
     display: none !important;
   }
 
-  /* Hamburger Toggle */
+  /* Hamburger Toggle: 44x44px Minimum Touch Target */
   .nav-toggle {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
     width: 44px !important;
     height: 44px !important;
     padding: 0 !important;
@@ -9146,7 +9364,7 @@ html, body {
     z-index: 10001 !important;
   }
 
-  /* Mobile Slide-down / Full Navigation Drawer */
+  /* Mobile/Tablet Slide-down Full Width Drawer: STRICTLY HIDDEN UNLESS .open */
   .site-nav {
     display: none !important;
     position: fixed !important;
@@ -9159,7 +9377,7 @@ html, body {
     background-color: #0b1e33 !important;
     flex-direction: column !important;
     align-items: stretch !important;
-    padding: 1.25rem 1.5rem 3rem 1.5rem !important;
+    padding: 1.5rem 1.5rem 3.5rem 1.5rem !important;
     margin: 0 !important;
     gap: 0 !important;
     overflow-y: auto !important;
@@ -9172,18 +9390,19 @@ html, body {
     display: flex !important;
   }
 
+  /* Nav Links in Drawer: Minimum 18px font size for effortless readability */
   .site-nav > a,
   .nav-dropdown > a {
     color: #ffffff !important;
-    font-size: 16px !important;
-    font-weight: 500 !important;
-    padding: 13px 12px !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    padding: 14px 12px !important;
     border-radius: 6px !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
-    min-height: 48px !important;
+    min-height: 50px !important;
     width: 100% !important;
     text-align: left !important;
     background: transparent !important;
@@ -9196,7 +9415,7 @@ html, body {
     color: #38bdf8 !important;
   }
 
-  /* Nested dropdown items */
+  /* Submenu for Solutions */
   .dropdown-menu {
     display: block !important;
     position: static !important;
@@ -9211,11 +9430,11 @@ html, body {
   }
 
   .dropdown-menu a {
-    color: rgba(255, 255, 255, 0.85) !important;
-    font-size: 14px !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-size: 16px !important;
     font-weight: 400 !important;
-    padding: 11px 16px !important;
-    min-height: 44px !important;
+    padding: 12px 16px !important;
+    min-height: 46px !important;
     display: flex !important;
     align-items: center !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
@@ -9246,14 +9465,15 @@ html, body {
     justify-content: center !important;
     align-items: center !important;
     padding: 14px 20px !important;
-    font-size: 15px !important;
+    font-size: 16px !important;
     font-weight: 600 !important;
     border-radius: 8px !important;
+    min-height: 48px !important;
   }
 
-  /* 4. Tagline Bar Mobile Fitting */
+  /* Tagline Bar */
   .site-tagline-bar {
-    padding: 5px 8px !important;
+    padding: 6px 12px !important;
     height: 28px !important;
     min-height: 28px !important;
     display: flex !important;
@@ -9262,9 +9482,11 @@ html, body {
   }
 
   .site-tagline-text {
-    font-size: 8.5px !important;
+    font-size: clamp(8px, 2.2vw, 10px) !important;
     letter-spacing: 0.4px !important;
     white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
     line-height: 1 !important;
     text-align: center !important;
   }
@@ -9274,34 +9496,51 @@ html, body {
     opacity: 0.6 !important;
   }
 
-  /* 5. Hero Section Mobile Optimization */
+  /* ----------------------------------------------------------
+     4. HERO SECTION & HERO ILLUSTRATION STACKING
+  ---------------------------------------------------------- */
   .hero-white {
     padding-top: calc(var(--header-height, 88px) + 20px) !important;
     padding-bottom: 40px !important;
     min-height: auto !important;
   }
 
-  .hero-white-content h1 {
-    font-size: clamp(1.65rem, 6.5vw, 2.2rem) !important;
-    line-height: 1.15 !important;
+  .hero-white-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 24px !important;
+    width: 100% !important;
+    padding-bottom: 0 !important;
   }
 
-  .hero-leadin {
-    font-size: 1.25rem !important;
-    line-height: 1.25 !important;
+  .hero-white-content {
+    order: 1 !important;
+    width: 100% !important;
   }
 
-  .hero-accent {
-    font-size: 1.25rem !important;
+  .hero-white-visual {
+    order: 2 !important;
+    width: 100% !important;
+    margin-top: 20px !important;
   }
 
-  .hero-white-sub {
-    font-size: 0.95rem !important;
-    line-height: 1.5 !important;
-    margin-bottom: 18px !important;
+  .hero-img-wrap {
+    width: 100% !important;
+    max-width: 100% !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
   }
 
-  /* Hero Stats Row -> Clean 2x2 Grid */
+  .hero-img-wrap img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 300px !important;
+    object-fit: cover !important;
+    border-radius: 8px !important;
+    display: block !important;
+  }
+
+  /* Hero Stats Row: Clean 2x2 Grid with generous space */
   .hero-stats-row {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
@@ -9332,10 +9571,12 @@ html, body {
 
   .hero-counter {
     font-size: 26px !important;
+    white-space: nowrap !important;
   }
 
   .hero-stat-global {
     font-size: 22px !important;
+    white-space: nowrap !important;
   }
 
   .hero-stat-plus {
@@ -9343,25 +9584,274 @@ html, body {
   }
 
   .hero-stat-label {
-    font-size: 11px !important;
-    line-height: 1.35 !important;
+    font-size: 12px !important;
+    line-height: 1.4 !important;
     margin-top: 4px !important;
+    text-align: left !important;
   }
-}
 
-/* Extra small mobile (< 480px & 360px-390px) */
-@media (max-width: 480px) {
+  /* ----------------------------------------------------------
+     5. COLLAPSE EVERY GRID & TWO-COLUMN LAYOUT TO SINGLE COLUMN
+  ---------------------------------------------------------- */
+  .grid-2,
+  .grid-3,
+  .grid-4,
+  .grid-auto,
+  .cards-grid,
+  .features-grid,
+  .testimonials-grid,
+  .insights-grid,
+  .insights-grid-layout,
+  .stories-grid,
+  .why-choose-grid,
+  .results-grid,
+  .results-kpi-grid,
+  .results-case-grid,
+  .services-grid,
+  .case-studies-grid,
+  .team-grid,
+  .footer-grid,
+  .about-stats,
+  .mission-vision-grid,
+  .service-page-layout,
+  .service-sidebar,
+  .contact-layout,
+  .contact-layout-grid,
+  .contact-grid,
+  .problems-grid,
+  .solutions-grid,
+  .global-map-grid,
+  .products-grid,
+  .page-hero-grid,
+  .service-problem-grid,
+  .scope-grid,
+  .outcomes-grid,
+  .pillars-grid,
+  .advantage-grid,
+  .ab-mv__grid,
+  .ab-lens__grid,
+  .ab-caps__grid,
+  .ab-geo__grid,
+  .ab-team__grid,
+  .ab-products-grid,
+  .ab-geo__countries-grid,
+  .process-roadmap-grid,
+  .process-steps-grid,
+  .garment-solutions-grid,
+  .challenges-grid,
+  .comparison-grid,
+  .deliverables-grid,
+  .delivery-grid,
+  .cadence-grid,
+  .impact-grid,
+  .modules-grid,
+  .os-comparison-grid,
+  .form-row,
+  .form-row-dual,
+  .pillar-row,
+  .pillar-row-reverse,
+  .benchmark-stats-row {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 20px !important;
+  }
+
+  .contact-form-column,
+  .contact-info-column,
+  .service-sidebar,
+  .service-content {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* ----------------------------------------------------------
+     6. CARDS & COMPONENTS (FULL WIDTH, 16px+ PADDING)
+  ---------------------------------------------------------- */
+  .card,
+  .pillar-card,
+  .service-card,
+  .story-card,
+  .insight-card,
+  .why-card,
+  .advantage-card,
+  .problem-card,
+  .solution-card,
+  .kpi-card,
+  .testimonial-card,
+  .ab-mv__card,
+  .ab-lens__card,
+  .ab-caps__card,
+  .case-card,
+  .contact-form-card,
+  .contact-sidebar-card,
+  .office-card,
+  .deliv-card,
+  .benchmark-card,
+  .cadence-card,
+  .challenge-card,
+  .comparison-card,
+  .garment-sol-card,
+  .highlight-card,
+  .impact-card,
+  .insight-article-card,
+  .module-card,
+  .os-card,
+  .partner-access-card,
+  .roadmap-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 20px 16px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Card Images: Scaled and Responsive */
+  .card-img,
+  .pillar-card-img,
+  .story-card-img,
+  .insight-card-img,
+  .service-card img,
+  .story-card img,
+  .insight-card img,
+  .pillar-card img,
+  .card-image img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 240px !important;
+    object-fit: cover !important;
+    border-radius: 6px !important;
+    display: block !important;
+  }
+
+  /* Card CTAs */
+  .card-cta,
+  .story-card a,
+  .insight-card a,
+  .pillar-card a,
+  .btn-text,
+  .read-more {
+    min-height: 44px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+  }
+
+  /* Eliminate Negative Margins & Overlapping Absolute Chips on Mobile */
+  .floating-chip,
+  .advantage-stat-card,
+  .hero-chip,
+  .ab-mv__bg-word {
+    display: none !important;
+  }
+
+  /* ----------------------------------------------------------
+     7. BUTTONS & FORMS (FULL WIDTH, 44px+ TOUCH TARGET)
+  ---------------------------------------------------------- */
+  .btn,
+  .btn-group .btn,
+  .hero-white-content .btn-group .btn,
+  button[type="submit"],
+  .newsletter-form button,
+  .contact-form button {
+    width: 100% !important;
+    min-height: 48px !important;
+    padding: 14px 24px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    box-sizing: border-box !important;
+    border-radius: 6px !important;
+  }
+
+  .btn-group,
   .hero-white-content .btn-group {
     display: flex !important;
     flex-direction: column !important;
     width: 100% !important;
-    gap: 10px !important;
+    gap: 12px !important;
+    margin-bottom: 20px !important;
   }
 
-  .hero-white-content .btn-group .btn {
+  /* Full Width Form Inputs & 16px iOS Zoom Prevention */
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  select,
+  textarea {
     width: 100% !important;
-    justify-content: center !important;
-    text-align: center !important;
+    font-size: 16px !important; /* Critical to prevent iOS Safari auto-zoom */
+    padding: 12px 14px !important;
+    min-height: 48px !important;
+    border-radius: 6px !important;
+    box-sizing: border-box !important;
+  }
+
+  .form-group {
+    width: 100% !important;
+    margin-bottom: 16px !important;
+  }
+
+  /* ----------------------------------------------------------
+     8. IMAGES & MEDIA PROTECTION
+  ---------------------------------------------------------- */
+  img, svg, picture, video {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  .client-logo-img {
+    height: 32px !important;
+    max-width: 120px !important;
+    object-fit: contain !important;
+  }
+
+  /* ----------------------------------------------------------
+     9. FOOTER MOBILE STACKING
+  ---------------------------------------------------------- */
+  .footer-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 28px !important;
+  }
+
+  .footer-col {
+    width: 100% !important;
+  }
+
+  .footer-bottom {
+    padding-top: 24px !important;
+    margin-top: 24px !important;
+  }
+
+  .footer-copyright-row {
+    flex-direction: column !important;
+    gap: 8px !important;
+    text-align: left !important;
+  }
+
+  .footer-tagline-text {
+    text-align: left !important;
+    width: 100% !important;
+  }
+
+  .footer-bottom-links {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 12px 16px !important;
+    margin-top: 12px !important;
+  }
+}
+
+/* ============================================================
+   EXTRA SMALL MOBILE (320px - 375px)
+   ============================================================ */
+@media (max-width: 375px) {
+  .hero-white-content h1 {
+    font-size: 24px !important;
   }
 
   .site-tagline-text {
@@ -9370,6 +9860,22 @@ html, body {
   }
 
   .tagline-pipe {
-    margin: 0 3px !important;
+    margin: 0 2px !important;
+  }
+
+  .hero-counter {
+    font-size: 22px !important;
+  }
+
+  .hero-stat-global {
+    font-size: 18px !important;
+  }
+
+  .hero-stat-plus {
+    font-size: 16px !important;
+  }
+
+  .hero-stat-label {
+    font-size: 10.5px !important;
   }
 }
