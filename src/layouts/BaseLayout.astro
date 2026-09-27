@@ -11,12 +11,22 @@ const {
   title,
   description,
   canonicalUrl = Astro.url.href,
-  ogImage = "https://centedge.co.in/images/og-image.webp",
+  ogImage = "https://www.centedge.co.in/images/og-image.webp",
 } = Astro.props;
 ---
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QLWRDSWQ4S"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-QLWRDSWQ4S');
+  </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{title}</title>
@@ -38,7 +48,7 @@ const {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "Cent Edge Consulting Pvt Ltd",
-    "url": "https://centedge.co.in",
+    "url": "https://www.centedge.co.in",
     "description": "India leading apparel manufacturing consultancy.",
     "foundingDate": "2002",
     "telephone": "+91-9901422066",
