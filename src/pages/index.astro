@@ -1,7 +1,26 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+
+const allStories = await getCollection('success-stories');
+const latestStories = allStories
+  .sort((a, b) => {
+    const dateA = new Date(a.data.publishDate || a.data.date || 0).getTime();
+    const dateB = new Date(b.data.publishDate || b.data.date || 0).getTime();
+    return dateB - dateA;
+  })
+  .slice(0, 3);
+
+const allInsights = await getCollection('insights');
+const latestInsights = allInsights
+  .sort((a, b) => {
+    const dateA = new Date(a.data.publishDate || a.data.date || 0).getTime();
+    const dateB = new Date(b.data.publishDate || b.data.date || 0).getTime();
+    return dateB - dateA;
+  })
+  .slice(0, 3);
 ---
 
 <BaseLayout
@@ -501,7 +520,7 @@ import Footer from '../components/Footer.astro';
     </section>
 
     <!-- ====================================================
-         FEATURED SUCCESS STORIES (Updated images)
+         FEATURED SUCCESS STORIES (Dynamic from Content Collection)
          ==================================================== -->
     <section class="stories-section section bg-light-blue" aria-labelledby="stories-heading">
       <div class="container">
@@ -509,42 +528,29 @@ import Footer from '../components/Footer.astro';
         <h2 id="stories-heading" data-reveal>Measurable Impact. Real Factories.</h2>
         <p class="section-sub" data-reveal>Selected engagements from our portfolio of 30+ factory transformation projects across India and global markets.</p>
         <div class="stories-grid" data-reveal>
-          <article class="story-card">
-            <div class="story-img">
-              <img src="/images/story-lean.jpg" alt="Production line efficiency improvement through Lean Manufacturing" loading="lazy" width="480" height="270"/>
+          {latestStories.length > 0 ? (
+            latestStories.map((story) => {
+              const slug = story.id.replace(/\.md$/, '');
+              return (
+                <article class="story-card">
+                  <div class="story-img">
+                    <img src={story.data.coverImage || "/images/story-lean.jpg"} alt={story.data.title} loading="lazy" width="480" height="270"/>
+                  </div>
+                  <div class="story-body">
+                    <div class="story-tag">{story.data.category}</div>
+                    <h3>{story.data.title}</h3>
+                    {story.data.kpi && <p class="story-result">{story.data.kpi}</p>}
+                    <p>{story.data.summary}</p>
+                    <a href={`/success-stories/${slug}/`} class="story-link">Read Case Study &rarr;</a>
+                  </div>
+                </article>
+              );
+            })
+          ) : (
+            <div class="empty-state-card" style="grid-column: 1 / -1; text-align: center; padding: 3rem 1.5rem; background: #fff; border-radius: 8px; border: 1px dashed var(--color-border, #cbd5e1);">
+              <p style="font-size: 1.1rem; color: var(--color-muted, #64748b); margin: 0;">Case studies and verified outcome reports coming soon.</p>
             </div>
-            <div class="story-body">
-              <div class="story-tag">Lean Manufacturing</div>
-              <h3>Large Apparel Exporter, Bangalore</h3>
-              <p class="story-result">+32% throughput in 90 days</p>
-              <p>Lean transformation across 3 production lines. WIP reduced by 40%, operator efficiency improved from 54% to 71% in selected lines.</p>
-              <a href="/success-stories/" class="story-link">Read Case Study →</a>
-            </div>
-          </article>
-          <article class="story-card">
-            <div class="story-img">
-              <img src="/images/story-5s.jpg" alt="5S implementation and factory organisation project" loading="lazy" width="480" height="270"/>
-            </div>
-            <div class="story-body">
-              <div class="story-tag">5S Implementation</div>
-              <h3>Multi-Unit Export Factory, South India</h3>
-              <p class="story-result">Audit scores: 45% → 89%</p>
-              <p>Factory-wide 5S rollout across 5 production units. Significant reduction in search time and rework linked to workplace disorganisation.</p>
-              <a href="/success-stories/" class="story-link">Read Case Study →</a>
-            </div>
-          </article>
-          <article class="story-card">
-            <div class="story-img">
-              <img src="/images/story-layout.jpg" alt="Factory layout redesign and lead time reduction project for Denim Manufacturer" loading="lazy" width="480" height="270"/>
-            </div>
-            <div class="story-body">
-              <div class="story-tag">Layout &amp; Lead Time</div>
-              <h3>Denim Manufacturer, Gujarat</h3>
-              <p class="story-result">Lead time: 45 → 28 days</p>
-              <p>End-to-end value stream mapping and production layout redesign. On-time delivery improved from 61% to 94% within the project period.</p>
-              <a href="/success-stories/" class="story-link">Read Case Study →</a>
-            </div>
-          </article>
+          )}
         </div>
         <div style="text-align:center; margin-top:2.5rem;" data-reveal>
           <a href="/success-stories/" class="btn btn-primary">View All Success Stories</a>
@@ -554,7 +560,7 @@ import Footer from '../components/Footer.astro';
     </section>
 
     <!-- ====================================================
-         INSIGHTS (Updated images)
+         INSIGHTS (Dynamic from Content Collection)
          ==================================================== -->
     <section class="insights-section section bg-white" aria-labelledby="insights-heading">
       <div class="container">
@@ -562,45 +568,30 @@ import Footer from '../components/Footer.astro';
         <h2 id="insights-heading" data-reveal>From Our Knowledge Centre</h2>
         <p class="section-sub" data-reveal>Practical articles written by our principal consultants for apparel factory managers, IE teams and operations leaders.</p>
         <div class="insights-grid" data-reveal>
-          <article class="insight-card">
-            <div class="insight-img">
-              <img src="/images/insight-5s.jpg" alt="Lean manufacturing and 5S sustainability article" loading="lazy" width="480" height="270"/>
+          {latestInsights.length > 0 ? (
+            latestInsights.map((item) => {
+              const slug = item.id.replace(/\.md$/, '');
+              return (
+                <article class="insight-card">
+                  <div class="insight-img">
+                    <img src={item.data.coverImage || "/images/insight-5s.jpg"} alt={item.data.title} loading="lazy" width="480" height="270"/>
+                  </div>
+                  <div class="insight-body">
+                    <div class="insight-tag">{item.data.category}</div>
+                    <h3><a href={`/insights/${slug}/`}>{item.data.title}</a></h3>
+                    <div class="insight-meta">
+                      <span>By {item.data.author}</span>
+                      {item.data.readTime && <span>{item.data.readTime}</span>}
+                    </div>
+                  </div>
+                </article>
+              );
+            })
+          ) : (
+            <div class="empty-state-card" style="grid-column: 1 / -1; text-align: center; padding: 3rem 1.5rem; background: #f8fafc; border-radius: 8px; border: 1px dashed var(--color-border, #cbd5e1);">
+              <p style="font-size: 1.1rem; color: var(--color-muted, #64748b); margin: 0;">Knowledge centre articles and thought leadership pieces coming soon.</p>
             </div>
-            <div class="insight-body">
-              <div class="insight-tag">Lean Manufacturing</div>
-              <h3><a href="/insights/">Why Most Indian Garment Factories Fail to Sustain 5S After Consultants Leave</a></h3>
-              <div class="insight-meta">
-                <span>By Surya Prakash</span>
-                <span>5 min read</span>
-              </div>
-            </div>
-          </article>
-          <article class="insight-card">
-            <div class="insight-img">
-              <img src="/images/insight-sam.jpg" alt="SAM calculation and industrial engineering article" loading="lazy" width="480" height="270"/>
-            </div>
-            <div class="insight-body">
-              <div class="insight-tag">Industrial Engineering</div>
-              <h3><a href="/insights/">How to Calculate Standard Allowed Minutes (SAM) Accurately in Garment Factories</a></h3>
-              <div class="insight-meta">
-                <span>By Sampath Kumar</span>
-                <span>8 min read</span>
-              </div>
-            </div>
-          </article>
-          <article class="insight-card">
-            <div class="insight-img">
-              <img src="/images/insight-setup.jpg" alt="Greenfield factory setup checklist article" loading="lazy" width="480" height="270"/>
-            </div>
-            <div class="insight-body">
-              <div class="insight-tag">Factory Setup</div>
-              <h3><a href="/insights/">Setting Up a Greenfield Apparel Factory: A Complete Checklist for Factory Directors</a></h3>
-              <div class="insight-meta">
-                <span>By R. Kalyan Sundaram</span>
-                <span>12 min read</span>
-              </div>
-            </div>
-          </article>
+          )}
         </div>
         <div style="text-align:center; margin-top:2.5rem;" data-reveal>
           <a href="/insights/" class="btn btn-outline">View All Insights</a>
