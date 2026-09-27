@@ -116,18 +116,10 @@ const canonicalUrl = "https://centedge.co.in/contact/";
                     <div class="select-wrapper">
                       <select id="engagementArea" name="engagementArea">
                         <option value="" selected>Select Consulting Area</option>
-                        <option value="dipstick-diagnostic">Preliminary On-Site Plant Dipstick Study</option>
-                        <option value="5s-implementation">5S Implementation &amp; Visual Factory Management</option>
-                        <option value="lean-transformation">Lean Manufacturing &amp; Productivity Transformation</option>
-                        <option value="factory-setup">Apparel Factory Setup &amp; Feasibility Study</option>
-                        <option value="layout-optimisation">Garment Factory Layout &amp; Flow Optimisation</option>
-                        <option value="lead-time">Lead Time Reduction &amp; Quick Response Systems</option>
-                        <option value="quality-systems">Apparel Quality Management Systems (QMS)</option>
-                        <option value="ie-training">Industrial Engineering (IE) &amp; Skill Development</option>
-                        <option value="production-planning">Apparel Production Planning &amp; Control (PPC)</option>
-                        <option value="operator-training">Garment Operator &amp; Supervisory Skill Training</option>
-                        <option value="sustainability">Sustainable &amp; Resource-Efficient Manufacturing</option>
-                        <option value="other">Other Strategic Advisory / Custom Engagement</option>
+                        <option value="Factory Setup">Factory Setup</option>
+                        <option value="Lean Manufacturing">Lean Manufacturing</option>
+                        <option value="Smart Factory">Smart Factory</option>
+                        <option value="Industrial Engineering">Industrial Engineering</option>
                       </select>
                     </div>
                   </div>
@@ -393,9 +385,18 @@ const canonicalUrl = "https://centedge.co.in/contact/";
         const originalBtnHtml = submitBtn.innerHTML;
 
         const fullName = form.querySelector('#fullName');
-        const email = form.querySelector('#email');
-        if (!fullName.value.trim() || !email.value.trim()) {
-          alert('Please fill in your full name and corporate email address.');
+        const email = form.querySelector('#corporateEmail') || form.querySelector('input[name="email"]');
+        const phone = form.querySelector('#phoneNumber') || form.querySelector('input[name="phone"]');
+
+        if (!fullName || !fullName.value.trim()) {
+          alert('Please enter your full name.');
+          if (fullName) fullName.focus();
+          return;
+        }
+
+        if (!email || !email.value.trim()) {
+          alert('Please enter your corporate email address.');
+          if (email) email.focus();
           return;
         }
 
