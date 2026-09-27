@@ -23,12 +23,12 @@ function isActive(href: string) {
         <img src="/images/centedge_logo_hd.png" alt="Cent Edge Consulting" class="site-logo-img" style="max-height: 42px; height: 42px; width: auto;" />
       </a>
 
-      <nav class="site-nav" id="site-nav" role="navigation" aria-label="Main navigation" style="display: flex; gap: 1.25rem; justify-content: center; flex: 1; margin: 0 2rem;">
+      <nav class="site-nav" id="site-nav" role="navigation" aria-label="Main navigation">
         <a href="/" class={isActive('/') ? 'active' : ''}>Home</a>
         <a href="/about/" class={isActive('/about/') ? 'active' : ''}>About Us</a>
         <div class="nav-dropdown">
           <a href="/solutions/" aria-haspopup="true" class={isActive('/solutions/') ? 'active' : ''}>Solutions</a>
-                  <div class="dropdown-menu" role="menu">
+          <div class="dropdown-menu" role="menu">
             <a href="/solutions/apparel-factory-setup-consulting/" role="menuitem">Factory Setup</a>
             <a href="/solutions/lean-manufacturing/" role="menuitem">Lean Manufacturing</a>
             <a href="/solutions/smart-factory/" role="menuitem">Smart Factory</a>
@@ -38,6 +38,9 @@ function isActive(href: string) {
         <a href="/success-stories/" class={isActive('/success-stories/') ? 'active' : ''}>Success Stories</a>
         <a href="/insights/" class={isActive('/insights/') ? 'active' : ''}>Insights</a>
         <a href="/contact/" class={isActive('/contact/') ? 'active' : ''}>Contact</a>
+        <div class="mobile-nav-cta">
+          <a href="/contact/" class="btn btn-primary">Schedule a Dipstick Study</a>
+        </div>
       </nav>
 
       <div class="header-actions">
