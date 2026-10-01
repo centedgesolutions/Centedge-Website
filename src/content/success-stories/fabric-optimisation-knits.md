@@ -6,10 +6,9 @@ category: Lean Manufacturing
 publishDate: 2026-10-01
 featured: false
 coverImage: /images/uploads/cutting-section.webp
-summary: >
-  A common control system improved fabric accountability across four factories,
-  increased average process adherence from 58.5% to 90.3%, and delivered 3.7%
-  documented fabric savings.
+summary: A common control system improved fabric accountability across four
+  factories, increased average process adherence from 58.5% to 90.3%, and
+  delivered 3.7% documented fabric savings.
 challenge: >-
   The Challenge
 
