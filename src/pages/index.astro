@@ -732,3 +732,95 @@ const latestInsights = allInsights
 
 
 </BaseLayout>
+
+<style is:global>
+
+/* ============================================================
+   HERO STATS - GLOBAL + PERFECT BASELINE ALIGNMENT
+   Ensures 'GLOBAL +' sits on the exact same bottom baseline
+   as '30+', '100+', and '300+' across all viewports.
+   ============================================================ */
+.hero-stat-number {
+  display: flex !important;
+  align-items: flex-end !important;
+  height: 36px !important;
+  min-height: 36px !important;
+  line-height: 1 !important;
+  gap: 2px !important;
+  white-space: nowrap !important;
+}
+
+.hero-counter {
+  font-size: 32px !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  color: #1e3a5f !important;
+  -webkit-text-fill-color: #1e3a5f !important;
+  display: inline-block !important;
+  vertical-align: bottom !important;
+}
+
+.hero-stat-global {
+  font-size: 28px !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  color: #1e3a5f !important;
+  -webkit-text-fill-color: #1e3a5f !important;
+  letter-spacing: 0.01em !important;
+  display: inline-block !important;
+  vertical-align: bottom !important;
+  white-space: nowrap !important;
+}
+
+.hero-stat-plus {
+  font-size: 22px !important;
+  font-weight: 700 !important;
+  color: #c0392b !important;
+  -webkit-text-fill-color: #c0392b !important;
+  line-height: 1 !important;
+  margin-bottom: 2px !important;
+  display: inline-block !important;
+  vertical-align: bottom !important;
+}
+
+.hero-stat-label {
+  margin-top: 6px !important;
+}
+
+@media (max-width: 1023px) {
+  .hero-stat-number {
+    height: 30px !important;
+    min-height: 30px !important;
+    align-items: flex-end !important;
+  }
+  .hero-counter {
+    font-size: 26px !important;
+  }
+  .hero-stat-global {
+    font-size: 22px !important;
+  }
+  .hero-stat-plus {
+    font-size: 20px !important;
+    margin-bottom: 1.5px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-stat-number {
+    height: 26px !important;
+    min-height: 26px !important;
+    align-items: flex-end !important;
+  }
+  .hero-counter {
+    font-size: 22px !important;
+  }
+  .hero-stat-global {
+    font-size: 18px !important;
+  }
+  .hero-stat-plus {
+    font-size: 16px !important;
+    margin-bottom: 1px !important;
+  }
+}
+
+</style>
