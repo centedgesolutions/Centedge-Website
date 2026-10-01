@@ -7,7 +7,7 @@ publishDate: 2026-10-01
 readTime: 5 min read
 category: Lean Manufacturing
 featured: false
-coverImage: /images/insight-5s.jpg
+coverImage: ""
 excerpt: >
   Smart Cutting connects planning, fabric control, automation and quality into
   one operating system. A maturity assessment helps manufacturers identify where
