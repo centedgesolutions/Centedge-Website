@@ -64,20 +64,56 @@ function isActive(href: string) {
 
 <style is:global>
 /* ============================================================
-   SOLUTIONS DROPDOWN HOVER BRIDGE & HIT-AREA ENHANCEMENTS
-   Eliminates gap and makes Solutions dropdown 100% reliable
+   SOLUTIONS NAV TAB ALIGNMENT & HOVER BRIDGE
+   Ensures perfect baseline alignment with sibling nav links,
+   symmetric pill styling, and rock-solid dropdown stability.
    ============================================================ */
 @media (min-width: 1024px) {
   .nav-dropdown {
     position: relative !important;
     display: inline-flex !important;
     align-items: center !important;
+    justify-content: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 44px !important;
+    vertical-align: middle !important;
   }
 
   .nav-dropdown > a {
     position: relative !important;
-    padding-bottom: 8px !important;
-    margin-bottom: -8px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 8px 16px !important;
+    margin: 0 !important;
+    min-height: 44px !important;
+    height: 44px !important;
+    box-sizing: border-box !important;
+    font-size: 0.9rem !important;
+    font-weight: 500 !important;
+    line-height: 1 !important;
+    color: var(--color-navy, #1a3f6f) !important;
+    border-radius: var(--radius-full, 9999px) !important;
+    white-space: nowrap !important;
+    transition: background-color var(--transition, 0.2s ease), color var(--transition, 0.2s ease) !important;
+  }
+
+  .nav-dropdown > a:hover,
+  .nav-dropdown.is-open > a {
+    background-color: rgba(37, 99, 168, 0.06) !important;
+    color: var(--color-navy, #1a3f6f) !important;
+  }
+
+  .nav-dropdown > a.active {
+    font-weight: 600 !important;
+    background-color: rgba(37, 99, 168, 0.1) !important;
+    color: var(--color-navy, #1a3f6f) !important;
+  }
+
+  /* Remove any pseudo-arrow so text is horizontally centered inside the active pill */
+  .nav-dropdown > a::after {
+    display: none !important;
   }
 
   .nav-dropdown .dropdown-menu {
@@ -85,7 +121,7 @@ function isActive(href: string) {
     top: 100% !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
-    margin-top: 4px !important;
+    margin-top: 2px !important;
     background-color: #ffffff !important;
     border-radius: 10px !important;
     box-shadow: 0 12px 32px rgba(26, 63, 111, 0.16), 0 2px 8px rgba(0, 0, 0, 0.05) !important;
@@ -96,14 +132,14 @@ function isActive(href: string) {
     pointer-events: auto !important;
   }
 
-  /* Seamless hover bridge: spans from -30px above the menu all the way down, covering the gap completely */
+  /* Seamless hover bridge: spans 25px above dropdown to reach into the Solutions link */
   .nav-dropdown .dropdown-menu::before {
     content: '' !important;
     position: absolute !important;
-    top: -30px !important;
+    top: -25px !important;
     left: -25px !important;
     right: -25px !important;
-    height: 35px !important;
+    height: 30px !important;
     background: transparent !important;
     display: block !important;
     pointer-events: auto !important;
@@ -115,12 +151,6 @@ function isActive(href: string) {
   .nav-dropdown:focus-within .dropdown-menu,
   .nav-dropdown.is-open .dropdown-menu {
     display: block !important;
-  }
-
-  .nav-dropdown:hover > a::after,
-  .nav-dropdown:focus-within > a::after,
-  .nav-dropdown.is-open > a::after {
-    transform: rotate(180deg) !important;
   }
 
   .nav-dropdown .dropdown-menu a {
