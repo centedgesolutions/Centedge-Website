@@ -1,143 +1,81 @@
 ---
-title: FABRIC OPTIMISATION KNITS
+title: Fabric Optimisation Success Story
 client: LEADING EXPORTER FROM INDIA
 kpi: 3.7% FABRIC SAVINGS
 category: Lean Manufacturing
 publishDate: 2026-10-01
 featured: false
 coverImage: /images/uploads/cutting-section.webp
-summary: >-
-  A leading multi-location apparel manufacturer faced inconsistent
-  fabric-control practices across four factories. Differences in cutting
-  discipline, reconciliation, system usage and consumption monitoring made it
-  difficult for management to obtain reliable, real-time visibility of fabric
-  performance.
-
-
-  Cent Edge implemented a structured Fabric Optimisation Programme covering fabric receipt, planning, consumption approval, lay control, cutting accountability, reconciliation and digital monitoring. Average process adherence across the four factories improved from 58.5% to 90.3%, while a specific splice-control intervention identified a monthly saving of approximately ₹11.47 lakh.
+summary: >
+  A common control system improved fabric accountability across four factories,
+  increased average process adherence from 58.5% to 90.3%, and delivered 3.7%
+  documented fabric savings.
 challenge: >-
-  Fabric is the largest cost component in apparel manufacturing. Even small
-  losses in consumption, spreading, cutting or reconciliation can materially
-  affect factory profitability.
+  The Challenge
 
 
-  The client operated multiple manufacturing units, while planning and governance were managed centrally. This operating model created several challenges:
+  Fabric was the client’s largest cost lever, but four manufacturing units followed different control practices. Central management lacked one reliable view of approved, issued and achieved consumption while orders were still running.
 
 
-  Different fabric-control practices across factories
+  Inconsistent cut planning, lay records and reconciliation across factories
 
 
-  Limited real-time visibility of actual consumption
+  Limited visibility of splice loss, end bits, leftovers and re-cutting
 
 
-  Gaps between Head Office consumption, factory issuance and achieved consumption
+  Data gaps in Trakwel reduced confidence in running-order consumption
 
 
-  Inaccurate or incomplete lay-record data
+  Consumption deviations were often identified too late for corrective action
+solution: >+
+  Cent Edge converted a 100-point diagnostic into a common operating system
+  spanning fabric receipt, planning, spreading, cutting, reconciliation and
+  management governance.
 
 
-  Excess fabric loss from uncontrolled splice and lap joints
+  01
 
 
-  Inconsistent tracking of end bits, leftovers and re-cutting
+  DIAGNOSE
 
 
-  Limited order-wise and style-wise reconciliation
+  Benchmark five control areas across every factory using one weighted assessment.
 
 
-  Incomplete adoption of the Trakwel cutting system
+  02
 
 
-  Delayed identification of excess consumption, shortages and abnormal savings
+  STANDARDISE
 
 
-  Management required a standardized system that could establish accountability from fabric receipt through cutting and provide reliable consumption visibility while production was still in progress.
-solution: >-
-  Cent Edge developed a 100-point Fabric Optimisation Assessment and Governance
-  Framework covering five critical areas:
+  Align cut plans, lay-length checks, splice control and roll-wise accountability.
 
 
-  Fabric Store and Godown Control – 16%
+  03
 
 
-  Controls included fabric inward accountability, quality audits, physical parameter verification, fabric requirement statements, issue systems and leftover-fabric transparency.
+  DIGITISE
 
 
-  Line Plan and Cut Plan Follow-up – 10%
+  Correct Trakwel logic and strengthen online lay slips, consumption and exception visibility.
 
 
-  Daily line and cut plans were linked to fabric relaxation, issue planning and cutting accountability.
+  04
 
 
-  Consumption Approval and Physical Verification – 13%
+  GOVERN
 
 
-  Approved consumption was validated using actual fabric width, GSM, ply weight, marker efficiency and confirmed fabric parameters.
+  Run weekly FCR reviews linking approved, issued and achieved consumption to action.
 
-
-  Lay Records and Lay-Length Accuracy – 37%
-
-
-  The programme focused on lay-length accuracy, width monitoring, splice control, lay-record accuracy, lay-to-lay consumption monitoring, online system updating and reconciliation.
-
-
-  Cutting Store and Supermarket Control – 24%
-
-
-  Cutting-store clarity, loading plans, return-to-location controls, dashboard updating and purchase-order-wise loading visibility were strengthened.
-
-
-  Cent Edge then implemented a structured improvement programme:
-
-
-  Assessed every factory against the same 100-point framework.
-
-
-  Identified gaps at factory, process and order level.
-
-
-  Standardized cutting accountability and daily cut planning.
-
-
-  Introduced continuous lay-length, width and splice monitoring.
-
-
-  Established lay-to-lay and roll-wise reconciliation.
-
-
-  Corrected critical Trakwel calculation and data-logic errors.
-
-
-  Introduced weekly Fabric Consumption Review governance.
-
-
-  Compared Head Office, factory-issued and achieved consumption.
-
-
-  Created deviation alerts during production rather than after order closure.
-
-
-  Developed a consolidated Fabric Optimisation Control Centre and management dashboard.
 results: >-
-  Quantified savings opportunity
+  Business value identified. Reducing average lap joints from three to one
+  lowered modeled fabric waste from 4.055 kg to 1.352 kg per lay, indicating a
+  net savings opportunity of approximately ₹45,888 per day or ₹11.47 lakh per
+  month under the studied operating conditions.
 
 
-  A focused study identified fabric loss caused by multiple lap joints between rolls. By reducing average lap joints from three to one:
-
-
-  Fabric wastage per lay reduced from 4.055 kg to 1.352 kg
-
-
-  Avoidable fabric loss reduced by 2.703 kg per lay
-
-
-  Fabric-loss cost reduced by approximately ₹50,688 per day
-
-
-  After allowing ₹4,800 per day for additional re-cutting support, the net potential saving was approximately ₹45,888 per day
-
-
-  Estimated potential monthly saving: ₹11.47 lakh
+  Recommended UI treatment: Use a two-column Challenge and Methodology section, followed by the four-number impact strip. Keep the detailed narrative behind a “Read the full case study” expansion.
 ---
 The engagement began with a factory-wise assessment of the complete fabric-control cycle. Cent Edge evaluated not only fabric consumption figures but also the operating discipline behind those figures—from fabric receipt and physical verification to cut planning, spreading, lay-record accuracy, cutting-store control and final reconciliation.
 
