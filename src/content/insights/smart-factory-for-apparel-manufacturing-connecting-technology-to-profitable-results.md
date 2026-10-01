@@ -5,7 +5,7 @@ author: Surya Prakash
 authorRole: Principal Consultant
 publishDate: 2026-10-01
 readTime: 5 min read
-category: Lean Manufacturing
+category: Smart Factory
 featured: false
 coverImage: /images/insight-5s.jpg
 excerpt: >
