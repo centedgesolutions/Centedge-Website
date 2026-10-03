@@ -9052,18 +9052,21 @@ img {
 /* --------------------------------------------------------------------------
    NARROW MOBILE SCREENS (max-width: 480px)
    -------------------------------------------------------------------------- */
-@media (max-width: 480px) {
-  /* ISSUE 3: Single column benchmark cards on smaller mobile screens */
+@media (max-width: 640px) {
+  /* ISSUE 3: Single column benchmark cards on mobile screens */
   .ticker-inner,
   .results-ticker-strip .ticker-inner,
+  .ticker-cards-row,
   .benchmark-cards-grid,
   .benchmarks-grid {
     grid-template-columns: 1fr !important;
     gap: 14px !important;
+    width: 100% !important;
   }
 
   .ticker-card,
   .benchmark-card {
     width: 100% !important;
+    min-width: 0 !important;
   }
 }

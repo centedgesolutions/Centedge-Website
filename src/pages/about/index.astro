@@ -403,7 +403,122 @@ import Footer from '../../components/Footer.astro';
               .cat-img-wrapper {
                 overflow: hidden;
               }
-            </style>
+            
+  /* LEADER CARDS RESPONSIVE STYLES */
+  .ab-leader {
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    display: flex;
+    gap: 32px;
+    box-shadow: var(--shadow-sm);
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .ab-leader__photo-col {
+    width: 150px;
+    flex-shrink: 0;
+    text-align: center;
+  }
+  .ab-leader__avatar {
+    width: 150px;
+    height: 150px;
+    background: #e0f2fe;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .ab-leader__content {
+    flex: 1;
+    min-width: 0;
+  }
+  .ab-credentials-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 12px;
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 12px 0;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    color: #2563a8;
+    font-weight: 600;
+    line-height: 1.5;
+    font-family: var(--font-main, 'Inter', sans-serif);
+  }
+  .ab-cred-pipe {
+    color: #94a3b8;
+    margin: 0 4px;
+    font-weight: 300;
+  }
+
+  @media (max-width: 768px) {
+    .ab-leader {
+      padding: 20px 16px !important;
+      gap: 16px !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      text-align: center !important;
+    }
+    .ab-leader__photo-col {
+      width: 100% !important;
+      display: flex !important;
+      justify-content: center !important;
+    }
+    .ab-leader__content {
+      width: 100% !important;
+      min-width: 0 !important;
+    }
+    .ab-leader__name {
+      font-size: 1.75rem !important;
+      text-align: center !important;
+      word-wrap: break-word !important;
+    }
+    .ab-leader__role {
+      text-align: center !important;
+    }
+    .ab-credentials-row {
+      justify-content: center !important;
+      text-align: center !important;
+      font-size: 12px !important;
+      gap: 8px !important;
+      padding: 10px 0 !important;
+    }
+    .ab-cred-pipe {
+      display: none !important;
+    }
+    .ab-cred-tag {
+      background: #eff6ff;
+      border: 1px solid #dbeafe;
+      padding: 4px 10px;
+      border-radius: 6px;
+      display: inline-block;
+      font-size: 12px !important;
+      text-align: center;
+      word-wrap: break-word !important;
+      max-width: 100%;
+    }
+  }
+    .ab-leader__stats {
+      justify-content: center !important;
+      width: 100% !important;
+      margin-top: 12px !important;
+    }
+    .ab-network {
+      padding: 24px 16px !important;
+      flex-direction: column !important;
+      text-align: center !important;
+      gap: 14px !important;
+    }
+    .ab-network__icon {
+      margin: 0 auto !important;
+    }
+  }
+</style>
                                     <div class="ab-products-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 32px; text-align: left;">
               <div class="category-card" style="background: white; border: 1px solid var(--color-border); border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-sm); transition: transform 0.3s, box-shadow 0.3s;">
                 <div class="cat-img-wrapper"><img src="/images/categories/cat_shirts.jpg" alt="Folded premium oxford and woven shirts showing precision stitching and collar craftsmanship" width="100%" height="220" style="width: 100%; height: 220px; object-fit: cover; object-position: center;" loading="lazy" /></div>
@@ -472,19 +587,19 @@ import Footer from '../../components/Footer.astro';
         </div>
         <div class="ab-team__grid" style="display: flex; flex-direction: column; gap: var(--space-8); margin-bottom: var(--space-12);">
           <!-- Surya Prakash -->
-          <div class="ab-leader" style="background: var(--color-white); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 32px; display: flex; gap: 32px; box-shadow: var(--shadow-sm); flex-wrap: wrap; align-items: flex-start;">
+          <div class="ab-leader">
             <div class="ab-leader__photo-col" style="width: 150px; flex-shrink: 0; text-align: center;">
               <div class="ab-leader__avatar" style="width: 150px; height: 150px; background: #e0f2fe; border-radius: 12px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
                 <img src="/images/surya-prakash.jpg" alt="Surya Prakash" style="width: 100%; height: 100%; object-fit: cover; object-position: top center;" />
               </div>
             </div>
-            <div class="ab-leader__content" style="flex: 1; min-width: 320px;">
+            <div class="ab-leader__content">
               <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; flex-wrap: wrap; gap: 16px;">
                 <div>
                   <h3 class="ab-leader__name" style="font-family: 'Playfair Display', Georgia, serif !important; font-size: 2.35rem; color: #0f172a; margin: 0 0 6px 0; font-weight: 700; line-height: 1.15; letter-spacing: -0.02em;">Surya Prakash</h3>
                   <p class="ab-leader__role" style="color: #2563a8; font-size: 1.15rem; font-weight: 600; margin: 0; font-family: var(--font-main, 'Inter', sans-serif);">Founder &amp; Principal Consultant</p>
                 </div>
-                <div style="display: flex; align-items: center; gap: 28px;">
+                <div class="ab-leader__stats" style="display: flex; align-items: center; gap: 28px;">
                   <div>
                     <div style="font-family: var(--font-main, 'Inter', sans-serif); font-size: 2.3rem; font-weight: 800; color: #2563a8; line-height: 1; letter-spacing: -0.03em;">25<span style="font-size: 1.85rem; font-weight: 700; margin-left: 2px;">+</span></div>
                     <div style="font-size: 0.8rem; color: #64748b; font-weight: 500; margin-top: 6px; font-family: var(--font-main, 'Inter', sans-serif);">Years of Experience</div>
@@ -504,8 +619,12 @@ import Footer from '../../components/Footer.astro';
                 <span style="background: #eff6ff; color: #2563a8; border: 1px solid #dbeafe; padding: 6px 16px; border-radius: 9999px; font-size: 0.85rem; font-weight: 600; font-family: var(--font-main, 'Inter', sans-serif);">Manufacturing Excellence</span>
               </div>
 
-              <div style="border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; padding: 12px 0; margin-bottom: 20px; font-size: 0.95rem; color: #2563a8; font-weight: 600; line-height: 1.5; font-family: var(--font-main, 'Inter', sans-serif);">
-                MBA &mdash; IIM Kozhikode <span style="color: #94a3b8; margin: 0 12px; font-weight: 300;">|</span> AI Specialisation &mdash; IIM Kozhikode <span style="color: #94a3b8; margin: 0 12px; font-weight: 300;">|</span> Six Sigma Black Belt &mdash; ASQ, Milwaukee
+              <div class="ab-credentials-row">
+                <span class="ab-cred-tag">MBA &mdash; IIM Kozhikode</span>
+                <span class="ab-cred-pipe">|</span>
+                <span class="ab-cred-tag">AI Specialisation &mdash; IIM Kozhikode</span>
+                <span class="ab-cred-pipe">|</span>
+                <span class="ab-cred-tag">Six Sigma Black Belt &mdash; ASQ, Milwaukee</span>
               </div>
 
               <p style="color: #475569; font-size: 0.96rem; line-height: 1.7; margin: 0; font-family: var(--font-main, 'Inter', sans-serif);">Surya brings 25+ years of experience in apparel manufacturing, consulting and business transformation. He has worked with leading manufacturers and exporters and delivered improvement initiatives across India, Bangladesh and Africa. His expertise spans business strategy, manufacturing excellence, Smart Factory implementation, factory setup and operational transformation. He combines Lean, Six Sigma, digitisation and leadership coaching to improve productivity, capacity, quality, cost and profitability.</p>
@@ -513,19 +632,19 @@ import Footer from '../../components/Footer.astro';
           </div>
 
           <!-- Sampath Kumar -->
-          <div class="ab-leader" style="background: var(--color-white); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 32px; display: flex; gap: 32px; box-shadow: var(--shadow-sm); flex-wrap: wrap; align-items: flex-start;">
+          <div class="ab-leader">
             <div class="ab-leader__photo-col" style="width: 150px; flex-shrink: 0; text-align: center;">
               <div class="ab-leader__avatar" style="width: 150px; height: 150px; background: #e0f2fe; border-radius: 12px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
                 <img src="/images/sampath-kumar.jpg" alt="Sampath Kumar.A.S" style="width: 100%; height: 100%; object-fit: cover; object-position: top center;" />
               </div>
             </div>
-            <div class="ab-leader__content" style="flex: 1; min-width: 320px;">
+            <div class="ab-leader__content">
               <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; flex-wrap: wrap; gap: 16px;">
                 <div>
                   <h3 class="ab-leader__name" style="font-family: 'Playfair Display', Georgia, serif !important; font-size: 2.35rem; color: #0f172a; margin: 0 0 6px 0; font-weight: 700; line-height: 1.15; letter-spacing: -0.02em;">Sampath Kumar.A.S</h3>
                   <p class="ab-leader__role" style="color: #2563a8; font-size: 1.15rem; font-weight: 600; margin: 0; font-family: var(--font-main, 'Inter', sans-serif);">Operational Excellence &amp; Continuous Improvement Specialist</p>
                 </div>
-                <div style="display: flex; align-items: center; gap: 28px;">
+                <div class="ab-leader__stats" style="display: flex; align-items: center; gap: 28px;">
                   <div>
                     <div style="font-family: var(--font-main, 'Inter', sans-serif); font-size: 2.3rem; font-weight: 800; color: #2563a8; line-height: 1; letter-spacing: -0.03em;">25<span style="font-size: 1.85rem; font-weight: 700; margin-left: 2px;">+</span></div>
                     <div style="font-size: 0.8rem; color: #64748b; font-weight: 500; margin-top: 6px; font-family: var(--font-main, 'Inter', sans-serif);">Years of Experience</div>
@@ -545,8 +664,14 @@ import Footer from '../../components/Footer.astro';
                 <span style="background: #eff6ff; color: #2563a8; border: 1px solid #dbeafe; padding: 6px 16px; border-radius: 9999px; font-size: 0.85rem; font-weight: 600; font-family: var(--font-main, 'Inter', sans-serif);">Problem Solving &amp; QMS</span>
               </div>
 
-              <div style="border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; padding: 12px 0; margin-bottom: 20px; font-size: 0.95rem; color: #2563a8; font-weight: 600; line-height: 1.5; font-family: var(--font-main, 'Inter', sans-serif);">
-                Six Sigma Black Belt <span style="color: #94a3b8; margin: 0 12px; font-weight: 300;">|</span> MBA &mdash; Human Resource Management <span style="color: #94a3b8; margin: 0 12px; font-weight: 300;">|</span> PG Diploma &mdash; Supply Chain Management <span style="color: #94a3b8; margin: 0 12px; font-weight: 300;">|</span> CII &amp; ABK AOTS Sustenance Level
+              <div class="ab-credentials-row">
+                <span class="ab-cred-tag">Six Sigma Black Belt</span>
+                <span class="ab-cred-pipe">|</span>
+                <span class="ab-cred-tag">MBA &mdash; Human Resource Management</span>
+                <span class="ab-cred-pipe">|</span>
+                <span class="ab-cred-tag">PG Diploma &mdash; Supply Chain Management</span>
+                <span class="ab-cred-pipe">|</span>
+                <span class="ab-cred-tag">CII &amp; ABK AOTS Sustenance Level</span>
               </div>
 
               <p style="color: #475569; font-size: 0.96rem; line-height: 1.7; margin: 0; font-family: var(--font-main, 'Inter', sans-serif);">Operational Excellence expert with 25+ years of experience transforming manufacturing organizations across the apparel and automotive sectors including India Pistons Ltd, MAS Intimate Fashions, Shahi Exports, Gokaldas Exports, Page Industries, and Arvind Limited. Successfully fostered high-performance cultures and delivered sustainable business outcomes across multi-location manufacturing operations. He has led transformations across 11 factory locations facilitating over 120+ continuous improvement projects, with Black Belt projects worth millions of INR in cost savings and international ISO 9001:2015 certifications.</p>
