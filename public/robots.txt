@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://centedge.co.in/sitemap.xml
-Sitemap: https://centedge.co.in/sitemap-index.xml
+Sitemap: https://www.centedge.co.in/sitemap-index.xml
+Sitemap: https://www.centedge.co.in/sitemap.xml

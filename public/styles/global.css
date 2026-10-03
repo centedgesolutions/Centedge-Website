@@ -8800,3 +8800,270 @@ p, li, td, th, address, .text-body, .article-content, .hero-white-sub {
     margin-bottom: 1px !important;
   }
 }
+
+
+/* ==========================================================================
+   COMPREHENSIVE MOBILE AUDIT FIXES (SCREENSHOTS AUDIT <= 768px & <= 480px)
+   Addresses Issues 1 to 6 and General Mobile Baseline Rules.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   GENERAL GLOBAL FIXES (OVERFLOW & IMAGES)
+   -------------------------------------------------------------------------- */
+html,
+body {
+  overflow-x: hidden !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* --------------------------------------------------------------------------
+   MOBILE BREAKPOINT OVERRIDES (max-width: 768px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+
+  /* GENERAL READABILITY & TOUCH TARGETS */
+  body {
+    font-size: 16px !important;
+  }
+
+  p {
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+  }
+
+  button,
+  .btn,
+  a.btn,
+  input[type="submit"],
+  input[type="button"] {
+    min-height: 44px !important;
+  }
+
+  /* ISSUE 1 — TEAM CARDS: NAME AND TITLE OVERFLOW */
+  .partner-profile-item,
+  .ab-leader,
+  .team-card,
+  .partner-access-card,
+  .contact-sidebar-card,
+  .card-container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    overflow: visible !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .ab-leader {
+    padding: 20px 16px !important;
+    gap: 16px !important;
+  }
+
+  .ab-leader__photo-col {
+    width: 100% !important;
+    text-align: center !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .ab-leader__content {
+    min-width: 0 !important;
+    width: 100% !important;
+    flex: 1 1 100% !important;
+  }
+
+  .partner-profile-details {
+    width: 100% !important;
+    min-width: 0 !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    text-align: center !important;
+  }
+
+  .partner-name,
+  .ab-leader__name,
+  .team-member-name,
+  .leader-name {
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .partner-role,
+  .partner-subtext,
+  .ab-leader__role,
+  .team-member-title,
+  .leader-role {
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    white-space: normal !important;
+    text-overflow: clip !important;
+    overflow: visible !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  /* ISSUE 2 — CTA BUTTON TEXT OVERFLOW */
+  .btn,
+  .btn-primary,
+  .btn-outline,
+  .submit-btn,
+  .cta-btn,
+  button[type="submit"] {
+    white-space: normal !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 14px 16px !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: auto !important;
+    line-height: 1.35 !important;
+  }
+
+  .btn span,
+  .submit-btn span {
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    text-align: center !important;
+  }
+
+  /* ISSUE 3 — BENCHMARK / STATS CARDS SHOWING 4 COLUMNS */
+  .ticker-inner,
+  .results-ticker-strip .ticker-inner,
+  .benchmark-cards-grid,
+  .benchmarks-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+    width: 100% !important;
+  }
+
+  .ticker-card,
+  .benchmark-card {
+    min-width: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .ticker-card .ticker-desc,
+  .ticker-card .ticker-title,
+  .ticker-card .ticker-num {
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  /* ISSUE 4 — QUALIFICATION TAGS OVERFLOWING SCREEN */
+  .ab-leader__credentials,
+  .ab-leader__content > div[style*="border-top"],
+  .partner-qualifications,
+  .qualifications-row,
+  .credentials-container {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    justify-content: center !important;
+    text-align: center !important;
+    font-size: 12px !important;
+    line-height: 1.5 !important;
+    padding: 10px 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .ab-leader__credentials span[style*="margin: 0 12px"],
+  .ab-leader__content > div[style*="border-top"] span {
+    display: none !important;
+  }
+
+  .ab-leader__credentials > *,
+  .ab-leader__content > div[style*="border-top"] {
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    max-width: 100% !important;
+  }
+
+  /* ISSUE 5 — CONTENT TOUCHING SCREEN EDGES */
+  .container, 
+  .section-container,
+  .card-container,
+  [class*="section"],
+  [class*="wrapper"] {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    box-sizing: border-box !important;
+  }
+
+  body > * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* ISSUE 6 — HERO SECTION SPACING */
+  .hero-white-content .btn-group,
+  .hero-buttons,
+  .hero-cta-group {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 12px !important;
+    margin-bottom: 24px !important;
+  }
+
+  .hero-white-content .btn-group .btn,
+  .hero-buttons .btn,
+  .hero-cta-group .btn {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  .hero-white {
+    padding-bottom: 32px !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   NARROW MOBILE SCREENS (max-width: 480px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+  /* ISSUE 3: Single column benchmark cards on smaller mobile screens */
+  .ticker-inner,
+  .results-ticker-strip .ticker-inner,
+  .benchmark-cards-grid,
+  .benchmarks-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .ticker-card,
+  .benchmark-card {
+    width: 100% !important;
+  }
+}
