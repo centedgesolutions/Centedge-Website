@@ -136,6 +136,21 @@ const latestInsights = allInsights
           <div class="logo-item"><img src="/images/clients/bd-removebg-preview.png" alt="bd" class="client-logo-img" /></div>
           <div class="logo-item"><img src="/images/clients/afritex-logo.png" alt="afritex" class="client-logo-img" /></div>
           <div class="logo-item"><img src="/images/clients/novarea-textiles-logo.png" alt="novarea-textiles" class="client-logo-img" /></div>
+          <!-- Duplicate set for infinite seamless marquee -->
+          <div class="logo-item" aria-hidden="true"><img src="/images/clients/arvind-removebg-preview.png" alt="arvind" class="client-logo-img" /></div>
+          <div class="logo-item" aria-hidden="true"><img src="/images/clients/jockey-removebg-preview.png" alt="jockey" class="client-logo-img" /></div>
+          <div class="logo-item" aria-hidden="true"><img src="/images/clients/eastman-removebg-preview.png" alt="eastman" class="client-logo-img" /></div>
+          <div class="logo-item" aria-hidden="true"><img src="/images/clients/texport-removebg-preview.png" alt="texport" class="client-logo-img" /></div>
+          <div class="logo-item" aria-hidden="true"><img src="/images/clients/bhartiya-removebg-preview.png" alt="bhartiya" class="client-logo-img" /></div>
+          <div class="logo-item" aria-hidden="true"><img src="/images/clients/of_business-removebg-preview.png" alt="of business" class="client-logo-img" /></div>
+          <div class="logo-item" aria-hidden="true"><img src="/images/clients/ckdl-removebg-preview.png" alt="ckdl" class="client-logo-img" /></div>
+          <div class="logo-item" aria-hidden="true"><img src="/images/clients/mallow-removebg-preview.png" alt="mallow" class="client-logo-img" /></div>
+          <div class="logo-item" aria-hidden="true"><img src="/images/clients/royal_yarns-removebg-preview.png" alt="royal yarns" class="client-logo-img" /></div>
+          <div class="logo-item" aria-hidden="true"><img src="/images/clients/sothern.png" alt="sothern" class="client-logo-img" /></div>
+          <div class="logo-item" aria-hidden="true"><img src="/images/clients/uk-removebg-preview.png" alt="uk" class="client-logo-img" /></div>
+          <div class="logo-item" aria-hidden="true"><img src="/images/clients/bd-removebg-preview.png" alt="bd" class="client-logo-img" /></div>
+          <div class="logo-item" aria-hidden="true"><img src="/images/clients/afritex-logo.png" alt="afritex" class="client-logo-img" /></div>
+          <div class="logo-item" aria-hidden="true"><img src="/images/clients/novarea-textiles-logo.png" alt="novarea-textiles" class="client-logo-img" /></div>
         </div>
         </div></div>
     </section>
@@ -842,6 +857,78 @@ const latestInsights = allInsights
   }
   .hero-white {
     padding-bottom: 32px !important;
+  }
+}
+
+
+/* CLIENT LOGO STRIP ROBUST STYLING */
+.logo-track-wrapper {
+  overflow: hidden !important;
+  position: relative !important;
+  width: 100% !important;
+  padding: 12px 0 !important;
+}
+
+.logo-track {
+  display: flex !important;
+  align-items: center !important;
+  gap: 20px !important;
+  animation: marquee 35s linear infinite !important;
+  width: max-content !important;
+}
+
+.logo-track:hover {
+  animation-play-state: paused !important;
+}
+
+.logo-item {
+  flex: 0 0 auto !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 8px 24px !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 9999px !important;
+  background: #ffffff !important;
+  height: 56px !important;
+  min-width: 130px !important;
+  max-height: 56px !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+  transition: all 0.25s ease !important;
+}
+
+.logo-item:hover {
+  border-color: #2563a8 !important;
+  box-shadow: 0 4px 12px rgba(37, 99, 168, 0.12) !important;
+  transform: translateY(-1px) !important;
+}
+
+.client-logo-img {
+  height: 34px !important;
+  max-height: 34px !important;
+  width: auto !important;
+  max-width: 140px !important;
+  object-fit: contain !important;
+  display: block !important;
+  margin: 0 auto !important;
+}
+
+@media (max-width: 768px) {
+  .logo-track {
+    gap: 14px !important;
+  }
+  .logo-item {
+    height: 46px !important;
+    max-height: 46px !important;
+    padding: 6px 16px !important;
+    min-width: 100px !important;
+  }
+  .client-logo-img {
+    height: 26px !important;
+    max-height: 26px !important;
+    max-width: 110px !important;
   }
 }
 
